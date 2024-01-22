@@ -19,9 +19,13 @@ dev:
 how to use the repo:
 
 1. final buileded files:
+
 ./*.html
+
 ./css/*.css
+
 ./js/*.js
 
-2. files for dev:
+3. files for dev:
+
 ./src/*
