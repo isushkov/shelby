@@ -1,31 +1,62 @@
-install:
+# Project Setup and Usage Guide
 
-1. git clone
-2. cd dir
-3. npm install
+## Installation:
 
-build:
+1. **Clone the Repository:**
+    ```bash
+    git clone <repository-url>
+    ```
 
-0. install gulp
-1. gulp build
+2. **Navigate to the Project Directory:**
+    ```bash
+    cd <project-directory>
+    ```
 
-dev:
+3. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-0. install gulp
-1. run "gulp"
-2. open local web-server from gulp
-3. done
+## Building the Project:
 
-how to use the repo:
+1. **Install Gulp:**
+    ```bash
+    npm install -g gulp
+    ```
 
-1. final buileded files:
+2. **Run Gulp Build:**
+    ```bash
+    gulp build
+    ```
 
-./*.html
+## Development:
 
-./css/*.css
+1. **Install Gulp:**
+    ```bash
+    npm install -g gulp
+    ```
 
-./js/*.js
+2. **Run Gulp:**
+    ```bash
+    gulp
+    ```
 
-3. files for dev:
+3. **Open Local Web Server:**
+    - Gulp will start a local web server for development.
 
-./src/*
+4. **Done!**
+    - Now you can start developing and see changes in real-time.
+
+## Repository Structure:
+
+### Final Build Files:
+
+- `*.html` - Final HTML files.
+- `./css/*.css` - Compiled CSS files.
+- `./js/*.js` - Compiled JavaScript files.
+
+### Development Files:
+
+- `./src/*` - Source files for development.
+
+Feel free to explore and modify the contents of the `src` directory to customize the project as needed.
