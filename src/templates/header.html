@@ -1,0 +1,63 @@
+<nav class="autohide navbar navbar-expand navbar-dark bg-dark p-0 m-0 d-flex flex-column">
+  <div id="header" class="container d-flex flex-column p-2">
+    <div id="headerTop" class="container d-flex justify-content-between align-items-center">
+      <!-- top:logo -->
+      <div id="headerTopLeft">
+        <a class="navbar-brand" href="/">
+          <img id="logo" src="img/logo-dark_ico-txt_transp.png">
+        </a>
+      </div>
+      <!-- top:phone,links -->
+      <div id="headerTopRight" class="flex-column">
+        @@include('./header/phone.html')
+        <!-- links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link @@if(page=='index'){disabled}" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link @@if(page=='about-us'){disabled}" href="/about-us.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link @@if(page=='projects'){disabled}" href="/projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link @@if(page=='contact-us'){disabled}" href="/contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- bottom:links -->
+    <div id="headerBottom" class="flex-row">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link @@if(page=='index'){disabled}" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link @@if(page=='about-us'){disabled}" href="/about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link @@if(page=='projects'){disabled}" href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link @@if(page=='contact-us'){disabled}" href="/contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="underline"></div>
+</nav>
+<!-- empty header -->
+<div id="headerEmpty"></div>
+<!-- modals/alerts -->
+@@include('./header/_alert-copy.html')
+@@include('./header/_modal-call.html')
+
+<!-- js -->
+<script src="js/header.js"></script>
+<script>
+  $(document).ready(function () {
+    var navbar = $('.navbar');
+    var dropdownMenu = $('.dropdown-menu');
+
+    if (navbar.length) {
+      var lastScrollTop = 0;
+      $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        dropdownMenu.removeClass('show');
+
+        if (scrollTop < lastScrollTop) {
+          navbar.removeClass('scrolled-down').addClass('scrolled-up');
+        } else {
+          navbar.removeClass('scrolled-up').addClass('scrolled-down');
+        }
+
+        lastScrollTop = scrollTop;
+      });
+    }
+  });
+</script>

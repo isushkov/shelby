@@ -1,0 +1,1 @@
+function updatePaddingTop(){$(".first-filler").css("padding-top",$(".autohide").outerHeight()+"px")}$(document).ready(function(){updatePaddingTop(),$(window).resize(function(){updatePaddingTop()})});

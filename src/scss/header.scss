@@ -1,0 +1,171 @@
+@import 'common.scss';
+
+header {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #header {
+    font-family: Barlow-SemiBold;
+    font-size: 20px;
+    color: $light;
+    padding: 0;
+  }
+  #logo {
+    height: 92px;
+    width: auto;
+  }
+  #phoneText {
+    font-family: Barlow-SemiBold;
+    color: $gray-light;
+  }
+  #phoneDropdown {
+    #phoneDropdownButton {
+      font-size: 20px;
+      color: $light;
+    }
+    .dropdown-menu {
+      min-width: 100px;
+      border: solid 2px $primary;
+      background-color: $dark;
+      .dropdown-item {
+        text-transform: uppercase;
+        color: $light;
+        &:active,
+        &:hover {
+          background-color: $primary;
+          color: $light !important;
+        }
+        &.active {
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    font-family: Barlow-SemiBold;
+    color: $light;
+    text-transform: uppercase;
+  }
+  #headerBottom {
+    display: none;
+  }
+  .underline {
+    width: 100%;
+    height: 8px;
+    background-color: $primary;
+  }
+
+  .scrolled-down{
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #copyAlertSuccess {
+    display: none;
+    min-width: 90%;
+  }
+
+  // === md ===
+  @media (max-width: 990px) {
+    #header {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+    #headerTop {
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+    }
+    #logo {
+      height: 80px;
+    }
+  }
+  // === sm ===
+  @media (max-width: 780px) {
+    #header {
+      width: 100%;
+      max-width: 100%;
+      font-size: 18px;
+    }
+    #logo {
+      height: 70px;
+    }
+    #phoneDropdownButton {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 660px) {
+    #headerTop {
+      justify-content: center !important;
+    }
+    #logo {
+      height: 80px;
+    }
+    #phone {
+      flex-direction:column !important;
+    }
+    #phoneText {
+      font-size: 16px;
+      padding: 0;
+      padding-bottom: 2px;
+    }
+    #headerTopRight {
+      .navbar-nav {
+        display: none;
+      }
+    }
+    #headerBottom {
+      display: flex;
+      .navbar-nav {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    #headerTop {
+      padding: 0;
+    }
+    #logo {
+      height: 60px;
+    }
+  }
+  @media (max-width: 460px) {
+    #header {
+      #headerTop {
+        flex-direction: column;
+        .navbar-brand {
+          margin: 0;
+          #logo {
+            height: 80px;
+          }
+        }
+        #headerTopRight {
+          #phone {
+            flex-direction: row !important;
+            #phoneDropdownButton {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      #headerBottom {
+        .navbar-nav {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

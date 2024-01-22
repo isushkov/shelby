@@ -1,0 +1,193 @@
+@import "common.scss";
+@import "header.scss";
+@import "footer.scss";
+
+main {
+  .content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  #pageHeaderTitle {
+    max-width: 960px;
+    width: 90%;
+    text-align: center;
+    h1 {
+      font-family: Barlow-SemiBold;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+    }
+  }
+  .postcard {
+    .postcard__title {
+      text-transform: uppercase;
+      font-family: Barlow-SemiBold;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
+
+  #sendForm {
+    padding: 2rem;
+  }
+  #followUsTop {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      li {
+        padding-top: 1rem;
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          i {
+            font-size: 5rem;
+          }
+          p {
+            font-size: 1.2rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .divider-dynamic {
+    @extend .divider-dark-graylight;
+  }
+  #map {
+    max-height: 300px;
+    background: $gray-light;
+    iframe {
+      border: 0;
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+
+  // colors
+  .content {
+    &.dark {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(170deg, $primary, transparent 50%);
+    }
+    &.dark-rev {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(-10deg, $primary, transparent 50%);
+    }
+    &.light {
+      color: $dark;
+      background: $light-gray;
+      background-image: linear-gradient(-10deg, $white, transparent 50%);
+    }
+  }
+  #pageHeaderTitle {
+    color: $light;
+  }
+  .postcard {
+    box-shadow: 0 4px 21px -12px $black;
+    &.dark {
+      color: $light;
+      background-color: $dark;
+      &:before {
+        background-color: $dark;
+      }
+    }
+    &.light {
+      color: $dark;
+      background-color: $light;
+      &:before {
+        background-color: $light;
+      }
+    }
+  }
+  #followUsBottom {
+    display: none;
+    .postcard {
+      box-shadow: none;
+      background-color: inherit;
+      text-align: center;
+    }
+    ul {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    a {
+      color: $dark;
+      &:active,
+      &:hover {
+        color: $primary !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    #contentTop {
+      width: 100%;
+      max-width: 615px;
+    }
+    #sendForm {
+      width: 100%;
+    }
+    #followUsTop {
+      display: none;
+    }
+    #followUsBottom {
+      display: flex;
+      .follow-us {
+        width: 100%;
+        padding: 2rem 0 2rem 0;
+        h1 {
+          padding-bottom: 1.5rem;
+        }
+        ul {
+          display: flex;
+          li {
+            display: flex;
+            text-align: center;
+            align-items: flex-end;
+            padding: 1rem;
+            i {
+              font-size: 5rem;
+            }
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .divider-dynamic {
+      background: repeating-linear-gradient(-45deg, $light-gray, $light-gray 10px, $light 10px, $light 20px);
+    }
+  }
+  @media screen and (max-width: 765px) {
+    .container, .container-sm {
+      max-width: 700px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    #followUsBottom {
+      .follow-us {
+        h1 {
+          text-align: center;
+        }
+        ul {
+          justify-content: center;
+          margin: 0;
+          li p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

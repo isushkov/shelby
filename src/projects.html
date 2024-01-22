@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "projects",
+      "title": "Projects | Shelby Electrical",
+      "description": "Shelby Electrical - Projects",
+      "url": "https://www.shelbyelectrical.com/projects.html"
+    })
+  </head>
+  <body>
+    <header>
+      @@include("./templates/header.html", { "page": "projects" })
+    </header>
+    <main>
+      @@include("./templates/projects.html")
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "projects" })
+    </footer>
+  </body>
+</html>

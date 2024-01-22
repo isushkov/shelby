@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "contact-us",
+      "title": "Contact Us | Shelby Electrical",
+      "description": "Shelby Electrical - Contact Us",
+      "url": "https://www.shelbyelectrical.com/contact-us.html"
+    })
+  </head>
+  <body>
+    <header>
+      @@include("./templates/header.html", { "page": "contact-us" })
+    </header>
+    <main>
+      @@include("./templates/contact-us.html")
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "contact-us" })
+    </footer>
+  </body>
+</html>

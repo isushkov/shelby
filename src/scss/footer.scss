@@ -1,0 +1,129 @@
+@import 'common.scss';
+
+footer {
+  // common
+  padding: 0;
+  margin: 0;
+  color: $light;
+  background-color: $dark;
+  text-align: left;
+  a {
+    color: $primary;
+  }
+  .disabled a {
+    color: $gray-dark;
+  }
+
+  #footerTop {
+    justify-content: center;
+    // left
+    #footerTopLeft {
+      width: 60%;
+      font-size: 1.2rem;
+      justify-content: center;
+      .title {
+        color: $gray-light;
+        font-family: Barlow-Semibold;
+        text-transform: uppercase;
+      }
+    }
+    // right
+    #footerTopRight {
+      width: 30%;
+      #footerLogo {
+        max-width: 250px;
+        width: 100%;
+      }
+      #footerSocial {
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        a {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+  #copyright {
+    max-width: 100%;
+    margin: 0;
+    background-color: #29292f;
+  }
+
+  @media (max-width: 1000px) {
+    #footerTop {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      justify-content: space-around;
+      #footerTopLeft {
+        justify-content: flex-start;
+      }
+      #footerTopRight a {
+        text-align: end;
+      }
+      #footerSocial {
+        justify-content: flex-end;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    #footerTopLeft {
+      width: 70% !important;
+      justify-content: flex-start !important;
+    }
+  }
+  @media (max-width: 800px) {
+    #footerTop {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      #footerTopLeft {
+        width: 70% !important;
+        #footerCompany {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    #footerTop {
+      flex-direction: column-reverse !important;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      #footerTopLeft {
+        width: 100% !important;
+        flex-direction: row !important;
+        margin-top: 1rem;
+        justify-content: center !important;
+      }
+      #footerTopRight {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row !important;
+        #footerSocial {
+          flex-direction: row !important;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 545px) {
+    #footerTop {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 2rem !important;
+    }
+  }
+  @media (max-width: 500px) {
+    #footerTopLeft {
+      font-size: 1rem !important;
+      #footerContacts i {
+        display: none;
+      }
+    }
+  }
+}

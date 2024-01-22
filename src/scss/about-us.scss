@@ -1,0 +1,101 @@
+@import "common.scss";
+@import "header.scss";
+@import "footer.scss";
+
+main {
+  // common
+  font-family: "Barlow-Regular";
+  font-size: 1.2rem;
+  text-rendering: optimizeLegibility;
+  font-weight: initial;
+  .content {
+    max-width: 100%;
+    padding: 2rem 0 2rem 0;
+    .txt {
+      .txt-title {
+        font-family: "Barlow-SemiBold";
+      }
+      .txt-bar {
+        width: 50px;
+        height: 7px;
+        margin: 10px 0;
+        transition: width 0.2s ease, background 0.2s ease;
+      }
+    }
+    &:active,
+    &:hover {
+      .txt-bar {
+        width: 120px !important;
+        background: $primary !important;
+      }
+    }
+  }
+  @media (min-width: 40em) {
+    .txt-title {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 62em) {
+    .txt-title {
+      margin-top: 7rem;
+    }
+  }
+
+  // colors
+  .content.dark {
+    color: $light;
+    background: $dark;
+    background-image: linear-gradient(170deg, $primary, transparent 50%);
+    .txt-bar {
+      background: $light;
+    }
+  }
+  .content.light {
+    max-width: 100%;
+    color: $dark;
+    background: $light;
+    .txt-bar {
+      background: $dark;
+    }
+  }
+
+  // yourVision
+  #yourVision {
+  }
+
+  // yourSuccess
+  #yourSuccess {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      width: 40%;
+      object-fit: cover;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    .txt {
+      width: 60%;
+    }
+  }
+  @media (max-width: 1000px) {
+    #yourSuccess {
+      flex-direction: column;
+      img {
+        max-height: 300px;
+        width: 100%;
+      }
+      .txt {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    #yourSuccess {
+      img {
+        max-height: 250px;
+        width: 100%;
+      }
+    }
+  }
+}

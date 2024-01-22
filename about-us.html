@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- START HEAD -->
+<title>About Us | Shelby Electrical</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Shelby Electrical - About Us">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shelby Electrical">
+<meta property="og:title" content="About Us | Shelby Electrical">
+<meta property="og:description" content="Shelby Electrical - About Us">
+<meta property="og:url" content="https://www.shelbyelectrical.com/about-us.html">
+<link rel="canonical" href="https://www.shelbyelectrical.com/about-us.html">
+<link rel="icon" sizes="16x16 32x32 64x64" href="./favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+<!-- css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="css/about-us.css">
+<!-- js -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<!-- END HEAD -->
+
+  </head>
+  <body>
+    <header>
+      <nav class="autohide navbar navbar-expand navbar-dark bg-dark p-0 m-0 d-flex flex-column">
+  <div id="header" class="container d-flex flex-column p-2">
+    <div id="headerTop" class="container d-flex justify-content-between align-items-center">
+      <!-- top:logo -->
+      <div id="headerTopLeft">
+        <a class="navbar-brand" href="/">
+          <img id="logo" src="img/logo-dark_ico-txt_transp.png">
+        </a>
+      </div>
+      <!-- top:phone,links -->
+      <div id="headerTopRight" class="flex-column">
+        <div id="phone" class="d-flex flex-row align-items-center justify-content-end px-2">
+  <div id="phoneText" class="phone-text p-2">24 Hour Service:</div>
+  <div id="phoneDropdown" class="dropdown">
+    <button id="phoneDropdownButton" type="button" class="btn btn-primary dropdown-toggle"
+       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      (347) 633-4662
+    </button>
+    <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
+      <a id="copyAction" class="dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+        <i class="bi-clipboard-plus-fill"></i>
+        <span class="p-2">Copy</span>
+      </a>
+      <a id="callAction" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+        <i class="bi-telephone-outbound-fill"></i>
+        <span class="p-2">Call</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+        <!-- links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="/about-us.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- bottom:links -->
+    <div id="headerBottom" class="flex-row">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link " href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="/about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="underline"></div>
+</nav>
+<!-- empty header -->
+<div id="headerEmpty"></div>
+<!-- modals/alerts -->
+<div id="copyAlertSuccess" role="alert" class="alert alert-success position-fixed bottom-0 start-50 translate-middle-x">
+  <div class="d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-check-circle-fill me-2"></i>
+      Phone number copied successfully!
+    </div>
+    <button id="closeCopyAlertSuccess" type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // copy
+    var clipboard = new ClipboardJS('#copyAction');
+    clipboard.on('success', function (e) {
+      e.clearSelection();
+    });
+    // show
+    $('#copyAction').click(function () {
+      if (!$('#copyAlertSuccess').is(':visible')) {
+        $('#copyAlertSuccess').fadeIn().delay(2000).fadeOut();
+      }
+    });
+    // close
+    $('#closeCopyAlertSuccess').on('click', function () {
+      $('#copyAlertSuccess').fadeOut();
+    });
+  });
+</script>
+
+<div id="confirmCallModal" aria-labelledby="confirmCallModalLabel" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="confirmCallModalLabel" class="modal-title">Let's Connect!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ready to connect with us over the phone?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button id="confirmCallBtn" type="button" class="btn btn-primary">Yes, Call now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- js -->
+<script src="js/header.js"></script>
+<script>
+  $(document).ready(function () {
+    var navbar = $('.navbar');
+    var dropdownMenu = $('.dropdown-menu');
+
+    if (navbar.length) {
+      var lastScrollTop = 0;
+      $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        dropdownMenu.removeClass('show');
+
+        if (scrollTop < lastScrollTop) {
+          navbar.removeClass('scrolled-down').addClass('scrolled-up');
+        } else {
+          navbar.removeClass('scrolled-up').addClass('scrolled-down');
+        }
+
+        lastScrollTop = scrollTop;
+      });
+    }
+  });
+</script>
+
+    </header>
+    <main>
+      <div class="first-filler content dark px-3">
+  <div id="yourVision" class="container">
+    <div class="txt">
+      <h2 class="txt-title mt-0">Lighting Your Vision.</h2>
+      <div class="txt-bar"></div>
+      <p class="lead">
+        We take pride in contributing to meaningful projects across the five boroughs.
+        With a focus on practical craftsmanship,
+        we apply industry-leading technologies to handle electrical construction
+        for new facilities and spaces undergoing renovations.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="content light">
+  <div id="yourSuccess" class="container">
+    <img class="img-fluid p-2" src="./img/about-us/2.jpg">
+    <div class="txt p-2">
+      <h2 class="txt-title mt-0">Your Success, Our Purpose.</h2>
+      <div class="txt-bar"></div>
+      <p class="txt-lead">
+        At Shelby Electrical Corp, we offer comprehensive solutions through
+        the collaborative efforts of our dedicated office staff
+        and skilled electricians across all five boroughs.
+        Our expertise extends to major healthcare facilities,
+        intricate data centers, solar fields, and projects of various sizes.
+        Our commitment lies in building lasting relationships.
+        We prioritize transparent communication and mutual success.
+        Over 85% of our projects come from repeat customers,
+        a testament to the trust our clients place in us to consistently deliver
+        cost-effective, people-centric, and innovative solutions.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="divider-dark-graylight"></div>
+
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      <div id="footerTop" class="container d-flex flex-row pt-5">
+  <div id="footerTopLeft" class="d-flex flex-row">
+    <ul id="footerCompany" class="d-flex flex-column list-unstyled mr-3">
+      <li class="title"><span>Company</span></li>
+      <li class="nav-link mx-2 "><a href="/">Home</a></li>
+      <li class="nav-link mx-2 disabled"><a href="/about-us.html">About us</a></li>
+      <li class="nav-link mx-2 "><a href="/projects.html">Projects</a></li>
+      <li class="nav-link mx-2 "><a href="/contact-us.html">Contact Us</a></li>
+    </ul>
+    <ul id="footerContacts" class="d-flex flex-column list-unstyled mx-3">
+      <li class="title"><span>Contacts</span></li>
+      <li><a href="mailto:estimating@shelbyelectrical.com"><i class="mx-2 fas fa-envelope"></i>estimating@shelbyelectrical.com</a></li>
+      <li><span><i class="mx-2 fas fa-phone"></i>(347) 633-4662</span></li>
+      <li><span><i class="mx-2 fas fa-home"></i>2461 East 16th St, Brooklyn, NY</span></li>
+    </ul>
+  </div>
+  <div id="footerTopRight" class="d-flex flex-column">
+    <a href="/"><img id="footerLogo" class="img-fluid" src="img/logo-dark_ico-txt_transp.png"></a>
+    <ul id="footerSocial" class="d-flex flex-row list-unstyled">
+      <li><a class="img-fluid" href="https://www.instagram.com/shelbyelectrical" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a class="img-fluid" href="https://www.facebook.com/shelbyelectricalnyc" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a class="img-fluid" href="https://www.linkedin.com/company/shelby-electrical" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="copyright" class="container text-center mt-3 py-3">
+  <span>
+    Copyright &copy; Shelby Electrical
+    <script>document.write(new Date().getFullYear())</script>
+  </span>
+</div>
+
+<!-- css/js -->
+<script src="js/footer.js"></script>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+projects
+  project-N
+
+modal/alerts
+  styles
+header
+  fix responsive
+contact-us:
+  test form:
+    required
+      block button
+    add extra info to message
+index
+  add slider to title
+about-us
+  redesign
+
+hosting
+404 page
+created by
+>>>
+add blueprints
+robot.txt
+sitemap

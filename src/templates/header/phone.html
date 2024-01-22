@@ -1,0 +1,19 @@
+<div id="phone" class="d-flex flex-row align-items-center justify-content-end px-2">
+  <div id="phoneText" class="phone-text p-2">24 Hour Service:</div>
+  <div id="phoneDropdown" class="dropdown">
+    <button id="phoneDropdownButton" type="button" class="btn btn-primary dropdown-toggle"
+       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      (347) 633-4662
+    </button>
+    <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
+      <a id="copyAction" class="dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+        <i class="bi-clipboard-plus-fill"></i>
+        <span class="p-2">Copy</span>
+      </a>
+      <a id="callAction" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+        <i class="bi-telephone-outbound-fill"></i>
+        <span class="p-2">Call</span>
+      </a>
+    </div>
+  </div>
+</div>
