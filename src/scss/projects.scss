@@ -3,5 +3,182 @@
 @import "footer.scss";
 
 main {
-  color: red;
+  .content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &.dark {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(170deg, $primary, transparent 50%);
+    }
+    &.dark-rev {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(-10deg, $primary, transparent 50%);
+    }
+    &.dark-both {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(170deg, $primary, transparent 40%, transparent 60%, $primary);
+    }
+    &.light {
+      color: $dark;
+      background: $light-gray;
+      background-image: linear-gradient(-10deg, $white, transparent 50%);
+    }
+  }
+  #pageHeaderTitle {
+    font-family: Barlow-SemiBold;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    h1 {
+      max-width: 960px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  // // v1
+  // .card-img-top {
+  //   /* height: 225px; */
+  //   /* width: 100%; */
+  //   /* display: block; */
+  //   object-fit: cover; /* Предотвращает обрезку изображения */
+  //   object-position: center; /* Выравнивает изображение по центру */
+  //   /* width: 100%; /* Занимает 100% ширины родительского контейнера */
+  //   height: 100%; /* Выберите высоту по вашему усмотрению */
+  //   background-image: url('./img/projects/@@img'); /* Заблуренная копия изображения для заполнения пустых мест */
+  //   background-size: cover; /* Заполняет пустые места заблуренной копией */
+  // }
+
+  // v2
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .postcard {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 2rem 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 21px -12px $black;
+    a {
+      all: initial;
+      /* Дополнительные стили, которые вы хотите применить к тегу a */
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+    }
+    .postcard__img_link {
+      display: flex;
+      justify-content: center;
+      .postcard__img {
+        max-width: 100%;
+        max-height: 300px;
+        width: max-content;
+        transition: transform 0.3s ease;
+        object-fit: cover;
+        position: relative;
+      }
+    }
+    .postcard__text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      width: 100%;
+      &::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 15%;
+        background-color: #ff0000;
+        width: 100%
+      }
+      .postcard__title {
+        text-transform: uppercase;
+        font-family: Barlow-Bold;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 0;
+        transition: color 0.2s ease;
+      }
+      .postcard__subtitle {
+        text-transform: uppercase;
+        font-family: Barlow-Regular;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      .postcard__bar {
+        width: 50px;
+        height: 10px;
+        margin: 10px 0;
+        transition: width 0.2s ease;
+      }
+      .postcard__description {
+        font-size: 1.5rem;
+      }
+    }
+    &:active, &:hover {
+      .postcard__img {
+        transform: scale(1.1);
+      }
+      .postcard__bar {
+        width: 100px;
+      }
+    }
+    &.dark {
+      color: $light;
+      background-color: $dark;
+      &:before {
+        background-color: $dark;
+      }
+      &:active .postcard__title,
+      &:hover .postcard__title {
+        color: $primary;
+      }
+      .postcard__bar {
+        background-color: $primary;
+      }
+      .postcard__text:before {
+        background-color: $dark;
+      }
+    }
+    &.light {
+      color: $dark;
+      background-color: $light;
+      &:before {
+        background-color: $light;
+      }
+      &:active .postcard__title,
+      &:hover .postcard__title {
+        color: $primary;
+      }
+      .postcard__bar {
+        background-color: $primary;
+      }
+      .postcard__text:before {
+        background-color: $light;
+      }
+    }
+  }
 }

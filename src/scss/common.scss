@@ -12,14 +12,16 @@ $font-family-base: Barlow-Regular;
 @import 'fonts.scss';
 
 body {
-  font-family: $font-family-base;
+  font-size: 16px;
+  color: $white;
+  text-rendering: optimizeLegibility;
+  font-weight: initial;
 }
 
 a {
   text-decoration: none;
-  &:active,
-  &:hover {
-    color: $secondary !important;
+  &:active, &:hover {
+    color: $secondary;
     transition: color 0.3s ease-in-out;
   }
 }
