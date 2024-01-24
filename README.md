@@ -1,62 +1,47 @@
-# Project Setup and Usage Guide
+# Readme
 
-## Installation:
+In the end, these files constitute the website, the output:
+- `*.html` 
+- `./css/*.css` 
+- `./js/*.js` 
+- `./img/*`
 
-1. **Clone the Repository:**
-    ```bash
-    git clone <repository-url>
-    ```
+## Development Process:
 
-2. **Navigate to the Project Directory:**
-    ```bash
-    cd <project-directory>
-    ```
-
-3. **Install Dependencies:**
+1. Install all dependencies:
     ```bash
     npm install
     ```
 
-## Building the Project:
-
-1. **Install Gulp:**
-    ```bash
-    npm install -g gulp
+2. Files are compiled from:
+    ```
+    ./src/*
     ```
 
-2. **Run Gulp Build:**
-    ```bash
-    gulp build
-    ```
+3. Using Gulp:
 
-## Development:
+   - Install Gulp globally:
+     ```bash
+     npm install -g gulp
+     ```
 
-1. **Install Gulp:**
-    ```bash
-    npm install -g gulp
-    ```
+   - `gulpfile.mjs` - Describe Gulp commands and their functionality.
 
-2. **Run Gulp:**
-    ```bash
-    gulp
-    ```
+   - To compile:
+     ```bash
+     gulp build
+     ```
 
-3. **Open Local Web Server:**
-    - Gulp will start a local web server for development.
+   - To compile automatically on changes:
+     ```bash
+     gulp watch
+     ```
+     Or simply:
+     ```bash
+     gulp
+     ```
+     (because it is the default task)
 
-4. **Done!**
-    - Now you can start developing and see changes in real-time.
+4. Bootstrap is also used.
 
-## Repository Structure:
-
-### Final Build Files:
-
-- `*.html` - Final HTML files.
-- `./css/*.css` - Compiled CSS files.
-- `./js/*.js` - Compiled JavaScript files.
-
-### Development Files:
-
-- `./src/*` - Source files for development.
-
-Feel free to explore and modify the contents of the `src` directory to customize the project as needed.
+5. Gulp-include-file is used as a template engine.

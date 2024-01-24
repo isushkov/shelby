@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "project-n",
+      "title": "Project Boerum Street | Shelby Electrical",
+      "description": "Shelby Electrical - Project Boerum Street",
+      "url": "https://www.shelbyelectrical.com/project-1.html"
+    })
+  </head>
+  <body>
+    <header>
+      @@include("./templates/header.html", { "page": "project-n" })
+    </header>
+    <main>
+      @@include("./templates/project-n.html")
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "project-n" })
+    </footer>
+  </body>
+</html>
