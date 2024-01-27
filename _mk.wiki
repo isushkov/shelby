@@ -1,25 +1,26 @@
-projects
-  project-N
+contact-us form:
+  required
+    block button
+  add extra info to message
 
 modal/alerts
   styles
-header
-  fix responsive
-contact-us:
-  test form:
-    required
-      block button
-    add extra info to message
-index
-  add slider to title
-about-us
-  redesign
-анимация не на hover а при скроле
+
+project-N
+
+download add 3th side files, minify js, ...
+losted fonts
+
+test all
+>>> done
+
+
 
 hosting
 404 page
-created by
->>>
+index
+  add slider to title
 add blueprints
 robot.txt
 sitemap
+created by

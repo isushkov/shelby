@@ -31,6 +31,10 @@ main {
   #sendForm {
     padding: 2rem;
   }
+  #message {
+    resize: none;
+    height: 180px;
+  }
   #followUsTop {
     display: flex;
     flex-direction: column;
@@ -175,7 +179,12 @@ main {
       padding-left: 2rem;
       padding-right: 2rem;
     }
+    #sendForm {
+      padding: 1rem;
+    }
     #followUsBottom {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       .follow-us {
         h1 {
           text-align: center;

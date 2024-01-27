@@ -81,8 +81,8 @@ header {
     #header {
       width: 100%;
       max-width: 100%;
-      padding-left: 2rem !important;
-      padding-right: 2rem !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
     }
     #headerTop {
       padding: 0;
@@ -91,6 +91,10 @@ header {
     }
     #logo {
       height: 80px;
+    }
+    .nav-link {
+      padding-left: 6px !important;
+      padding-right: 6px !important;
     }
   }
   // === sm ===
@@ -161,11 +165,14 @@ header {
           }
         }
       }
-      #headerBottom {
-        .navbar-nav {
-          font-size: 14px;
-        }
+      .nav-link {
+        text-align: center;
       }
+    }
+  }
+  @media (max-width: 400px) {
+    .nav-link {
+      font-size: 1rem;
     }
   }
 }
