@@ -52,6 +52,9 @@ header {
     font-family: Barlow-SemiBold;
     color: $light;
     text-transform: uppercase;
+    &:hover, &:active {
+      color: $secondary;
+    }
   }
   #headerBottom {
     display: none;

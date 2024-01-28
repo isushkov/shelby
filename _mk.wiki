@@ -1,22 +1,31 @@
-contact-us form:
-  required
-    block button
+contact-us:
+  check required
+  check validation
+  block button
   add extra info to message
+  check alert 
+header:
+  icons - bootstrap to fas
+  copy - check alert:
+    z-index
+    func
+    design
+  call - check modal:
+    z-index
+    func
+    design
+test all links
 
-modal/alerts
+project-N:
+  images
   styles
+download 3th side files, minify js, ...
 
-project-N
-
-download add 3th side files, minify js, ...
-losted fonts
-
-test all
 >>> done
-
-
-
 hosting
+
+
+
 404 page
 index
   add slider to title
