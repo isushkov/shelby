@@ -1,0 +1,74 @@
+@import "common.scss";
+@import "header.scss";
+@import "footer.scss";
+
+main {
+  background: $light;
+  color: $dark;
+  .content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &.dark {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(170deg, $primary, transparent 50%);
+    }
+    &.dark-rev {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(-10deg, $primary, transparent 50%);
+    }
+    &.light {
+      color: $dark;
+      background: $light-gray;
+      background-image: linear-gradient(-10deg, $white, transparent 50%);
+    }
+  }
+  #project {
+    color: $dark;
+    background: $light;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+  }
+  #carousel {
+    width: 40%;
+  }
+  #info {
+    width: 60%;
+    padding-left: 2rem;
+  }
+  #slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+      width: 30%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .container {
+      max-width: 90%;
+    }
+    #info {
+      padding-left: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    #project {
+      padding: 0;
+      flex-direction: column;
+    }
+    #carousel {
+      width: 100%;
+    }
+    #info {
+      width: 100%;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+}

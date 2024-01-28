@@ -30,13 +30,13 @@ a {
   height: 2rem;
   width: 100%;
 }
-.divider-dark-primary {
-  @extend .divider;
-  background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $primary 10px, $primary 20px);
-}
 .divider-dark-light {
   @extend .divider;
   background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $light 10px, $light 20px);
+}
+.divider-dark-primary {
+  @extend .divider;
+  background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $primary 10px, $primary 20px);
 }
 .divider-dark-graylight {
   @extend .divider;

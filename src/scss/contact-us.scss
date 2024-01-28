@@ -6,25 +6,31 @@ main {
   .content {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    &.dark {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(170deg, $primary, transparent 50%);
+    }
+    &.dark-rev {
+      color: $light;
+      background: $dark;
+      background-image: linear-gradient(-10deg, $primary, transparent 50%);
+    }
+    &.light {
+      color: $dark;
+      background: $light-gray;
+      background-image: linear-gradient(-10deg, $white, transparent 50%);
+    }
   }
   #pageHeaderTitle {
     max-width: 960px;
     width: 90%;
     text-align: center;
+    color: $light;
     h1 {
       font-family: Barlow-SemiBold;
       text-transform: uppercase;
       font-size: 2.5rem;
-    }
-  }
-  .postcard {
-    .postcard__title {
-      text-transform: uppercase;
-      font-family: Barlow-SemiBold;
-      font-size: 2rem;
-      font-weight: 500;
-      line-height: 1.2;
-      margin-bottom: 0;
     }
   }
 
@@ -75,29 +81,16 @@ main {
     }
   }
 
-  // colors
-  .content {
-    &.dark {
-      color: $light;
-      background: $dark;
-      background-image: linear-gradient(170deg, $primary, transparent 50%);
-    }
-    &.dark-rev {
-      color: $light;
-      background: $dark;
-      background-image: linear-gradient(-10deg, $primary, transparent 50%);
-    }
-    &.light {
-      color: $dark;
-      background: $light-gray;
-      background-image: linear-gradient(-10deg, $white, transparent 50%);
-    }
-  }
-  #pageHeaderTitle {
-    color: $light;
-  }
   .postcard {
     box-shadow: 0 4px 21px -12px $black;
+    .postcard__title {
+      text-transform: uppercase;
+      font-family: Barlow-SemiBold;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
     &.dark {
       color: $light;
       background-color: $dark;

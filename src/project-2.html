@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "project",
+      "title": "Project Manhattan avenue | Shelby Electrical",
+      "description": "Shelby Electrical - Project Manhattan avenue",
+      "url": "https://www.shelbyelectrical.com/project-2.html"
+    })
+  </head>
+  <body>
+    <header>
+      @@include("./templates/header.html", { "page": "project" })
+    </header>
+    <main>
+      @@include("./templates/project.html", {
+        "title": "Manhattan avenue",
+        "subtitle": "Residential and commercial development.",
+        "description": "Located in Greenpoint, Brooklyn, between Freeman Street and Green Street, the 75-foot-tall development yields 28,436 square feet, with 24,666 square feet designated for residential space and 3,770 square feet for commercial space. The building has 30 residences with nine affordable housing units. Units are rentals based on the average unit scope of 822 square feet. The concrete-based structure has a cellar and a 22-foot-long rear yard.",
+        "prevProj": "project-1.html",
+        "nextProj": "project-3.html"
+      })
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "project" })
+    </footer>
+  </body>
+</html>

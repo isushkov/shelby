@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "project",
+      "title": "Project Bay 25th Street | Shelby Electrical",
+      "description": "Shelby Electrical - Project Bay 25th Street",
+      "url": "https://www.shelbyelectrical.com/project-6.html"
+    })
+  </head>
+  <body>
+    <header>
+      @@include("./templates/header.html", { "page": "project" })
+    </header>
+    <main>
+      @@include("./templates/project.html", {
+        "title": "Bay 25th Street",
+        "subtitle": "3-family semi-detached residence construction.",
+        "description": "2 Story, basement and cellar 3 family semi-detached residence",
+        "prevProj": "project-5.html",
+        "nextProj": "project-7.html"
+      })
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "project" })
+    </footer>
+  </body>
+</html>

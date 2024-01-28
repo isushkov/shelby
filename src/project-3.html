@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "project",
+      "title": "Project West 13th Street Manhattan | Shelby Electrical",
+      "description": "Shelby Electrical - Project West 13th Street Manhattan",
+      "url": "https://www.shelbyelectrical.com/project-3.html"
+    })
+  </head>
+  <body>
+    <header>
+      @@include("./templates/header.html", { "page": "project" })
+    </header>
+    <main>
+      @@include("./templates/project.html", {
+        "title": "West 13th Street Manhattan",
+        "subtitle": "High-rise residential construction.",
+        "description": "Seven Story High Rise residential structure. The seventy foot structure yields close to 75,200 square feet dedicated to residential use.",
+        "prevProj": "project-2.html",
+        "nextProj": "project-4.html"
+      })
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "project" })
+    </footer>
+  </body>
+</html>
