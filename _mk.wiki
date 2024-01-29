@@ -1,35 +1,40 @@
-contact-us:
-  check required
-  check validation
-  block button
-  add extra info to message
-  check alert 
 header:
-  icons - bootstrap to fas
-  copy - check alert:
-    z-index
+  copy:
+    replace alert to "copied!"
+    icons - bootstrap to fas
     func
+  call:
+    icons - bootstrap to fas
     design
-  call - check modal:
-    z-index
     func
-    design
-test all links
 
 project-N:
   images
   styles
+
+style upd:
+  add sliders
+  and more pics
+    add blueprints
+  add animastions
+  чуть чуть more black and white
+
+q:
+  pasandy:
+    add animastions - logo
+    less words - provide what exactly
+    more black and white
+  what email using:
+    for email form
+  what phone number using:
+    for header
+    for footer
+  projects - get images
+  hosting
+  may i add "created by"
+
 download 3th side files, minify js, ...
-
->>> done
 hosting
-
-
-
-404 page
-index
-  add slider to title
-add blueprints
-robot.txt
-sitemap
-created by
+  +404 page
+  +php email?
+>>> done
