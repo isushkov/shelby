@@ -79,7 +79,7 @@
     }
 
     // валидация email
-    $('#email').on('input', function() {
+    $('#email').on('input blur', function() {
       var emailInput = $(this);
       var emailValue = emailInput.val().trim();
       var feedbackEmpty = emailInput.siblings('.feedback-empty');
@@ -109,7 +109,7 @@
     });
 
     // валидация message
-    $('#message').on('input', function() {
+    $('#message').on('input blur', function() {
       var messageInput = $(this);
       var messageValue = messageInput.val().trim();
       var feedbackEmpty = messageInput.siblings('.feedback-empty');
@@ -124,10 +124,6 @@
       // Проверяем валидность формы
       checkFormValidity();
     });
-
-    // // валидация при изменении значений
-    // $('#email').on('input', function() { checkFormValidity(); });
-    // $('#message').on('input', function() { checkFormValidity(); });
 
     // Обработчик отправки формы
     $('form').submit(function(event) {
@@ -151,61 +147,3 @@
     });
   });
 </script>
-
-<!-- <script> -->
-<!-- $(document).ready(function(){ -->
-<!--   // required -->
-<!--   $('#contactForm input, #contactForm textarea').on('input', function() { -->
-<!--     var formValid = true; -->
-<!--     $('#contactForm input, #contactForm textarea').each(function() { -->
-<!--       if (!this.checkValidity()) { -->
-<!--         formValid = false; -->
-<!--         return false; // Выходим из цикла, если хотя бы одно поле невалидно -->
-<!--       } -->
-<!--     }); -->
-<!--     // Включаем или выключаем кнопку отправки в зависимости от валидности формы -->
-<!--     $('#submitBtn').prop('disabled', !formValid); -->
-<!--   }); -->
-<!--  -->
-<!--   // submit -->
-<!--   $('#contactForm').on('submit', function(event) { -->
-<!--     event.preventDefault(); // Предотвращаем стандартное поведение отправки формы -->
-<!--  -->
-<!--     // validate -->
-<!--     var formValid = true; -->
-<!--     $('#contactForm input, #contactForm textarea').each(function() { -->
-<!--       if (!this.checkValidity()) { -->
-<!--         formValid = false; -->
-<!--         $(this).addClass('is-invalid'); // Подсвечиваем невалидные поля -->
-<!--       } else { -->
-<!--         $(this).removeClass('is-invalid'); -->
-<!--       } -->
-<!--     }); -->
-<!--     if (!formValid) { -->
-<!--       // Если есть невалидные поля, отображаем сообщение об ошибке -->
-<!--       $('#validationMessage').text('Пожалуйста, заполните все обязательные поля корректно.'); -->
-<!--     } else { -->
-<!--       // Если все поля валидны, выполняем логику отправки формы -->
-<!--  -->
-<!--       // Добавляем "Hello World!" к сообщению -->
-<!--       var message = $('#message').val(); -->
-<!--       message = "Hello World! " + message; -->
-<!--       $('#message').val(message); -->
-<!--  -->
-<!--       // Отправляем форму -->
-<!--       $.ajax({ -->
-<!--         type: 'POST', -->
-<!--         url: $(this).attr('action'), -->
-<!--         data: $(this).serialize(), -->
-<!--         success: function(response) { -->
-<!--           alert('Сообщение успешно отправлено.'); -->
-<!--           $('#contactForm').trigger('reset'); // Сбрасываем значения полей формы -->
-<!--         }, -->
-<!--         error: function() { -->
-<!--           alert('Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте снова позже.'); -->
-<!--         } -->
-<!--       }); -->
-<!--     } -->
-<!--   }); -->
-<!-- }); -->
-<!-- </script> -->
