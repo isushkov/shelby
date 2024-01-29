@@ -1,18 +1,21 @@
-header:
-  check icons
-  check call
-  check copy
-
 index:
   add sliders
   remake content to 2 column
+
 project-N:
-  images
   styles
+  images
   projects - add hover like horsepower
 
 style upd:
   add animations
+    touchmove:
+      $('#yourElementId').on('touchmove', function(event) {
+        $(this).addClass('hover');
+      });
+      $('#yourElementId').on('touchend', function(event) {
+        $(this).removeClass('hover');
+      });
   and more pics
     add blueprints
 
