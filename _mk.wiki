@@ -1,20 +1,15 @@
 header:
-  copy:
-    icons - bootstrap to fas
-    replace alert to "copied!"
-    func
-  call:
-    icons - bootstrap to fas
-    design
-    func
-
-project-N:
-  images
-  styles
+  check icons
+  check call
+  check copy
 
 index:
   add sliders
   remake content to 2 column
+project-N:
+  images
+  styles
+  projects - add hover like horsepower
 
 style upd:
   add animations

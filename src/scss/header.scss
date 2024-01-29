@@ -41,8 +41,8 @@ header {
           background-color: $primary;
           color: $light !important;
         }
-        &.active {
-          background-color: $secondary;
+        &:focus {
+          background-color: $dark;
         }
       }
     }
@@ -74,9 +74,26 @@ header {
     transition: all 0.3s ease-in-out;
   }
 
-  #copyAlertSuccess {
-    display: none;
-    min-width: 90%;
+  // modal
+  #confirmCallModal {
+    .modal-header {
+      color: $dark;
+      #confirmCallModalLabel {
+        font-size: 1.5rem;
+      }
+    }
+    .modal-body {
+      color: $dark;
+      font-size: 1.2rem;
+    }
+    .btn-gray {
+      color: $light;
+      background-color: $gray-dark;
+      border-color: darken($gray-dark, 10%);
+      &:hover, &:active {
+        background-color: darken($gray-dark, 15%);
+      }
+    }
   }
 
   // === md ===

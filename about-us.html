@@ -49,16 +49,41 @@
     </button>
     <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
       <a id="copyAction" class="dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
-        <i class="bi-clipboard-plus-fill"></i>
-        <span class="p-2">Copy</span>
+        <i class="copy-icon fas fa-clipboard"></i>
+        <span class="copy-text p-2">Copy</span>
       </a>
       <a id="callAction" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
-        <i class="bi-telephone-outbound-fill"></i>
-        <span class="p-2">Call</span>
+        <i class="call-icon fas fa-phone-alt"></i>
+        <span class="call-text p-2">Call</span>
       </a>
     </div>
   </div>
 </div>
+
+<script>
+// copy
+$('#copyAction').on('click', function(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+  event.stopPropagation(); // Предотвращаем распространение события клика
+
+  var $this = $(this);
+  var $icon = $this.find('.fa-clipboard'); // Получаем иконку
+  var $text = $this.find('.p-2'); // Получаем текст
+  // Сохраняем исходные данные
+  var originalIconClass = $icon.attr('class');
+  var originalText = $text.text();
+
+  // Изменяем иконку и текст
+  $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
+  $text.text('Copied!'); // Изменение текста
+
+  setTimeout(function() {
+    $('.dropdown-menu').removeClass('show'); // Закрываем dropdown-menu через 1 секунду
+    $icon.attr('class', originalIconClass); // Восстанавливаем иконку
+    $text.text(originalText); // Восстанавливаем текст
+  }, 1000);
+});
+</script>
 
         <!-- links -->
         <ul class="navbar-nav mr-auto">
@@ -81,39 +106,7 @@
   </div>
   <div class="underline"></div>
 </nav>
-<!-- empty header -->
-<div id="headerEmpty"></div>
-<!-- modals/alerts -->
-<div id="copyAlertSuccess" role="alert" class="alert alert-success position-fixed bottom-0 start-50 translate-middle-x">
-  <div class="d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
-      <i class="bi bi-check-circle-fill me-2"></i>
-      Phone number copied successfully!
-    </div>
-    <button id="closeCopyAlertSuccess" type="button" class="btn-close" aria-label="Close"></button>
-  </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-<script>
-  $(document).ready(function () {
-    // copy
-    var clipboard = new ClipboardJS('#copyAction');
-    clipboard.on('success', function (e) {
-      e.clearSelection();
-    });
-    // show
-    $('#copyAction').click(function () {
-      if (!$('#copyAlertSuccess').is(':visible')) {
-        $('#copyAlertSuccess').fadeIn().delay(2000).fadeOut();
-      }
-    });
-    // close
-    $('#closeCopyAlertSuccess').on('click', function () {
-      $('#copyAlertSuccess').fadeOut();
-    });
-  });
-</script>
-
+<!-- modals -->
 <div id="confirmCallModal" aria-labelledby="confirmCallModalLabel" class="modal fade" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -125,16 +118,22 @@
         Ready to connect with us over the phone?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">Cancel</button>
         <button id="confirmCallBtn" type="button" class="btn btn-primary">Yes, Call now</button>
       </div>
     </div>
   </div>
 </div>
 
+<script>
+// init call
+$('#confirmCallBtn').on('click', function() {
+  window.location.href = 'tel:+1234567890';
+});
+</script>
+
 
 <!-- js -->
-<script src="js/header.js"></script>
 <script>
   $(document).ready(function () {
     var navbar = $('.navbar');
@@ -151,7 +150,6 @@
         } else {
           navbar.removeClass('scrolled-up').addClass('scrolled-down');
         }
-
         lastScrollTop = scrollTop;
       });
     }
@@ -232,9 +230,6 @@
     <script>document.write(new Date().getFullYear())</script>
   </span>
 </div>
-
-<!-- css/js -->
-<script src="js/footer.js"></script>
 
     </footer>
   </body>

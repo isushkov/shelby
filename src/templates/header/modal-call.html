@@ -9,9 +9,16 @@
         Ready to connect with us over the phone?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">Cancel</button>
         <button id="confirmCallBtn" type="button" class="btn btn-primary">Yes, Call now</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+// init call
+$('#confirmCallBtn').on('click', function() {
+  window.location.href = 'tel:+1234567890';
+});
+</script>

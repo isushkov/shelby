@@ -31,14 +31,10 @@
   </div>
   <div class="underline"></div>
 </nav>
-<!-- empty header -->
-<div id="headerEmpty"></div>
-<!-- modals/alerts -->
-@@include('./header/_alert-copy.html')
-@@include('./header/_modal-call.html')
+<!-- modals -->
+@@include('./header/modal-call.html')
 
 <!-- js -->
-<script src="js/header.js"></script>
 <script>
   $(document).ready(function () {
     var navbar = $('.navbar');
@@ -55,7 +51,6 @@
         } else {
           navbar.removeClass('scrolled-up').addClass('scrolled-down');
         }
-
         lastScrollTop = scrollTop;
       });
     }

@@ -2,12 +2,10 @@ var initialPaddingTop;
 
 function updatePaddingTop() {
   var autohideHeight = $('.autohide').outerHeight();
-  
   if (initialPaddingTop === undefined) {
     // Запоминаем изначальное значение padding-top
     initialPaddingTop = parseInt($('.first-filler').css('padding-top'), 10) || 0;
   }
-
   // Добавляем к изначальному значению padding-top
   var newPaddingTop = initialPaddingTop + autohideHeight;
   $('.first-filler').css('padding-top', newPaddingTop + 'px');
