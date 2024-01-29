@@ -25,12 +25,13 @@ $('#copyAction').on('click', function(event) {
   event.stopPropagation(); // Предотвращаем распространение события клика
 
   var $this = $(this);
-  var $icon = $this.find('.fa-clipboard'); // Получаем иконку
-  var $text = $this.find('.p-2'); // Получаем текст
+  var $icon = $this.find('.copy-icon'); // Получаем иконку
+  var $text = $this.find('.copy-text'); // Получаем текст
   // Сохраняем исходные данные
   var originalIconClass = $icon.attr('class');
   var originalText = $text.text();
-
+  // copy
+  navigator.clipboard.writeText('3476334662')
   // Изменяем иконку и текст
   $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
   $text.text('Copied!'); // Изменение текста
