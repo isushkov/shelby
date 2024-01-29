@@ -1,7 +1,7 @@
 header:
   copy:
-    replace alert to "copied!"
     icons - bootstrap to fas
+    replace alert to "copied!"
     func
   call:
     icons - bootstrap to fas
@@ -12,12 +12,14 @@ project-N:
   images
   styles
 
-style upd:
+index:
   add sliders
+  remake content to 2 column
+
+style upd:
+  add animations
   and more pics
     add blueprints
-  add animastions
-  чуть чуть more black and white
 
 q:
   pasandy:
@@ -25,10 +27,15 @@ q:
     less words - provide what exactly
     more black and white
   what email using:
+    for footer
     for email form
+      estimating@shelbyelectrical.com
+      office@shelbyelectrical.com
   what phone number using:
     for header
     for footer
+      929 788 9782
+      347 633 4662
   projects - get images
   hosting
   may i add "created by"
