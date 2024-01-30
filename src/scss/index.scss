@@ -3,6 +3,55 @@
 @import "footer.scss";
 
 main {
+  // carousel
+  .index-filler {
+    background-color: $primary;
+  }
+  .carousel-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(180deg, $primary, rgba(255,255,255,0) 50%);
+      display: flex;
+      .carousel-title {
+        font-family: Barlow-SemiBold;
+        text-transform: uppercase;
+        width: 100%;
+        max-width: 960px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+        .carousel-title-item {
+          width: auto;
+          margin: 0;
+          font-size: 2rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        .carousel-title-second {
+          margin-top: 0.2rem;
+        }
+        .carousel-title-first .carousel-title-item {
+          color: $light;
+          background-color: $dark;
+        }
+        .carousel-title-second .carousel-title-item {
+          color: $primary;
+          background-color: $dark;
+        }
+      }
+    }
+  }
+  
+  // content
   .container {
     display: flex;
     flex-direction: column;
@@ -10,6 +59,9 @@ main {
     max-width: 100%;
     padding: 2rem 0 2rem 0;
     margin: 0;
+    &.dark-nored {
+      background: $dark;
+    }
     &.dark {
       background: $dark;
       background-image: linear-gradient(170deg, $primary, transparent 50%);
@@ -23,16 +75,16 @@ main {
       background-image: linear-gradient(-10deg, $white, transparent 50%);
     }
   }
-  #pageHeaderTitle {
-    color: $light;
-    max-width: 960px;
-    width: 90%;
-    font-family: Barlow-SemiBold;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 2rem;
-  }
+  // #pageHeaderTitle {
+  //   color: $light;
+  //   max-width: 960px;
+  //   width: 90%;
+  //   font-family: Barlow-SemiBold;
+  //   text-transform: uppercase;
+  //   font-size: 2.5rem;
+  //   text-align: center;
+  //   margin: 2rem;
+  // }
   .postcard {
     display: flex;
     flex-wrap: wrap;
