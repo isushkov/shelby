@@ -1,3 +1,21 @@
+pasandy:
+  header - more space
+  links - more space
+  slider home page - faster
+  index - redo content section
+  карьера - сделать страницу
+
+  projects - gallery differrent sizes for projects
+  footer align
+  footer bigger font
+
+  add animastions - logo во весь экран на мобильные девайсы
+  projects/project-N:
+    сначала получить больше информации
+  в последнюю очередь:
+    less words - provide what exactly
+
+
 index:
   add sliders
   remake content to 2 column
@@ -18,22 +36,16 @@ style upd:
       });
   and more pics
     add blueprints
-
-q:
-  pasandy:
-    add animastions - logo
-    less words - provide what exactly
-    more black and white
   what email using:
     for footer
     for email form
-      estimating@shelbyelectrical.com
       office@shelbyelectrical.com
   what phone number using:
     for header
     for footer
-      929 788 9782
       347 633 4662
+
+q:
   projects - get images
   hosting
   formspree.io - create account and add form
