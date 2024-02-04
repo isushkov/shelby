@@ -14,8 +14,8 @@ main {
     #carouselFade {
       img {
         width: 100%;
-        min-height: 180px;
-        max-height: 400px;
+        min-height: 350px;
+        max-height: 500px;
         object-fit: cover;
       }
     }
@@ -252,9 +252,6 @@ main {
       max-width: 100%;
       padding: 0 2rem 0 2rem;
     }
-    .carousel-title-item {
-      font-size: 1.6rem !important;
-    }
   }
   @media screen and (max-width: 767px) {
     .content {
@@ -262,9 +259,6 @@ main {
     }
     .carousel-title {
       padding: 1.5rem !important;
-    }
-    .carousel-title-item {
-      font-size: 1.2rem !important;
     }
     .postcard__img {
       max-height: 300px;

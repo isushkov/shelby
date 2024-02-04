@@ -6,48 +6,80 @@ header {
     top: 0;
     right: 0;
     left: 0;
-    width: 100%;
     z-index: 2;
-  }
-
-  #header {
-    font-family: Barlow-SemiBold;
-    font-size: 20px;
-    color: $light;
+    width: 100%;
+    margin: 0;
     padding: 0;
+  }
+  #header {
+    padding: 1rem;
+    font-family: Barlow-SemiBold;
+    color: $light;
+  }
+  #header * {
+    font-size: 1.5rem;
+  }
+  #header .dropdown-menu * {
+    font-size: 1.2rem;
+  }
+  #headerLeft {
+    width: 40%;
+  }
+  #togglerLeft {
+    display: none;
+  }
+  #togglerRight {
+    margin-left: 0.5rem;
   }
   #logo {
     height: 92px;
     width: auto;
   }
-  #phoneText {
+  #headerRight {
+    width: 60%;
+  }
+  .phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .phoneText {
     font-family: Barlow-SemiBold;
     color: $gray-light;
+    padding-right: 1rem;
+    text-align: end;
   }
-  #phoneDropdown {
-    #phoneDropdownButton {
-      font-size: 20px;
-      color: $light;
+  .phoneDropdownButton {
+    color: $light;
+  }
+  .dropdown-menu {
+    min-width: 100px;
+    border: solid 2px $primary;
+    background-color: $dark;
+  }
+  .dropdown-item {
+    text-transform: uppercase;
+    color: $light;
+    &:active,
+    &:hover {
+      color: $light !important;
+      background-color: $primary;
     }
-    .dropdown-menu {
-      min-width: 100px;
-      border: solid 2px $primary;
+    &:focus {
+      color: $light !important;
       background-color: $dark;
-      .dropdown-item {
-        text-transform: uppercase;
-        color: $light;
-        &:active,
-        &:hover {
-          background-color: $primary;
-          color: $light !important;
-        }
-        &:focus {
-          background-color: $dark;
-        }
-      }
     }
   }
-
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav-item {
+    padding: 0 0.5rem 0 0.5rem;
+  }
   .nav-link {
     font-family: Barlow-SemiBold;
     color: $light;
@@ -55,9 +87,6 @@ header {
     &:hover, &:active {
       color: $secondary;
     }
-  }
-  #headerBottom {
-    display: none;
   }
   .underline {
     width: 100%;
@@ -75,124 +104,167 @@ header {
   }
 
   // modal
-  #confirmCallModal {
-    .modal-header {
-      color: $dark;
-      #confirmCallModalLabel {
-        font-size: 1.5rem;
-      }
-    }
-    .modal-body {
-      color: $dark;
-      font-size: 1.2rem;
-    }
-    .btn-gray {
-      color: $light;
-      background-color: $gray-dark;
-      border-color: darken($gray-dark, 10%);
-      &:hover, &:active {
-        background-color: darken($gray-dark, 15%);
-      }
+  .modal-header {
+    color: $dark;
+  }
+  #confirmCallModalLabel {
+    font-size: 1.5rem;
+  }
+  .modal-body {
+    color: $dark;
+    font-size: 1.2rem;
+  }
+  .btn-gray {
+    color: $light;
+    background-color: $gray-dark;
+    border-color: darken($gray-dark, 10%);
+    &:hover, &:active {
+      background-color: darken($gray-dark, 15%);
     }
   }
+  // expand
+  .navbar-toggler {
+    display: none;
+  }
+  #navbarContent .phone {
+    display: none;
+  }
 
-  // === md ===
-  @media (max-width: 990px) {
-    #header {
-      width: 100%;
-      max-width: 100%;
-      padding-left: 1rem !important;
-      padding-right: 1rem !important;
+  // media
+  @media (max-width: 1199px) {
+    #header * {
+      font-size: 1.3rem;
     }
-    #headerTop {
-      padding: 0;
-      margin: 0;
+  }
+  @media (max-width: 991px) {
+    #header {
       max-width: 100%;
+      padding: 1rem 2rem 1rem 2rem;
+      justify-content: center;
     }
     #logo {
       height: 80px;
     }
-    .nav-link {
-      padding-left: 6px !important;
-      padding-right: 6px !important;
+    #headerRight {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .phone {
+      padding-right: 1rem;
+    }
+    .phoneText {
+      padding-right: 0.5rem;
+    }
+
+    // expand
+    #headerRight .navbar-nav {
+      display: none;
+    }
+    .navbar-toggler {
+      display: block;
+    }
+    .navbar-collapse.collapsing, .navbar-collapse.show {
+      display: block; /* Показать меню при активации */
+    }
+    #navbarContent {
+      position: fixed;
+      top: -12px;
+      right: 1px;
+      z-index: -1;
+    }
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+      background-color: $dark;
+      padding: 1rem;
+    }
+    .nav-item {
+      padding: 0.5rem;
+      font-size: 1.3rem;
+      width: 100%;
+      text-align: center;
+    }
+    .underline {
+      z-index: -2;
     }
   }
-  // === sm ===
-  @media (max-width: 780px) {
-    #header {
-      width: 100%;
-      max-width: 100%;
-      font-size: 18px;
+  @media (max-width: 767px) {
+    #header * {
+      font-size: 1.2rem;
     }
     #logo {
       height: 70px;
     }
-    #phoneDropdownButton {
-      font-size: 18px;
+    .phone {
+      padding-right: 0;
+    }
+    .phoneText {
+      display: none;
     }
   }
-  @media (max-width: 660px) {
-    #headerTop {
-      justify-content: center !important;
+  @media (max-width: 550px) {
+    #header {
+      max-width: 100%;
+      padding: 1rem;
+      flex-direction: column;
+    }
+    #headerLeft {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .navbar-brand {
+      margin: 0;
+      padding: 0;
     }
     #logo {
       height: 80px;
     }
-    #phone {
-      flex-direction:column !important;
-    }
-    #phoneText {
-      font-size: 16px;
-      padding: 0;
-      padding-bottom: 2px;
-    }
-    #headerTopRight {
-      .navbar-nav {
-        display: none;
-      }
-    }
-    #headerBottom {
+    #togglerLeft {
       display: flex;
-      .navbar-nav {
-        font-size: 18px;
+      margin-left: 1rem;
+      width: 100%;
+      max-width: 60px;
+      height: 80px;
+    }
+    .navbar-toggler-icon {
+      height: 100%;
+      width: 100%;
+    }
+    #headerRight {
+      display: none;
+    }
+
+    // expand
+    #navbarContent {
+      .phone {
+        display: flex;
       }
-    }
-  }
-  @media (max-width: 500px) {
-    #headerTop {
-      padding: 0;
-    }
-    #logo {
-      height: 60px;
-    }
-  }
-  @media (max-width: 460px) {
-    #header {
-      #headerTop {
-        flex-direction: column;
-        .navbar-brand {
-          margin: 0;
-          #logo {
-            height: 80px;
-          }
-        }
-        #headerTopRight {
-          #phone {
-            flex-direction: row !important;
-            #phoneDropdownButton {
-              font-size: 16px;
-            }
-          }
-        }
+      .phoneDropdownButton {
+        padding: 0.5rem;
+        font-family: barlow-semibold;
+        font-size: 1.3rem;
       }
-      .nav-link {
-        text-align: center;
+      .dropdown-menu {
+        border: 0;
+        background: #29292f;
+        border-radius: 0;
+        padding: 0;
+      }
+      .dropdown-menu * {
+        font-family: barlow-semibold;
+        font-size: 1.3rem;
+      }
+      .dropdown-item {
+        padding: 1rem;
       }
     }
   }
   @media (max-width: 400px) {
-    .nav-link {
-      font-size: 1rem;
+    #header * {
+      font-size: 1.2rem;
     }
   }
 }

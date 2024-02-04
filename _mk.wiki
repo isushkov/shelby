@@ -1,48 +1,37 @@
-fix addres:
-  check all plases
-header - more space
-links - more space
-slider home page - faster
-index - redo content section
-карьера - сделать страницу
-footer align
-footer bigger font
-add animastions - logo во весь экран на мобильные девайсы
-projects - gallery differrent sizes for projects
 index:
-  add sliders
-  remake content to 2 column
-project-N:
-  styles
-  images
-  projects - add hover like horsepower
-style upd:
-  add animations
-    touchmove:
-      $('#yourElementId').on('touchmove', function(event) {
-        $(this).addClass('hover');
-      });
-      $('#yourElementId').on('touchend', function(event) {
-        $(this).removeClass('hover');
-      });
-and more pics
-  add blueprints
-what email using:
-  for footer
-  for email form
-    office@shelbyelectrical.com
+  content make red
+  add animastion to slider
+footer:
+  align
+  bigger font
+projects:
+  gallery differrent sizes for projects
+  add hover like horsepower
+add animastion:
+  logo во весь экран на мобильные девайсы
+slider home page:
+  add second animation
+карьера - сделать страницу
 
-what phone number using:
-  for header
-  for footer
-    347 633 4662
+add animations
+  touchmove:
+    $('#yourElementId').on('touchmove', function(event) {
+      $(this).addClass('hover');
+    });
+    $('#yourElementId').on('touchend', function(event) {
+      $(this).removeClass('hover');
+    });
 
-hosting
-  +404 page
-  download 3th side files, minify js, ...
-
-pasandy get info:
-  about-us: content.txt
-  projects/project-N:
-    сначала получить больше информации
-  карьера - получить ссылку
+after pasandy:
+  project-N:
+    styles
+    images
+  and more pics
+    add blueprints
+  upd about-us:
+    wait content.txt
+  hosting
+    +404 page
+    download 3th side files, minify js, ...
+  upd coreer:
+    get link to indeed

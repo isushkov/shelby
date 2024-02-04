@@ -1,33 +1,41 @@
-<nav class="autohide navbar navbar-expand navbar-dark bg-dark p-0 m-0 d-flex flex-column">
-  <div id="header" class="container d-flex flex-column p-2">
-    <div id="headerTop" class="container d-flex justify-content-between align-items-center">
-      <!-- top:logo -->
-      <div id="headerTopLeft">
-        <a class="navbar-brand" href="/">
-          <img id="logo" src="img/logo-dark_ico-txt_transp.png">
-        </a>
-      </div>
-      <!-- top:phone,links -->
-      <div id="headerTopRight" class="flex-column">
-        @@include('./header/phone.html')
-        <!-- links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link @@if(page=='index'){disabled}" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link @@if(page=='about-us'){disabled}" href="/about-us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link @@if(page=='projects'){disabled}" href="/projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link @@if(page=='contact-us'){disabled}" href="/contact-us.html">Contact Us</a></li>
-        </ul>
-      </div>
+<nav class="autohide navbar navbar-expand-custom navbar-dark bg-dark">
+  <div id="header" class="container">
+    <div id="headerLeft">
+      <a class="navbar-brand" href="/">
+        <img id="logo" src="img/logo-dark_ico-txt_transp.png">
+      </a>
+      <button id="togglerLeft" class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
-    <!-- bottom:links -->
-    <div id="headerBottom" class="flex-row">
+    <div id="headerRight">
+      @@include('./header/phone.html')
+      <button id="togglerRight" class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link @@if(page=='index'){disabled}" href="/">Home</a></li>
+        <li class="nav-item active"><a class="nav-link @@if(page=='index'){disabled}" href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link @@if(page=='about-us'){disabled}" href="/about-us.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link @@if(page=='projects'){disabled}" href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link @@if(page=='careers'){disabled}" href="/careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link @@if(page=='contact-us'){disabled}" href="/contact-us.html">Contact Us</a></li>
       </ul>
     </div>
+  </div>
+  <div id="navbarContent" class="collapse navbar-collapse first-filler">
+    <ul class="navbar-nav mr-auto">
+      @@include('./header/phone.html')
+      <li class="nav-item active"><a class="nav-link @@if(page=='index'){disabled}" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link @@if(page=='about-us'){disabled}" href="/about-us.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link @@if(page=='projects'){disabled}" href="/projects.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link @@if(page=='careers'){disabled}" href="/careers.html">Careers</a></li>
+      <li class="nav-item"><a class="nav-link @@if(page=='contact-us'){disabled}" href="/contact-us.html">Contact Us</a></li>
+    </ul>
+    <div class="underline"></div>
   </div>
   <div class="underline"></div>
 </nav>
@@ -54,5 +62,25 @@
         lastScrollTop = scrollTop;
       });
     }
+
+    // Закрытие при клике вне #navbarContent
+    $(document).click(function(event) {
+      var clickInsideNavbarContent = $(event.target).closest('#navbarContent').length;
+      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+      
+      if (!clickInsideNavbarContent && navbarTogglerVisible) {
+        $('#navbarContent').collapse('hide');
+      }
+    });
+
+    // Закрытие при скроле
+    $(window).scroll(function() {
+      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+      
+      if (navbarTogglerVisible) {
+        $('#navbarContent').collapse('hide');
+      }
+    });
+
   });
 </script>

@@ -29,30 +29,32 @@
   </head>
   <body>
     <header>
-      <nav class="autohide navbar navbar-expand navbar-dark bg-dark p-0 m-0 d-flex flex-column">
-  <div id="header" class="container d-flex flex-column p-2">
-    <div id="headerTop" class="container d-flex justify-content-between align-items-center">
-      <!-- top:logo -->
-      <div id="headerTopLeft">
-        <a class="navbar-brand" href="/">
-          <img id="logo" src="img/logo-dark_ico-txt_transp.png">
-        </a>
-      </div>
-      <!-- top:phone,links -->
-      <div id="headerTopRight" class="flex-column">
-        <div id="phone" class="d-flex flex-row align-items-center justify-content-end px-2">
-  <div id="phoneText" class="phone-text p-2">24 Hour Service:</div>
-  <div id="phoneDropdown" class="dropdown">
-    <button id="phoneDropdownButton" type="button" class="btn btn-primary dropdown-toggle"
+      <nav class="autohide navbar navbar-expand-custom navbar-dark bg-dark">
+  <div id="header" class="container">
+    <div id="headerLeft">
+      <a class="navbar-brand" href="/">
+        <img id="logo" src="img/logo-dark_ico-txt_transp.png">
+      </a>
+      <button id="togglerLeft" class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div id="headerRight">
+      <div class="phone">
+  <div class="phoneText phone-text">24 Hour Service:</div>
+  <div class="phoneDropdown dropdown">
+    <button type="button" class="phoneDropdownButton btn btn-primary dropdown-toggle"
        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       (347) 633-4662
     </button>
     <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
-      <a id="copyAction" class="dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+      <a class="copyAction dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
         <i class="copy-icon fas fa-clipboard"></i>
         <span class="copy-text p-2">Copy</span>
       </a>
-      <a id="callAction" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+      <a class="callAction dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
         <i class="call-icon fas fa-phone-alt"></i>
         <span class="call-text p-2">Call</span>
       </a>
@@ -62,7 +64,7 @@
 
 <script>
 // copy
-$('#copyAction').on('click', function(event) {
+$('.copyAction').on('click', function(event) {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
   event.stopPropagation(); // Предотвращаем распространение события клика
 
@@ -86,24 +88,75 @@ $('#copyAction').on('click', function(event) {
 });
 </script>
 
-        <!-- links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link " href="/about-us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- bottom:links -->
-    <div id="headerBottom" class="flex-row">
+      <button id="togglerRight" class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link " href="/">Home</a></li>
+        <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link " href="/about-us.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link " href="/careers.html">Careers</a></li>
         <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
       </ul>
     </div>
+  </div>
+  <div id="navbarContent" class="collapse navbar-collapse first-filler">
+    <ul class="navbar-nav mr-auto">
+      <div class="phone">
+  <div class="phoneText phone-text">24 Hour Service:</div>
+  <div class="phoneDropdown dropdown">
+    <button type="button" class="phoneDropdownButton btn btn-primary dropdown-toggle"
+       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      (347) 633-4662
+    </button>
+    <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
+      <a class="copyAction dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+        <i class="copy-icon fas fa-clipboard"></i>
+        <span class="copy-text p-2">Copy</span>
+      </a>
+      <a class="callAction dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+        <i class="call-icon fas fa-phone-alt"></i>
+        <span class="call-text p-2">Call</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+// copy
+$('.copyAction').on('click', function(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+  event.stopPropagation(); // Предотвращаем распространение события клика
+
+  var $this = $(this);
+  var $icon = $this.find('.copy-icon'); // Получаем иконку
+  var $text = $this.find('.copy-text'); // Получаем текст
+  // Сохраняем исходные данные
+  var originalIconClass = $icon.attr('class');
+  var originalText = $text.text();
+  // copy
+  navigator.clipboard.writeText('3476334662')
+  // Изменяем иконку и текст
+  $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
+  $text.text('Copied!'); // Изменение текста
+
+  setTimeout(function() {
+    $('.dropdown-menu').removeClass('show'); // Закрываем dropdown-menu через 1 секунду
+    $icon.attr('class', originalIconClass); // Восстанавливаем иконку
+    $text.text(originalText); // Восстанавливаем текст
+  }, 1000);
+});
+</script>
+
+      <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link " href="/about-us.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link " href="/careers.html">Careers</a></li>
+      <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
+    </ul>
+    <div class="underline"></div>
   </div>
   <div class="underline"></div>
 </nav>
@@ -154,6 +207,26 @@ $('#confirmCallBtn').on('click', function() {
         lastScrollTop = scrollTop;
       });
     }
+
+    // Закрытие при клике вне #navbarContent
+    $(document).click(function(event) {
+      var clickInsideNavbarContent = $(event.target).closest('#navbarContent').length;
+      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+      
+      if (!clickInsideNavbarContent && navbarTogglerVisible) {
+        $('#navbarContent').collapse('hide');
+      }
+    });
+
+    // Закрытие при скроле
+    $(window).scroll(function() {
+      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+      
+      if (navbarTogglerVisible) {
+        $('#navbarContent').collapse('hide');
+      }
+    });
+
   });
 </script>
 
@@ -230,11 +303,12 @@ $('#confirmCallBtn').on('click', function() {
       <li class="nav-link mx-2 "><a href="/">Home</a></li>
       <li class="nav-link mx-2 "><a href="/about-us.html">About us</a></li>
       <li class="nav-link mx-2 "><a href="/projects.html">Projects</a></li>
+      <li class="nav-link mx-2 "><a href="/projects.html">Careers</a></li>
       <li class="nav-link mx-2 "><a href="/contact-us.html">Contact Us</a></li>
     </ul>
     <ul id="footerContacts" class="d-flex flex-column list-unstyled mx-3">
       <li class="title"><span>Contacts</span></li>
-      <li><a href="mailto:estimating@shelbyelectrical.com"><i class="mx-2 fas fa-envelope"></i>estimating@shelbyelectrical.com</a></li>
+      <li><a href="mailto:office@shelbyelectrical.com"><i class="mx-2 fas fa-envelope"></i>office@shelbyelectrical.com</a></li>
       <li><span><i class="mx-2 fas fa-phone"></i>(347) 633-4662</span></li>
       <li><span><i class="mx-2 fas fa-home"></i>2461 East 16th St, Brooklyn, NY</span></li>
     </ul>

@@ -1,16 +1,16 @@
-<div id="phone" class="d-flex flex-row align-items-center justify-content-end px-2">
-  <div id="phoneText" class="phone-text p-2">24 Hour Service:</div>
-  <div id="phoneDropdown" class="dropdown">
-    <button id="phoneDropdownButton" type="button" class="btn btn-primary dropdown-toggle"
+<div class="phone">
+  <div class="phoneText phone-text">24 Hour Service:</div>
+  <div class="phoneDropdown dropdown">
+    <button type="button" class="phoneDropdownButton btn btn-primary dropdown-toggle"
        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       (347) 633-4662
     </button>
     <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
-      <a id="copyAction" class="dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+      <a class="copyAction dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
         <i class="copy-icon fas fa-clipboard"></i>
         <span class="copy-text p-2">Copy</span>
       </a>
-      <a id="callAction" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+      <a class="callAction dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
         <i class="call-icon fas fa-phone-alt"></i>
         <span class="call-text p-2">Call</span>
       </a>
@@ -20,7 +20,7 @@
 
 <script>
 // copy
-$('#copyAction').on('click', function(event) {
+$('.copyAction').on('click', function(event) {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
   event.stopPropagation(); // Предотвращаем распространение события клика
 

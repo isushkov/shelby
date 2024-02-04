@@ -1,6 +1,6 @@
 var initialPaddingTop;
 
-function updatePaddingTop() {
+function getNewPaddingTop() {
   var autohideHeight = $('.autohide').outerHeight();
   if (initialPaddingTop === undefined) {
     // Запоминаем изначальное значение padding-top
@@ -8,12 +8,20 @@ function updatePaddingTop() {
   }
   // Добавляем к изначальному значению padding-top
   var newPaddingTop = initialPaddingTop + autohideHeight;
-  $('.first-filler').css('padding-top', newPaddingTop + 'px');
+  return newPaddingTop;
 }
 
 $(document).ready(function () {
-  updatePaddingTop(); // при загрузке страницы
+  // при загрузке страницы
+  $('.first-filler').css('padding-top', getNewPaddingTop() + 'px');
+  // при изменении размера окна
   $(window).resize(function () {
-    updatePaddingTop(); // при изменении размера окна
+    $('.first-filler').css('padding-top', getNewPaddingTop() + 'px');
+  });
+  // при клике на toggler
+  $('.navbar-toggler').click(function() {
+    if (!$(this).hasClass('collapsed')) {
+      $('#navbarContent').css('padding-top', getNewPaddingTop() + 'px');
+    }
   });
 });
