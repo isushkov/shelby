@@ -38,7 +38,7 @@
       <button id="togglerLeft" class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
           aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
       </button>
     </div>
     <div id="headerRight">
@@ -63,18 +63,20 @@
 </div>
 
 <script>
-// copy
-$('.copyAction').on('click', function(event) {
+function handleCopyClick(event) {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
   event.stopPropagation(); // Предотвращаем распространение события клика
 
-  var $this = $(this);
+  var $this = $(event.currentTarget);
   var $icon = $this.find('.copy-icon'); // Получаем иконку
   var $text = $this.find('.copy-text'); // Получаем текст
+  console.log($this)
+  console.log($icon)
+  console.log($text)
   // Сохраняем исходные данные
   var originalIconClass = $icon.attr('class');
   var originalText = $text.text();
-  // copy
+  // Копируем текст
   navigator.clipboard.writeText('3476334662')
   // Изменяем иконку и текст
   $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
@@ -85,13 +87,18 @@ $('.copyAction').on('click', function(event) {
     $icon.attr('class', originalIconClass); // Восстанавливаем иконку
     $text.text(originalText); // Восстанавливаем текст
   }, 1000);
+}
+
+$(document).ready(function() {
+  $('#headerRight .copyAction').off('click').on('click', handleCopyClick);
+  $('#navbarContent .copyAction').off('click').on('click', handleCopyClick);
 });
 </script>
 
       <button id="togglerRight" class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
           aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
       </button>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active"><a class="nav-link disabled" href="/">Home</a></li>
@@ -125,18 +132,20 @@ $('.copyAction').on('click', function(event) {
 </div>
 
 <script>
-// copy
-$('.copyAction').on('click', function(event) {
+function handleCopyClick(event) {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
   event.stopPropagation(); // Предотвращаем распространение события клика
 
-  var $this = $(this);
+  var $this = $(event.currentTarget);
   var $icon = $this.find('.copy-icon'); // Получаем иконку
   var $text = $this.find('.copy-text'); // Получаем текст
+  console.log($this)
+  console.log($icon)
+  console.log($text)
   // Сохраняем исходные данные
   var originalIconClass = $icon.attr('class');
   var originalText = $text.text();
-  // copy
+  // Копируем текст
   navigator.clipboard.writeText('3476334662')
   // Изменяем иконку и текст
   $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
@@ -147,6 +156,11 @@ $('.copyAction').on('click', function(event) {
     $icon.attr('class', originalIconClass); // Восстанавливаем иконку
     $text.text(originalText); // Восстанавливаем текст
   }, 1000);
+}
+
+$(document).ready(function() {
+  $('#headerRight .copyAction').off('click').on('click', handleCopyClick);
+  $('#navbarContent .copyAction').off('click').on('click', handleCopyClick);
 });
 </script>
 
@@ -232,7 +246,8 @@ $('#confirmCallBtn').on('click', function() {
 
     </header>
     <main>
-      <div class="first-filler index-filler">
+      <div class="content dark-nored p-0">
+  <div class="first-filler index-filler">
 </div>
 <div class="carousel-container">
   <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -267,13 +282,22 @@ $('#confirmCallBtn').on('click', function() {
     </div>
   </div>
 </div>
+<script>
+// анимировать активный слайдер
+$(document).ready(function() {
+  $('#carouselFade').on('slid.bs.carousel', function () {
+    // Плавно возвращаем увеличение к исходному масштабу перед началом анимации
+    $('.carousel-item img').css('transform', 'scale(1)');
+    // Плавное увеличение активного изображения
+    $('.carousel-item.active img').css('transform', 'scale(1.05)');
+  });
+});
+</script>
 
-<div class="content light">
+</div>
+<div class="content dark-rev">
   <div class="container">
-    <!-- <div id="pageHeaderTitle" class="h1 text-center"> -->
-    <!--   <h1>Comprehensive Electrical Contracting Services for Your Every Need</h1> -->
-    <!-- </div> -->
-    <article class="postcard dark red">
+    <article class="postcard light red">
   <div class="postcard__img_link">
     <img class="postcard__img" src="./img/index/commercial.jpg"/>
   </div>
@@ -301,7 +325,7 @@ $('#confirmCallBtn').on('click', function() {
   </div>
 </article>
 
-    <article class="postcard dark red">
+    <article class="postcard light red">
   <div class="postcard__img_link">
     <img class="postcard__img" src="./img/index/industrial.jpg"/>
   </div>
@@ -315,10 +339,6 @@ $('#confirmCallBtn').on('click', function() {
   </div>
 </article>
 
-  </div>
-</div>
-<div class="content dark-rev">
-  <div class="container">
     <article class="postcard light red">
   <div class="postcard__img_link">
     <img class="postcard__img" src="./img/index/service-calls.jpg"/>
@@ -333,7 +353,7 @@ $('#confirmCallBtn').on('click', function() {
   </div>
 </article>
 
-    <article class="postcard dark red">
+    <article class="postcard light red">
   <div class="postcard__img_link">
     <img class="postcard__img" src="./img/index/fire-alarm.webp"/>
   </div>

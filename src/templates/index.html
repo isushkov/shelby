@@ -1,11 +1,10 @@
-@@include("./index/carousel.html")
-<div class="content light">
+<div class="content dark-nored p-0">
+  @@include("./index/carousel.html")
+</div>
+<div class="content dark-rev">
   <div class="container">
-    <!-- <div id="pageHeaderTitle" class="h1 text-center"> -->
-    <!--   <h1>Comprehensive Electrical Contracting Services for Your Every Need</h1> -->
-    <!-- </div> -->
     @@include("./index/postcard.html", {
-      "theme":       "dark",
+      "theme":       "light",
       "title":       "Commercial.",
       "subtitle":    "Tailored Solutions for Your Business.",
       "description": "Expert commercial electrical services: from installations to top-quality workmanship.",
@@ -19,16 +18,12 @@
       "img":         "residential.webp"
     })
     @@include("./index/postcard.html", {
-      "theme":       "dark",
+      "theme":       "light",
       "title":       "Industrial.",
       "subtitle":    "Precision and Efficiency.",
       "description": "Experienced team for installations, maintenance, and high-quality electrical services.",
       "img":         "industrial.jpg"
     })
-  </div>
-</div>
-<div class="content dark-rev">
-  <div class="container">
     @@include("./index/postcard.html", {
       "theme":       "light",
       "title":       "Service Calls.",
@@ -37,7 +32,7 @@
       "img":         "service-calls.jpg"
     })
     @@include("./index/postcard.html", {
-      "theme":       "dark",
+      "theme":       "light",
       "title":       "Fire Alarm & ARCS.",
       "subtitle":    "Trusted Fire Safety Partners.",
       "description": "Comprehensive fire alarm and ARCS installations for reliable property safety.",

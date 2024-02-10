@@ -38,7 +38,7 @@
       <button id="togglerLeft" class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
           aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
       </button>
     </div>
     <div id="headerRight">
@@ -63,18 +63,20 @@
 </div>
 
 <script>
-// copy
-$('.copyAction').on('click', function(event) {
+function handleCopyClick(event) {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
   event.stopPropagation(); // Предотвращаем распространение события клика
 
-  var $this = $(this);
+  var $this = $(event.currentTarget);
   var $icon = $this.find('.copy-icon'); // Получаем иконку
   var $text = $this.find('.copy-text'); // Получаем текст
+  console.log($this)
+  console.log($icon)
+  console.log($text)
   // Сохраняем исходные данные
   var originalIconClass = $icon.attr('class');
   var originalText = $text.text();
-  // copy
+  // Копируем текст
   navigator.clipboard.writeText('3476334662')
   // Изменяем иконку и текст
   $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
@@ -85,13 +87,18 @@ $('.copyAction').on('click', function(event) {
     $icon.attr('class', originalIconClass); // Восстанавливаем иконку
     $text.text(originalText); // Восстанавливаем текст
   }, 1000);
+}
+
+$(document).ready(function() {
+  $('#headerRight .copyAction').off('click').on('click', handleCopyClick);
+  $('#navbarContent .copyAction').off('click').on('click', handleCopyClick);
 });
 </script>
 
       <button id="togglerRight" class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
           aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
       </button>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
@@ -125,18 +132,20 @@ $('.copyAction').on('click', function(event) {
 </div>
 
 <script>
-// copy
-$('.copyAction').on('click', function(event) {
+function handleCopyClick(event) {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
   event.stopPropagation(); // Предотвращаем распространение события клика
 
-  var $this = $(this);
+  var $this = $(event.currentTarget);
   var $icon = $this.find('.copy-icon'); // Получаем иконку
   var $text = $this.find('.copy-text'); // Получаем текст
+  console.log($this)
+  console.log($icon)
+  console.log($text)
   // Сохраняем исходные данные
   var originalIconClass = $icon.attr('class');
   var originalText = $text.text();
-  // copy
+  // Копируем текст
   navigator.clipboard.writeText('3476334662')
   // Изменяем иконку и текст
   $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
@@ -147,6 +156,11 @@ $('.copyAction').on('click', function(event) {
     $icon.attr('class', originalIconClass); // Восстанавливаем иконку
     $text.text(originalText); // Восстанавливаем текст
   }, 1000);
+}
+
+$(document).ready(function() {
+  $('#headerRight .copyAction').off('click').on('click', handleCopyClick);
+  $('#navbarContent .copyAction').off('click').on('click', handleCopyClick);
 });
 </script>
 

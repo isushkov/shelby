@@ -1,26 +1,21 @@
-index:
-  content make red
-  add animastion to slider
 footer:
   align
   bigger font
 projects:
   gallery differrent sizes for projects
   add hover like horsepower
-add animastion:
-  logo во весь экран на мобильные девайсы
-slider home page:
-  add second animation
 карьера - сделать страницу
-
-add animations
-  touchmove:
-    $('#yourElementId').on('touchmove', function(event) {
-      $(this).addClass('hover');
-    });
-    $('#yourElementId').on('touchend', function(event) {
-      $(this).removeClass('hover');
-    });
+index:
+  animastions:
+    logo во весь экран на мобильные девайсы
+    add scroll animastions
+    touchmove:
+      $('#yourElementId').on('touchmove', function(event) {
+        $(this).addClass('hover');
+      });
+      $('#yourElementId').on('touchend', function(event) {
+        $(this).removeClass('hover');
+      });
 
 after pasandy:
   project-N:

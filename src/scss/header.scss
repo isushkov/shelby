@@ -61,8 +61,7 @@ header {
   .dropdown-item {
     text-transform: uppercase;
     color: $light;
-    &:active,
-    &:hover {
+    &:active, &:hover {
       color: $light !important;
       background-color: $primary;
     }
@@ -125,9 +124,20 @@ header {
   // expand
   .navbar-toggler {
     display: none;
+    background-color: #29292f;
   }
   #navbarContent .phone {
     display: none;
+  }
+  .fas.fa-bars {
+    color: $light-gray;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem !important;
   }
 
   // media
@@ -150,14 +160,11 @@ header {
       flex-direction: row;
       justify-content: flex-end;
     }
-    .phone {
-      padding-right: 1rem;
-    }
+
+    // expand
     .phoneText {
       padding-right: 0.5rem;
     }
-
-    // expand
     #headerRight .navbar-nav {
       display: none;
     }
@@ -169,21 +176,28 @@ header {
     }
     #navbarContent {
       position: fixed;
-      top: -12px;
-      right: 1px;
+      top: -8px;
+      right: 0px;
       z-index: -1;
     }
     .navbar-nav {
       flex-direction: column;
       align-items: center;
       background-color: $dark;
-      padding: 1rem;
+      padding: 0 1rem 1rem 1rem;
     }
     .nav-item {
-      padding: 0.5rem;
+      padding: 0;
       font-size: 1.3rem;
       width: 100%;
       text-align: center;
+    }
+    .nav-link {
+      padding: 0.5rem;
+      &:hover {
+        color: $light;
+        background: #29292f;
+      }
     }
     .underline {
       z-index: -2;
@@ -214,6 +228,7 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
     .navbar-brand {
       margin: 0;
@@ -227,7 +242,7 @@ header {
       margin-left: 1rem;
       width: 100%;
       max-width: 60px;
-      height: 80px;
+      height: 60px;
     }
     .navbar-toggler-icon {
       height: 100%;
@@ -238,9 +253,13 @@ header {
     }
 
     // expand
+    .fas.fa-bars {
+      font-size: 2rem !important;
+    }
     #navbarContent {
       .phone {
         display: flex;
+        padding-bottom: 1rem;
       }
       .phoneDropdownButton {
         padding: 0.5rem;
@@ -253,12 +272,15 @@ header {
         border-radius: 0;
         padding: 0;
       }
-      .dropdown-menu * {
-        font-family: barlow-semibold;
-        font-size: 1.3rem;
-      }
       .dropdown-item {
-        padding: 1rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        &:focus {
+          background-color: #29292f;
+        }
+      }
+      .dropdown-item span {
+        font-size: 1.2rem !important;
+        font-family: barlow-semibold;
       }
     }
   }
