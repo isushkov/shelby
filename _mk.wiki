@@ -1,8 +1,6 @@
-footer:
-  align
-  bigger font
-first-visit:
-  logo во весь экран на мобильные девайсы
+logo во весь экран на мобильные девайсы
+  example first-visit
+  add style
 
 projects:
   gallery differrent sizes for projects
@@ -13,16 +11,18 @@ project-N:
   all
   get link to indeed
 
-about-us:
-  upd
 header:
   fix phone dropdown menu
-index:
+  fix not collapsed hover style links
+    and footer
+about-us:
+  upd
+for all pages:
   add scroll animastions
-touchmove:
-  $('#yourElementId').on('touchmove', function(event) {
-    $(this).addClass('hover');
-  });
-  $('#yourElementId').on('touchend', function(event) {
-    $(this).removeClass('hover');
-  });
+  touchmove:
+    $('#yourElementId').on('touchmove', function(event) {
+      $(this).addClass('hover');
+    });
+    $('#yourElementId').on('touchend', function(event) {
+      $(this).removeClass('hover');
+    });
