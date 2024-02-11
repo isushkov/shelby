@@ -1,32 +1,28 @@
 footer:
   align
   bigger font
+first-visit:
+  logo во весь экран на мобильные девайсы
+
 projects:
   gallery differrent sizes for projects
   add hover like horsepower
-карьера - сделать страницу
-index:
-  animastions:
-    logo во весь экран на мобильные девайсы
-    add scroll animastions
-    touchmove:
-      $('#yourElementId').on('touchmove', function(event) {
-        $(this).addClass('hover');
-      });
-      $('#yourElementId').on('touchend', function(event) {
-        $(this).removeClass('hover');
-      });
+project-N:
+  all
+карьера:
+  all
+  get link to indeed
 
-after pasandy:
-  project-N:
-    styles
-    images
-  and more pics
-    add blueprints
-  upd about-us:
-    wait content.txt
-  hosting
-    +404 page
-    download 3th side files, minify js, ...
-  upd coreer:
-    get link to indeed
+about-us:
+  upd
+header:
+  fix phone dropdown menu
+index:
+  add scroll animastions
+touchmove:
+  $('#yourElementId').on('touchmove', function(event) {
+    $(this).addClass('hover');
+  });
+  $('#yourElementId').on('touchend', function(event) {
+    $(this).removeClass('hover');
+  });

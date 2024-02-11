@@ -8,10 +8,18 @@ import uglify       from 'gulp-uglify';
 import concat       from 'gulp-concat';
 import browserSync  from 'browser-sync';
 import fileinclude  from 'gulp-file-include';
+import yargs        from 'yargs';
+const argv = yargs(process.argv.slice(2)).argv;
 
 // css
 gulp.task('sass', function () {
-  return gulp.src('src/scss/**/*.scss')
+  // Путь по умолчанию, если аргумент не передан
+  let srcPath = 'src/scss/**/*.scss';
+  // Если аргумент name передан, измените srcPath
+  if (argv.name) {
+    srcPath = `src/scss/${argv.name}.scss`;
+  }
+  return gulp.src(srcPath)
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cleanCSS())
@@ -52,21 +60,6 @@ gulp.task('include', function(done) {
     .on('end', done);
 });
 
-// Watch
-gulp.task('watch', function () {
-  browserSync.init({
-    server: {
-      baseDir: './'
-    }
-  });
-  gulp.watch('src/**/*.html', gulp.series('include'));
-  gulp.watch('src/**/*.scss', gulp.series('sass'));
-  gulp.watch('src/**/*.js', gulp.series('js'));
-  gulp.watch('node_modules/bootstrap/scss/**/*.scss', gulp.series('bootstrap-sass'));
-  gulp.watch('node_modules/bootstrap/dist/js/bootstrap.bundle.js', gulp.series('bootstrap-js'));
-  gulp.watch('*.html').on('change', browserSync.reload);
-});
-
 // task: build
 gulp.task('build', gulp.series(
   'include',
@@ -75,5 +68,20 @@ gulp.task('build', gulp.series(
   'bootstrap-sass',
   'bootstrap-js'
 ));
+// Watch
+gulp.task('watch', function () {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+  gulp.watch('src/**/*.html', gulp.series('include'));
+  // gulp.watch('src/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/**/*.js', gulp.series('js'));
+  gulp.watch('node_modules/bootstrap/scss/**/*.scss', gulp.series('bootstrap-sass'));
+  gulp.watch('node_modules/bootstrap/dist/js/bootstrap.bundle.js', gulp.series('bootstrap-js'));
+  gulp.watch('*.html').on('change', browserSync.reload);
+});
+
 // task: build and watch
 gulp.task('default', gulp.series('build', 'watch'));

@@ -26,6 +26,28 @@ a {
   }
 }
 
+.content {
+  &.dark {
+    background: $dark;
+    background-image: linear-gradient(170deg, $primary, transparent 50%);
+  }
+  &.dark-rev {
+    background: $dark;
+    background-image: linear-gradient(-10deg, $primary, transparent 50%);
+  }
+  &.dark-both {
+    background: $dark;
+    background-image: linear-gradient(170deg, $primary, transparent 50%), linear-gradient(-10deg, $primary, transparent 50%);
+  }
+  &.dark-nored {
+    background: $dark;
+  }
+  &.light {
+    background: $light-gray;
+    background-image: linear-gradient(-10deg, $white, transparent 50%);
+  }
+}
+
 .divider {
   height: 2rem;
   width: 100%;
@@ -53,4 +75,8 @@ a {
 .divider-graylight-lightgray {
   @extend .divider;
   background: repeating-linear-gradient(-45deg, $gray-light, $gray-light 10px, $light-gray 10px, $light-gray 20px);
+}
+.divider-lightgray-light{
+  @extend .divider;
+  background: repeating-linear-gradient(-45deg, $light-gray, $light-gray 10px, $light 10px, $light 20px);
 }
