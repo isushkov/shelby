@@ -3,20 +3,24 @@ projects:
   add hover like horsepower
 project-N:
   all
+
 карьера:
   all
   get link to indeed
-
-header:
-  fix phone dropdown menu
-  fix not collapsed hover style links
-    and footer
 about-us:
   upd
-for all pages:
+
+header:
+  redo style dropdown menus to one design:
+    for phone-links
+    for menus-links
+  redo style not collapsed hover-style links
+    and footer
+
+animastions:
   index:
-    replase hover to scroll animastions
-    add scroll animastions for init
+    replase hover-behavior for mouse to scroll trigger
+    add scroll animastions for fadeIn content
   about-us
   projects
   careers
