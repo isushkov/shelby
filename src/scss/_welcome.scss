@@ -1,0 +1,62 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+}
+@keyframes fillProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+#welcome {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: $dark;
+  animation: fadeOut 1s 3s forwards;
+}
+#welcome-content {
+  margin-top: 33.333%;
+  max-width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 1s 0s forwards, fadeOutUp 1s 2s forwards;
+}
+.progress-container {
+  width: 97%;
+  background-color: $dark;
+  height: 0.3rem;
+}
+.progress-bar {
+  background-color: $primary;
+  width: 0%;
+  height: 100%;
+  animation: fillProgress 1s 1s linear forwards;
+}
+

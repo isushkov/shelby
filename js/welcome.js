@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).width()<=768&&!sessionStorage.getItem("alreadyVisited")?($("#welcome").css("display","flex"),sessionStorage.setItem("alreadyVisited","true"),$("#welcome").delay(4e3).queue(function(){$(this).remove()})):$("#welcome").remove()});
