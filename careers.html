@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- START HEAD -->
+<title>Careers | Shelby Electrical</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Shelby Electrical - Comprehensive Electrical Contracting Services">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shelby Electrical">
+<meta property="og:title" content="Careers | Shelby Electrical">
+<meta property="og:description" content="Shelby Electrical - Comprehensive Electrical Contracting Services">
+<meta property="og:url" content="https://www.shelbyelectrical.com/careers.html">
+<link rel="canonical" href="https://www.shelbyelectrical.com/careers.html">
+<link rel="icon" sizes="16x16 32x32 64x64" href="./favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+<!-- css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="css/careers.css">
+<!-- js -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<!-- END HEAD -->
+
+  </head>
+  <body>
+    <div id="welcome">
+  <div id="welcome-content">
+    <div>
+      <img id="logo" class="img-fluid" src="img/logo-dark_ico-txt_transp.png">
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+</div>
+<script src="./js/welcome.js"></script>
+
+    <header>
+      <nav class="autohide navbar navbar-expand-custom navbar-dark bg-dark">
+  <div id="header" class="container">
+    <div id="headerLeft">
+      <a class="navbar-brand" href="/">
+        <img id="logo" src="img/logo-dark_ico-txt_transp.png">
+      </a>
+      <button id="togglerLeft" class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="headerRight">
+      <div class="phone">
+  <div class="phoneText phone-text">24 Hour Service:</div>
+  <div class="phoneDropdown dropdown">
+    <button type="button" class="phoneDropdownButton btn btn-primary dropdown-toggle"
+       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      (347) 633-4662
+    </button>
+    <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
+      <a class="copyAction dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+        <i class="copy-icon fas fa-clipboard"></i>
+        <span class="copy-text p-2">Copy</span>
+      </a>
+      <a class="callAction dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+        <i class="call-icon fas fa-phone-alt"></i>
+        <span class="call-text p-2">Call</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleCopyClick(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+  event.stopPropagation(); // Предотвращаем распространение события клика
+
+  var $this = $(event.currentTarget);
+  var $icon = $this.find('.copy-icon'); // Получаем иконку
+  var $text = $this.find('.copy-text'); // Получаем текст
+  console.log($this)
+  console.log($icon)
+  console.log($text)
+  // Сохраняем исходные данные
+  var originalIconClass = $icon.attr('class');
+  var originalText = $text.text();
+  // Копируем текст
+  navigator.clipboard.writeText('3476334662')
+  // Изменяем иконку и текст
+  $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
+  $text.text('Copied!'); // Изменение текста
+
+  setTimeout(function() {
+    $('.dropdown-menu').removeClass('show'); // Закрываем dropdown-menu через 1 секунду
+    $icon.attr('class', originalIconClass); // Восстанавливаем иконку
+    $text.text(originalText); // Восстанавливаем текст
+  }, 1000);
+}
+
+$(document).ready(function() {
+  $('#headerRight .copyAction').off('click').on('click', handleCopyClick);
+  $('#navbarContent .copyAction').off('click').on('click', handleCopyClick);
+});
+</script>
+
+      <button id="togglerRight" class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link " href="/about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="/careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="navbarContent" class="collapse navbar-collapse first-filler">
+    <ul class="navbar-nav mr-auto">
+      <div class="phone">
+  <div class="phoneText phone-text">24 Hour Service:</div>
+  <div class="phoneDropdown dropdown">
+    <button type="button" class="phoneDropdownButton btn btn-primary dropdown-toggle"
+       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      (347) 633-4662
+    </button>
+    <div class="dropdown-menu dropdown-menu-end w-100" aria-labelledby="dropdown-phone">
+      <a class="copyAction dropdown-item" data-clipboard-text="(347)633-4662" href="#copy">
+        <i class="copy-icon fas fa-clipboard"></i>
+        <span class="copy-text p-2">Copy</span>
+      </a>
+      <a class="callAction dropdown-item" data-bs-toggle="modal" data-bs-target="#confirmCallModal" href="#call">
+        <i class="call-icon fas fa-phone-alt"></i>
+        <span class="call-text p-2">Call</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleCopyClick(event) {
+  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+  event.stopPropagation(); // Предотвращаем распространение события клика
+
+  var $this = $(event.currentTarget);
+  var $icon = $this.find('.copy-icon'); // Получаем иконку
+  var $text = $this.find('.copy-text'); // Получаем текст
+  console.log($this)
+  console.log($icon)
+  console.log($text)
+  // Сохраняем исходные данные
+  var originalIconClass = $icon.attr('class');
+  var originalText = $text.text();
+  // Копируем текст
+  navigator.clipboard.writeText('3476334662')
+  // Изменяем иконку и текст
+  $icon.removeClass('fa-clipboard').addClass('fa-clipboard-check'); // Замена иконки
+  $text.text('Copied!'); // Изменение текста
+
+  setTimeout(function() {
+    $('.dropdown-menu').removeClass('show'); // Закрываем dropdown-menu через 1 секунду
+    $icon.attr('class', originalIconClass); // Восстанавливаем иконку
+    $text.text(originalText); // Восстанавливаем текст
+  }, 1000);
+}
+
+$(document).ready(function() {
+  $('#headerRight .copyAction').off('click').on('click', handleCopyClick);
+  $('#navbarContent .copyAction').off('click').on('click', handleCopyClick);
+});
+</script>
+
+      <li class="nav-item active"><a class="nav-link " href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link " href="/about-us.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link disabled" href="/careers.html">Careers</a></li>
+      <li class="nav-item"><a class="nav-link " href="/contact-us.html">Contact Us</a></li>
+    </ul>
+    <div class="underline"></div>
+  </div>
+  <div class="underline"></div>
+</nav>
+<!-- modals -->
+<div id="confirmCallModal" aria-labelledby="confirmCallModalLabel" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="confirmCallModalLabel" class="modal-title">Let's Connect!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Ready to connect with us over the phone?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">Cancel</button>
+        <button id="confirmCallBtn" type="button" class="btn btn-primary">Yes, Call now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// init call
+$('#confirmCallBtn').on('click', function() {
+  window.location.href = 'tel:+13476334662';
+});
+</script>
+
+
+<!-- js -->
+<script>
+  $(document).ready(function () {
+    var navbar = $('.navbar');
+    var dropdownMenu = $('.dropdown-menu');
+
+    if (navbar.length) {
+      var lastScrollTop = 0;
+      $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        dropdownMenu.removeClass('show');
+
+        if (scrollTop < lastScrollTop) {
+          navbar.removeClass('scrolled-down').addClass('scrolled-up');
+        } else {
+          navbar.removeClass('scrolled-up').addClass('scrolled-down');
+        }
+        lastScrollTop = scrollTop;
+      });
+    }
+
+    // Закрытие при клике вне #navbarContent
+    $(document).click(function(event) {
+      var clickInsideNavbarContent = $(event.target).closest('#navbarContent').length;
+      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+      
+      if (!clickInsideNavbarContent && navbarTogglerVisible) {
+        $('#navbarContent').collapse('hide');
+      }
+    });
+
+    // Закрытие при скроле
+    $(window).scroll(function() {
+      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+      
+      if (navbarTogglerVisible) {
+        $('#navbarContent').collapse('hide');
+      }
+    });
+
+  });
+</script>
+
+    </header>
+    <main>
+      <div class="first-filler content light">
+  <div class="container">
+    <div class="career">
+      <img class="career-img" src="./img/about-us/2.jpg"/>
+      <div class="career-text">
+        <h2 class="career-title">A Career to Be Proud Of.</h2>
+        <div class="career-bar"></div>
+        <p class="career-description">
+          Shelby is on the lookout for new team members to join our endeavor
+          in developing, energizing, and illuminating the country!
+          Explore our job openings and shift your focus from just finding
+          a job to building a meaningful career!
+        </p>
+        <h2 class="txt-title mt-0"><a href="#">LINK_TO_INDEED</a></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="divider-dark-graylight"></div>
+
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      <div id="footerTop" class="container">
+  <div id="footerTopLeft">
+    <ul id="footerCompany" class="list-unstyled">
+      <li class="title"><span>Company</span></li>
+      <li class="nav-link "><a href="/">Home</a></li>
+      <li class="nav-link "><a href="/about-us.html">About Us</a></li>
+      <li class="nav-link "><a href="/projects.html">Projects</a></li>
+      <li class="nav-link disabled"><a href="/projects.html">Careers</a></li>
+      <li class="nav-link "><a href="/contact-us.html">Contact Us</a></li>
+    </ul>
+    <ul id="footerContacts" class="list-unstyled">
+      <li class="title"><span>Contacts</span></li>
+      <li><a href="mailto:office@shelbyelectrical.com"><i class="fas fa-envelope"></i>office@shelbyelectrical.com</a></li>
+      <li><span><i class="fas fa-phone"></i>(347) 633-4662</span></li>
+      <li><span><i class="fas fa-home"></i>2461 East 16th St, Brooklyn, NY</span></li>
+    </ul>
+  </div>
+  <div id="footerTopRight">
+    <a href="/"><img id="footerLogo" class="img-fluid" src="img/logo-dark_ico-txt_transp.png"></a>
+    <ul id="footerSocial" class="list-unstyled">
+      <li><a class="img-fluid" href="https://www.instagram.com/shelbyelectrical" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a class="img-fluid" href="https://www.facebook.com/shelbyelectricalnyc" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a class="img-fluid" href="https://www.linkedin.com/company/shelby-electrical" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="copyright" class="container">
+  <span>
+    Copyright &copy; Shelby Electrical
+    <script>document.write(new Date().getFullYear())</script>
+  </span>
+</div>
+
+    </footer>
+  </body>
+</html>

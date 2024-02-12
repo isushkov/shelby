@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("./templates/head.html", {
+      "page": "careers",
+      "title": "Careers | Shelby Electrical",
+      "description": "Shelby Electrical - Comprehensive Electrical Contracting Services",
+      "url": "https://www.shelbyelectrical.com/careers.html"
+    })
+  </head>
+  <body>
+    @@include("./templates/welcome.html")
+    <header>
+      @@include("./templates/header.html", { "page": "careers" })
+    </header>
+    <main>
+      @@include("./templates/careers.html")
+      <script src="./js/header-padding.js"></script>
+    </main>
+    <footer>
+      @@include("./templates/footer.html", { "page": "careers" })
+    </footer>
+  </body>
+</html>

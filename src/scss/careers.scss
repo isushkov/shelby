@@ -1,0 +1,40 @@
+@import "common.scss";
+
+main {
+  .content {
+    max-width: 100%;
+    padding: 2rem 0 2rem 0;
+    &:active, &:hover {
+      .career-bar {
+        width: 120px;
+      }
+    }
+    &.dark {
+      .career-bar { background: $light; }
+    }
+    &.light {
+      .career-bar { background: $dark; }
+    }
+  }
+  .career {
+    display: flex;
+    flex-direction: row;
+  }
+  .career-img {
+    width: 40%;
+    object-fit: cover;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  .career-text { width: 60%; }
+  .career-title {
+    font-family: "Barlow-SemiBold";
+  }
+  .career-bar {
+    width: 50px;
+    height: 7px;
+    margin: 10px 0;
+    transition: width 0.2s ease, background 0.2s ease;
+  }
+  .career-description {}
+}

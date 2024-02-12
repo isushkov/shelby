@@ -1,25 +1,22 @@
-projects:
-  gallery differrent sizes for projects
-  add hover like horsepower
-project-N:
-  all
-
-карьера:
-  all
-  get link to indeed
-about-us:
-  upd
-
 header:
   redo style dropdown menus to one design:
     for phone-links
     for menu-links
+about-us:
+  upd
+карьера:
+  all
+  get link to indeed
 
-animastions:
+project-N:
+  all
+animations:
   index:
     replase hover-behavior for mouse to scroll trigger
     add scroll animastions for fadeIn content
   about-us
   projects
+    +replase each img to imgs-slider
+  project-N
   careers
   contact-us
