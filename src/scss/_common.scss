@@ -40,7 +40,7 @@ a {
   }
   &.dark-both {
     background: $dark;
-    background-image: linear-gradient(170deg, $primary, transparent 50%), linear-gradient(-10deg, $primary, transparent 50%);
+    background-image: linear-gradient(175deg, $primary, transparent 35%), linear-gradient(-5deg, $primary, transparent 35%);
   }
   &.dark-nored {
     background: $dark;
