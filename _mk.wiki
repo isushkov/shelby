@@ -13,9 +13,7 @@ about-us:
 header:
   redo style dropdown menus to one design:
     for phone-links
-    for menus-links
-  redo style not collapsed hover-style links
-    and footer
+    for menu-links
 
 animastions:
   index:

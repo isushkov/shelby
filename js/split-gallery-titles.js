@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".gallery-item").each(function(){var t=$(this).find(".project-title-word"),e=t.text().split(" "),i=t.parent();t.remove(),$.each(e,function(t,e){$('<div class="project-title-word"></div>').text(e).appendTo(i)})})});

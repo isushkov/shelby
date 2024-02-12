@@ -27,7 +27,8 @@ main {
     align-items: center;
     justify-content: center;
     background-color: $dark;
-    border: 1px solid $gray-dark;
+    border: 1px solid $dark;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   .proj1 { grid-area: x1; }
   .proj2 { grid-area: x2; }
@@ -126,17 +127,70 @@ main {
   .project-link {
     width: 100%;
     height: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, $light-gray 0%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover, &:focus, &:active {
+      &::before {
+        opacity: 1;
+      }
+    }
   }
   .project-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .project-link:hover .project-img, 
+  .project-link:focus .project-img, 
+  .project-link:active .project-img {
+    transform: scale(1.05);
+    filter: blur(2px);
   }
   .project-text {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+  }
+  .project-link:hover .project-text, 
+  .project-link:focus .project-text, 
+  .project-link:active .project-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .project-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .project-title-word {
+    margin: 0;
+    padding: 0 0.5rem;
+    font-family: barlow-semibold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $light;
+    background-color: $dark;
   }
 }
