@@ -15,7 +15,6 @@ header {
     color: $light;
   }
   #header * { font-size: 1.5rem; }
-  #header .dropdown-menu * { font-size: 1.2rem; }
   #headerLeft { width: 40%; }
   #togglerLeft { display: none; }
   #togglerRight {
@@ -42,11 +41,12 @@ header {
   .phoneDropdownButton { color: $light; }
   .dropdown-menu {
     min-width: 100px;
-    border: solid 2px $primary;
+    padding: 0;
     background-color: $dark;
   }
   .dropdown-item {
     text-transform: uppercase;
+    padding: 0.5rem 1rem;
     color: $light;
     &:active, &:hover {
       color: $light !important;
@@ -237,6 +237,7 @@ header {
         font-size: 1.2rem !important;
         font-family: barlow-semibold;
       }
+      .dropdown-menu .underline { display: none; }
     }
   }
   @media screen and (max-width: 400px) {
