@@ -44,43 +44,49 @@
 
 <!-- js -->
 <script>
-  $(document).ready(function () {
-    var navbar = $('.navbar');
-    var dropdownMenu = $('.dropdown-menu');
+$(document).ready(function () {
+  var navbar = $('.navbar');
+  var dropdownMenu = $('.dropdown-menu');
 
-    if (navbar.length) {
-      var lastScrollTop = 0;
-      $(window).scroll(function () {
-        var scrollTop = $(window).scrollTop();
-        dropdownMenu.removeClass('show');
+  if (navbar.length) {
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      dropdownMenu.removeClass('show');
 
-        if (scrollTop < lastScrollTop) {
-          navbar.removeClass('scrolled-down').addClass('scrolled-up');
-        } else {
-          navbar.removeClass('scrolled-up').addClass('scrolled-down');
-        }
-        lastScrollTop = scrollTop;
-      });
+      if (scrollTop < lastScrollTop) {
+        navbar.removeClass('scrolled-down').addClass('scrolled-up');
+      } else {
+        navbar.removeClass('scrolled-up').addClass('scrolled-down');
+      }
+      lastScrollTop = scrollTop;
+    });
+  }
+  // Закрытие при клике вне #navbarContent
+  $(document).click(function(event) {
+    var clickInsideNavbarContent = $(event.target).closest('#navbarContent').length;
+    var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+    if (!clickInsideNavbarContent && navbarTogglerVisible) {
+      $('#navbarContent').collapse('hide');
     }
-
-    // Закрытие при клике вне #navbarContent
-    $(document).click(function(event) {
-      var clickInsideNavbarContent = $(event.target).closest('#navbarContent').length;
-      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
-      
-      if (!clickInsideNavbarContent && navbarTogglerVisible) {
-        $('#navbarContent').collapse('hide');
-      }
-    });
-
-    // Закрытие при скроле
-    $(window).scroll(function() {
-      var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
-      
-      if (navbarTogglerVisible) {
-        $('#navbarContent').collapse('hide');
-      }
-    });
-
   });
+  // Закрытие при скроле
+  $(window).scroll(function() {
+    var navbarTogglerVisible = $('.navbar-toggler').is(':visible');
+    if (navbarTogglerVisible) {
+      $('#navbarContent').collapse('hide');
+    }
+  });
+  // закрытие при нажатии на callAction
+  $('.callAction').click(function() {
+    $('#navbarContent').collapse('hide');
+  });
+  // icons controll
+  $('#navbarContent').on('show.bs.collapse', function () {
+    $('.navbar-toggler i').removeClass('fas fa-bars').addClass('fas fa-times');
+  });
+  $('#navbarContent').on('hide.bs.collapse', function () {
+    $('.navbar-toggler i').removeClass('fas fa-times').addClass('fas fa-bars');
+  });
+});
 </script>
