@@ -268,7 +268,6 @@ $(document).ready(function () {
     <main>
     <div class="first-filler content light">
   <div class="container">
-    <!-- title -->
     <div id="pageHeaderTitle">
       <h1>142-144 Bay 25th Street</h1>
     </div>
@@ -289,7 +288,6 @@ $(document).ready(function () {
             </div>
           </div>
         </div>
-
         <!-- description -->
         <div class="col-md-6">
           <div class="p-3 right-side">
@@ -307,8 +305,59 @@ $(document).ready(function () {
         </div>
       </div>
     </div>
-    <!-- projects slider -->
-    <section >
+    <!-- projects carousel -->
+    <div id="projectCarouselData" class="d-none">
+  <div class="card m-2">
+  <img class="project-img" src="./img/projects/1.png"/>
+  <div class="card-body">
+    <h5 class="card-title">Boerum Street</h5>
+    <a href="/project-1.html" class="btn btn-primary">View project</a>
+  </div>
+</div>
+
+  <div class="card m-2">
+  <img class="project-img" src="./img/projects/2.png"/>
+  <div class="card-body">
+    <h5 class="card-title">Manhattan avenue</h5>
+    <a href="/project-2.html" class="btn btn-primary">View project</a>
+  </div>
+</div>
+
+  <div class="card m-2">
+  <img class="project-img" src="./img/projects/3.jpg"/>
+  <div class="card-body">
+    <h5 class="card-title">West 13th St Manhattan</h5>
+    <a href="/project-3.html" class="btn btn-primary">View project</a>
+  </div>
+</div>
+
+  <div class="card m-2">
+  <img class="project-img" src="./img/projects/4.jpg"/>
+  <div class="card-body">
+    <h5 class="card-title">Narrows Road</h5>
+    <a href="/project-4.html" class="btn btn-primary">View project</a>
+  </div>
+</div>
+
+  <div class="card m-2">
+  <img class="project-img" src="./img/projects/5.jpg"/>
+  <div class="card-body">
+    <h5 class="card-title">Saint Edwards St</h5>
+    <a href="/project-5.html" class="btn btn-primary">View project</a>
+  </div>
+</div>
+
+  
+  <div class="card m-2">
+  <img class="project-img" src="./img/projects/7.jpg"/>
+  <div class="card-body">
+    <h5 class="card-title">99th St Brooklyn</h5>
+    <a href="/project-7.html" class="btn btn-primary">View project</a>
+  </div>
+</div>
+
+</div>
+<section>
   <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
     <!-- Carousel Buttons -->
     <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
@@ -320,47 +369,10 @@ $(document).ready(function () {
       <span class="visually-hidden">Next</span>
     </button>
     <!-- Carousel -->
-    <div class="carousel-inner">
-      <!-- slide 1 -->
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center">
-          <!-- Card 1 -->
-          <div class="card m-2" style="width: 18rem;">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">project 1</h5>
-              <p class="card-text">Description of project 1.</p>
-              <a href="#" class="btn btn-primary">View project</a>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="card m-2" style="width: 18rem;">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">project 2</h5>
-              <p class="card-text">Description of project 2.</p>
-              <a href="#" class="btn btn-primary">View project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- slide 2 -->
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center">
-          <!-- Card 1 -->
-          <div class="card m-2" style="width: 18rem;">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">project 1</h5>
-              <p class="card-text">Description of project 1.</p>
-              <a href="#" class="btn btn-primary">View project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="carousel-inner"></div>
   </div>
 </section>
+<script src="./js/projects-carousel-cards.js"></script>
 
   </div>
 </div>

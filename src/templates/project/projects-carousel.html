@@ -1,4 +1,48 @@
-<section >
+<div id="projectCarouselData" class="d-none">
+  @@if(page!=='project-1'){@@include("./projects-carousel-card.html",{
+    "number": "1",
+    "link": "project-1.html",
+    "img": "1.png",
+    "title": "Boerum Street"
+  })}
+  @@if(page!=='project-2'){@@include("./projects-carousel-card.html",{
+    "number": "2",
+    "link": "project-2.html",
+    "img": "2.png",
+    "title": "Manhattan avenue"
+  })}
+  @@if(page!=='project-3'){@@include("./projects-carousel-card.html",{
+    "number": "3",
+    "link": "project-3.html",
+    "img": "3.jpg",
+    "title": "West 13th St Manhattan"
+  })}
+  @@if(page!=='project-4'){@@include("./projects-carousel-card.html",{
+    "number": "4",
+    "link": "project-4.html",
+    "img": "4.jpg",
+    "title": "Narrows Road"
+  })}
+  @@if(page!=='project-5'){@@include("./projects-carousel-card.html",{
+    "number": "5",
+    "link": "project-5.html",
+    "img": "5.jpg",
+    "title": "Saint Edwards St"
+  })}
+  @@if(page!=='project-6'){@@include("./projects-carousel-card.html",{
+    "number": "6",
+    "link": "project-6.html",
+    "img": "6.jpg",
+    "title": "Bay 25th Street"
+  })}
+  @@if(page!=='project-7'){@@include("./projects-carousel-card.html",{
+    "number": "7",
+    "link": "project-7.html",
+    "img": "7.jpg",
+    "title": "99th St Brooklyn"
+  })}
+</div>
+<section>
   <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
     <!-- Carousel Buttons -->
     <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
@@ -10,54 +54,7 @@
       <span class="visually-hidden">Next</span>
     </button>
     <!-- Carousel -->
-    <div class="carousel-inner">
-      <!-- slide 1 -->
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center">
-          <!-- Card 1 -->
-          @@include("./project/projects-slider-card.html", {
-            "number": "2",
-            "link": "project-2.html",
-            "img": "2.png",
-            "title": "Manhattan avenue"
-          })
-          @@include("./project/projects-slider-card.html", {
-            "number": "3",
-            "link": "project-3.html",
-            "img": "3.jpg",
-            "title": "West 13th St Manhattan"
-          })
-          @@include("./project/projects-slider-card.html", {
-            "number": "4",
-            "link": "project-4.html",
-            "img": "4.jpg",
-            "title": "Narrows Road"
-          })
-        </div>
-      </div>
-      <!-- slide 2 -->
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center">
-          @@include("./project/projects-slider-card.html", {
-            "number": "5",
-            "link": "project-5.html",
-            "img": "5.jpg",
-            "title": "Saint Edwards St"
-          })
-          @@include("./project/projects-slider-card.html", {
-            "number": "6",
-            "link": "project-6.html",
-            "img": "6.jpg",
-            "title": "Bay 25th Street"
-          })
-          @@include("./project/projects-slider-card.html", {
-            "number": "7",
-            "link": "project-7.html",
-            "img": "7.jpg",
-            "title": "99th St Brooklyn"
-          })
-        </div>
-      </div>
-    </div>
+    <div class="carousel-inner"></div>
   </div>
 </section>
+<script src="./js/projects-carousel-cards.js"></script>

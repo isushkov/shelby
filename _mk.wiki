@@ -1,6 +1,5 @@
 project-N:
   all
-  add extra projects
 
 about-us:
   upd
@@ -26,3 +25,4 @@ request info:
   get link to indeed
   Narrows Road Brooklyn:
     add scope of work and desc
+  add extra projects?
