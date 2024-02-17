@@ -1,16 +1,17 @@
-header:
-  redo style dropdown menus to one design:
-    for phone-links
-    for menu-links
+project-N:
+  all
+  add extra projects
+
 about-us:
   upd
 карьера:
   all
-  get link to indeed
 
-project-N:
-  all
 animations:
+  добавить анимации по всему сайту:
+    - для повления контента при скроле
+    - цикличные для динамики
+    - заменить где возможно изображения на слайдеры
   index:
     replase hover-behavior for mouse to scroll trigger
     add scroll animastions for fadeIn content
@@ -21,16 +22,7 @@ animations:
   careers
   contact-us
 
->>>
-сверстать страницы:
-  - project-N (персонализированная страница под каждый проект)
-  - about-us
-  - careers (у меня все еще нет ссылки на indeed c вашими вакансиями)
-доработать header:
-  - переделать раскрывающееся меню c номером телефона в такой же стиль как ссылки для навигации по сайту в мобильной версии
-добавить анимации по всему сайту:
-  - для повления контента при скроле
-  - цикличные для динамики
-  - заменить где возможно изображения на слайдеры
-какртинки:
-  - понасоздавать изображений в фотошопе (около 10-20) на основе тех что прислал pasandy и заменить на сайте
+request info:
+  get link to indeed
+  Narrows Road Brooklyn:
+    add scope of work and desc

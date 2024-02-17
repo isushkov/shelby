@@ -1,0 +1,1 @@
+$(document).ready(function(){var o=$(".scope-of-work-item").text().split(";");$(".scope-of-work-item").remove(),$.each(o,function(o,t){(t=$.trim(t))&&$(".scope-of-work").append('<li class="scope-of-work-item">'+t+"</li>")}),$("#thumbnail img").click(function(){var o=$(this).attr("src");$("#main_product_image").attr("src",o)})});
