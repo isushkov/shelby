@@ -1,28 +1,15 @@
-project-N:
-  all
-
-about-us:
-  upd
-карьера:
-  all
-
-animations:
-  добавить анимации по всему сайту:
-    - для повления контента при скроле
-    - цикличные для динамики
-    - заменить где возможно изображения на слайдеры
-  index:
-    replase hover-behavior for mouse to scroll trigger
-    add scroll animastions for fadeIn content
-  about-us
-  projects
-    +replase each img to imgs-slider
-  project-N
-  careers
-  contact-us
+about-us
+careers
+добавить анимации по всему сайту:
+  - для повления контента при скроле
+  - цикличные для динамики
+  - replase hover-behavior for mouse to scroll trigger
 
 request info:
   get link to indeed
   Narrows Road Brooklyn:
-    add scope of work and desc
+    scope of work
+    desc
+    addres
+    imgs
   add extra projects?
