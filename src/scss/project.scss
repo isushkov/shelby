@@ -3,11 +3,10 @@
 main {
   background: $light;
   color: $dark;
-
   // title
   #pageHeaderTitle {
     text-align: center;
-    color: $dark;
+    color: $light;
     padding: 3rem 0;
     h1 {
       font-family: Barlow-SemiBold;
@@ -17,21 +16,85 @@ main {
   }
   // project
   .postcard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
+    padding: 1rem;
+    display: flex; flex-direction: column;
     color: $dark;
     background-color: $light;
   }
+  // project-top
+  .postcard-top {
+    display: flex; flex-direction: row;
+  }
+  // project-top-left
+  .postcard-left {
+    padding-right: 1rem;
+    width: 50%;
+    display: flex; flex-direction: column;
+  }
+  .main-image {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+  }
+  .blur-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    width: 100%;
+    height: 100%;
+  }
+  .darken-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  #mainProjectImage {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fade-overlay {
+    display: none;
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: #29292f;
+  }
+  .thumbnails {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: $light-gray;
+  }
+  .thumbnail {
+    margin: 1rem 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid;
+    &:first-child { margin-left: 1rem; }
+    &:last-child { margin-right: 1rem; }
+    &:hover .thumbnail-image { transform: scale(1.2); }
+  }
+  .thumbnail-image {
+    height: 70px;
+    width: 70px;
+    transition: transform 0.3s ease;
+  }
+  // project-top-right
+  .postcard-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
   .postcard-title {
     text-transform: uppercase;
-    font-family: Barlow-Bold;
+    font-family: Barlow-SemiBold;
     font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
     margin-bottom: 0;
-    transition: color 0.2s ease;
   }
   .postcard-bar {
     width: 150px;
@@ -40,15 +103,7 @@ main {
     background-color: $primary;
     margin-bottom: 0.5rem;
   }
-  .postcard-subtitle {
-    text-transform: uppercase;
-    font-family: Barlow-Regular;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-  }
-  .postcard-description {
+  .scope-of-work {
     font-size: 1.4rem;
     padding-left: 1rem;
     p { margin: 0; }
@@ -59,47 +114,107 @@ main {
     vertical-align: middle;
     padding-right: 0.5rem;
   }
+  // postcard-bottom
+  .postcard-bottom {
+    .postcard-title { padding-top: 2rem; }
+    p { margin: 0; }
+  }
+  .postcard-description {
+    font-size: 1.4rem;
+    padding: 2rem;
+  }
 
-  // project-left
-  .thumbnail-images ul {
-    list-style: none;
-    justify-content: center;
+  // carousel
+  .carousel {
+    padding: 3rem 0;
+  }
+  .carousel-item-wrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card { margin-right: 1rem; }
+  .project-img {
+    height: 300px;
+  }
+  // project
+  .project-link {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    li {
-      margin: 5px;
-      padding: 10px;
-      border: 2px solid #eee;
-      cursor: pointer;
-      transition: all 0.5s;
-      &:hover { border: 2px solid #000; }
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, $light-gray 0%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover, &:focus, &:active {
+      &::before {
+        opacity: 1;
+      }
     }
   }
-  .main-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    height: 400px;
+  .project-img {
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
-  // project-right
-  .right-side {
-    position: relative;
+  .project-link:hover .project-img, 
+  .project-link:focus .project-img, 
+  .project-link:active .project-img {
+    transform: scale(1.05);
+    filter: blur(2px);
   }
-  .scope-of-work span {
-    font-size: 14px;
-    margin-left: 12px;
+  .project-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
   }
-  .description p {
-    font-size: 12px;
+  .project-link:hover .project-text, 
+  .project-link:focus .project-text, 
+  .project-link:active .project-text {
+    opacity: 1;
+    transform: translateY(0);
   }
-  // project-cards slider
-  
- 
+  .project-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .project-title-word {
+    margin: 0;
+    padding: 0 0.5rem;
+    font-family: barlow-semibold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $light;
+    background-color: $dark;
+  }
+
   // media
   // @media (max-width: 992px) {}
   // @media (max-width: 768px) {}
+
+
+
+
+
+
 }

@@ -266,83 +266,153 @@ $(document).ready(function () {
 
     </header>
     <main>
-      <div class="first-filler content dark">
+      <div class="first-filler content light">
   <div class="container">
     <div id="pageHeaderTitle"><h1>415 99th Street</h1></div>
-    <div class="postcard light">
+    <div class="postcard">
       <div class="postcard-top">
         <div class="postcard-left">
           <div class="main-image">
-            <img id="mainProductImage" src="./img/projects/project-7/@@img-main">
+            <img class="blur-overlay" src="./img/projects/project-7/@@img-main">
+            <div class="darken-overlay"></div>
+            <img id="mainProjectImage" src="./img/projects/project-7/@@img-main">
+            <div class="fade-overlay"></div>
           </div>
           <div class="thumbnailImages">
             <div id="dataImgOthers" class="d-none">@@img-others</div>
-            <ul id="thumbnail">
-              <li><img onclick="changeImage(this)" src="./img/projects/project-7/@@img-main"></li>
+            <ul id="thumbnails" class="thumbnails list-unstyled">
+              <li class="thumbnail"><img class="thumbnail-image" onclick="changeImage(this)" src="./img/projects/project-7/@@img-main"></li>
             </ul>
           </div>
         </div>
         <div class="postcard-right">
           <div class="postcard-title"><h3>Scope Of Work:</h3></div>
           <div class="postcard-bar"></div>
-          <div class="postcard-description scope-of-work list-unstyled">
+          <div class="scope-of-work list-unstyled">
             <li class="scope-of-work-item">200A Temporary Service; 4000A Permanent Service; General Wiring; Fire Alarm; Underground Piping; In Slab Conduit Installation; 2D/3D Electrical and MEP Coordination Shop Drawings; Low Voltage & Intercom</li>
           </div>
         </div>
       </div>
-      <div class="postcard-description">
+      <div class="postcard-bottom">
         <div class="postcard-title"><h3>Description:</h3></div>
         <div class="postcard-bar"></div>
         <div class="postcard-description"><p>Presenting a two-family residential building in Fort Hamilton, this structure comprises two stories and a cellar, providing a total gross area of approximately 4,000 square feet. Within this space, 3,000 square feet are specifically allocated to accommodate two 3-bedroom living spaces.</p></div>
       </div>
     </div>
+  </div>
+</div>
+<div class="content dark-rev">
+  <div id="pageHeaderTitle">
+    <h1>Expertly Executed Projects.<br/>One Name you can trust.</h1>
+  </div>
+  <div class="container">
     <div id="projectCarouselData" class="d-none">
-  <div class="card m-2">
-  <img class="project-img" src="./img/projects/1.png"/>
-  <div class="card-body">
-    <h5 class="card-title">Boerum Street</h5>
-    <a href="/project-1.html" class="btn btn-primary">View project</a>
-  </div>
+  <!-- <div class="card col-sm-6 col-md-4"> -->
+<!--   <img class="project-img" src="./img/projects/project-1/0.jpg"/> -->
+<!--   <div class="card-body"> -->
+<!--     <h5 class="card-title">Boerum Street</h5> -->
+<!--     <a href="/project-1.html" class="btn btn-primary">View project</a> -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="card col-sm-6 col-md-4">
+  <a class="project-link" href="/project-1.html">
+    <img class="project-img" src="./img/projects/project-1/0.jpg"/>
+    <div class="project-text">
+      <div class="project-title">
+        <div class="project-title-word">Boerum Street</div>
+      </div>
+    </div>
+  </a>
 </div>
 
-  <div class="card m-2">
-  <img class="project-img" src="./img/projects/2.png"/>
-  <div class="card-body">
-    <h5 class="card-title">Manhattan avenue</h5>
-    <a href="/project-2.html" class="btn btn-primary">View project</a>
-  </div>
+  <!-- <div class="card col-sm-6 col-md-4"> -->
+<!--   <img class="project-img" src="./img/projects/project-2/0.png"/> -->
+<!--   <div class="card-body"> -->
+<!--     <h5 class="card-title">Manhattan avenue</h5> -->
+<!--     <a href="/project-2.html" class="btn btn-primary">View project</a> -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="card col-sm-6 col-md-4">
+  <a class="project-link" href="/project-2.html">
+    <img class="project-img" src="./img/projects/project-2/0.png"/>
+    <div class="project-text">
+      <div class="project-title">
+        <div class="project-title-word">Manhattan avenue</div>
+      </div>
+    </div>
+  </a>
 </div>
 
-  <div class="card m-2">
-  <img class="project-img" src="./img/projects/3.jpg"/>
-  <div class="card-body">
-    <h5 class="card-title">West 13th St Manhattan</h5>
-    <a href="/project-3.html" class="btn btn-primary">View project</a>
-  </div>
+  <!-- <div class="card col-sm-6 col-md-4"> -->
+<!--   <img class="project-img" src="./img/projects/project-3/0.jpg"/> -->
+<!--   <div class="card-body"> -->
+<!--     <h5 class="card-title">West 13th St Manhattan</h5> -->
+<!--     <a href="/project-3.html" class="btn btn-primary">View project</a> -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="card col-sm-6 col-md-4">
+  <a class="project-link" href="/project-3.html">
+    <img class="project-img" src="./img/projects/project-3/0.jpg"/>
+    <div class="project-text">
+      <div class="project-title">
+        <div class="project-title-word">West 13th St Manhattan</div>
+      </div>
+    </div>
+  </a>
 </div>
 
-  <div class="card m-2">
-  <img class="project-img" src="./img/projects/4.jpg"/>
-  <div class="card-body">
-    <h5 class="card-title">Narrows Road</h5>
-    <a href="/project-4.html" class="btn btn-primary">View project</a>
-  </div>
+  <!-- <div class="card col-sm-6 col-md-4"> -->
+<!--   <img class="project-img" src="./img/projects/project-4/0.jpg"/> -->
+<!--   <div class="card-body"> -->
+<!--     <h5 class="card-title">Narrows Road</h5> -->
+<!--     <a href="/project-4.html" class="btn btn-primary">View project</a> -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="card col-sm-6 col-md-4">
+  <a class="project-link" href="/project-4.html">
+    <img class="project-img" src="./img/projects/project-4/0.jpg"/>
+    <div class="project-text">
+      <div class="project-title">
+        <div class="project-title-word">Narrows Road</div>
+      </div>
+    </div>
+  </a>
 </div>
 
-  <div class="card m-2">
-  <img class="project-img" src="./img/projects/5.jpg"/>
-  <div class="card-body">
-    <h5 class="card-title">Saint Edwards St</h5>
-    <a href="/project-5.html" class="btn btn-primary">View project</a>
-  </div>
+  <!-- <div class="card col-sm-6 col-md-4"> -->
+<!--   <img class="project-img" src="./img/projects/project-5/0.jpg"/> -->
+<!--   <div class="card-body"> -->
+<!--     <h5 class="card-title">Saint Edwards St</h5> -->
+<!--     <a href="/project-5.html" class="btn btn-primary">View project</a> -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="card col-sm-6 col-md-4">
+  <a class="project-link" href="/project-5.html">
+    <img class="project-img" src="./img/projects/project-5/0.jpg"/>
+    <div class="project-text">
+      <div class="project-title">
+        <div class="project-title-word">Saint Edwards St</div>
+      </div>
+    </div>
+  </a>
 </div>
 
-  <div class="card m-2">
-  <img class="project-img" src="./img/projects/6.jpg"/>
-  <div class="card-body">
-    <h5 class="card-title">Bay 25th Street</h5>
-    <a href="/project-6.html" class="btn btn-primary">View project</a>
-  </div>
+  <!-- <div class="card col-sm-6 col-md-4"> -->
+<!--   <img class="project-img" src="./img/projects/project-6/0.jpg"/> -->
+<!--   <div class="card-body"> -->
+<!--     <h5 class="card-title">Bay 25th Street</h5> -->
+<!--     <a href="/project-6.html" class="btn btn-primary">View project</a> -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="card col-sm-6 col-md-4">
+  <a class="project-link" href="/project-6.html">
+    <img class="project-img" src="./img/projects/project-6/0.jpg"/>
+    <div class="project-text">
+      <div class="project-title">
+        <div class="project-title-word">Bay 25th Street</div>
+      </div>
+    </div>
+  </a>
 </div>
 
   
@@ -366,7 +436,7 @@ $(document).ready(function () {
 
   </div>
 </div>
-<div class="divider-dark-graylight"></div>
+<div class="divider-dark-primary"></div>
 <script src="./js/project.js"></script>
 
       <script src="./js/header-padding.js"></script>

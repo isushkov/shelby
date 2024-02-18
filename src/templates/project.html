@@ -1,35 +1,45 @@
-<div class="first-filler content dark">
+<div class="first-filler content light">
   <div class="container">
     <div id="pageHeaderTitle"><h1>@@title</h1></div>
-    <div class="postcard light">
+    <div class="postcard">
       <div class="postcard-top">
         <div class="postcard-left">
           <div class="main-image">
-            <img id="mainProductImage" src="./img/projects/@@page/@@img-main">
+            <img class="blur-overlay" src="./img/projects/@@page/@@img-main">
+            <div class="darken-overlay"></div>
+            <img id="mainProjectImage" src="./img/projects/@@page/@@img-main">
+            <div class="fade-overlay"></div>
           </div>
           <div class="thumbnailImages">
             <div id="dataImgOthers" class="d-none">@@img-others</div>
-            <ul id="thumbnail">
-              <li><img onclick="changeImage(this)" src="./img/projects/@@page/@@img-main"></li>
+            <ul id="thumbnails" class="thumbnails list-unstyled">
+              <li class="thumbnail"><img class="thumbnail-image" onclick="changeImage(this)" src="./img/projects/@@page/@@img-main"></li>
             </ul>
           </div>
         </div>
         <div class="postcard-right">
           <div class="postcard-title"><h3>Scope Of Work:</h3></div>
           <div class="postcard-bar"></div>
-          <div class="postcard-description scope-of-work list-unstyled">
+          <div class="scope-of-work list-unstyled">
             <li class="scope-of-work-item">@@scopeOfWork</li>
           </div>
         </div>
       </div>
-      <div class="postcard-description">
+      <div class="postcard-bottom">
         <div class="postcard-title"><h3>Description:</h3></div>
         <div class="postcard-bar"></div>
         <div class="postcard-description"><p>@@description</p></div>
       </div>
     </div>
+  </div>
+</div>
+<div class="content dark-rev">
+  <div id="pageHeaderTitle">
+    <h1>Expertly Executed Projects.<br/>One Name you can trust.</h1>
+  </div>
+  <div class="container">
     @@include("./project/projects-carousel.html", {"page": "@@page"})
   </div>
 </div>
-<div class="divider-dark-graylight"></div>
+<div class="divider-dark-primary"></div>
 <script src="./js/project.js"></script>
