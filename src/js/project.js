@@ -23,7 +23,7 @@ $(document).ready(function() {
   $.each(tasks, function(i, task) {
     task = $.trim(task);
     if (task) {
-      $('.scope-of-work').append('<li class="scope-of-work-item"><p><i class="fas fa-circle"></i>' + task + '</p></li>');
+      $('#scopeOfWork').append('<li class="scope-of-work-item"><p><i class="fas fa-circle"></i>' + task + '</p></li>');
     }
   });
 });

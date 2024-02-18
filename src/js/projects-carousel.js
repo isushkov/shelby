@@ -10,10 +10,12 @@ $(document).ready(function() {
   }
   function addCardsToSlides() {
     let cardsPerSlide;
-    if ($(window).width() > 768) {
+    if ($(window).width() > 991) {
       cardsPerSlide = 3;
-    } else {
+    } else if ($(window).width() > 550) {
       cardsPerSlide = 2;
+    } else {
+      cardsPerSlide = 1;
     }
     currentSlide = createNewSlide();
     $data.each(function(index) {

@@ -266,55 +266,46 @@ $(document).ready(function () {
 
     </header>
     <main>
-      <div class="first-filler content light">
+      <div class="first-filler content light content-project">
   <div class="container">
     <div id="pageHeaderTitle"><h1>118 West 13th Street</h1></div>
     <div class="postcard">
-      <div class="postcard-top">
-        <div class="postcard-left">
-          <div class="main-image">
-            <img class="blur-overlay" src="./img/projects/project-3/@@img-main">
-            <div class="darken-overlay"></div>
-            <img id="mainProjectImage" src="./img/projects/project-3/@@img-main">
-            <div class="fade-overlay"></div>
-          </div>
-          <div class="thumbnailImages">
-            <div id="dataImgOthers" class="d-none">@@img-others</div>
-            <ul id="thumbnails" class="thumbnails list-unstyled">
-              <li class="thumbnail"><img class="thumbnail-image" onclick="changeImage(this)" src="./img/projects/project-3/@@img-main"></li>
-            </ul>
-          </div>
+      <div class="postcard-gallery">
+        <div class="main-image">
+          <img class="blur-overlay" src="./img/projects/project-3/@@img-main">
+          <div class="darken-overlay"></div>
+          <img id="mainProjectImage" src="./img/projects/project-3/@@img-main">
+          <div class="fade-overlay"></div>
         </div>
-        <div class="postcard-right">
-          <div class="postcard-title"><h3>Scope Of Work:</h3></div>
-          <div class="postcard-bar"></div>
-          <div class="scope-of-work list-unstyled">
-            <li class="scope-of-work-item">200A Temporary Service; 4000A Permanent Service; General Wiring; Fire Alarm & ARCS; Underground Piping; In Slab Conduit Installation; 2D/3D Electrical and MEP Coordination Shop Drawings; Low Voltage, CCTV, & Intercom; Electrical Plan Review and Short Circuit Study</li>
-          </div>
+        <div class="thumbnailImages">
+          <div id="dataImgOthers" class="d-none">@@img-others</div>
+          <ul id="thumbnails" class="thumbnails list-unstyled">
+            <li class="thumbnail"><img class="thumbnail-image" onclick="changeImage(this)" src="./img/projects/project-3/@@img-main"></li>
+          </ul>
         </div>
       </div>
-      <div class="postcard-bottom">
+      <div class="postcard-description">
         <div class="postcard-title"><h3>Description:</h3></div>
         <div class="postcard-bar"></div>
-        <div class="postcard-description"><p>This seven-story high-rise residential structure, developed by ECA Developers LLC, stands at 70 feet tall and yields approximately 75,200 square feet dedicated to residential use. It features 8 high-end condominium units, each averaging 3,500 square feet, offering spacious and luxurious living spaces.</p></div>
+        <div class="postcard-text"><p>This seven-story high-rise residential structure, developed by ECA Developers LLC, stands at 70 feet tall and yields approximately 75,200 square feet dedicated to residential use. It features 8 high-end condominium units, each averaging 3,500 square feet, offering spacious and luxurious living spaces.</p></div>
+      </div>
+      <div class="postcard-scope">
+        <div class="postcard-title"><h3>Scope Of Work:</h3></div>
+        <div class="postcard-bar"></div>
+        <div id="scopeOfWork" class="postcard-text list-unstyled">
+          <li class="scope-of-work-item">200A Temporary Service; 4000A Permanent Service; General Wiring; Fire Alarm & ARCS; Underground Piping; In Slab Conduit Installation; 2D/3D Electrical and MEP Coordination Shop Drawings; Low Voltage, CCTV, & Intercom; Electrical Plan Review and Short Circuit Study</li>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="content dark-rev">
-  <div id="pageHeaderTitle">
-    <h1>Expertly Executed Projects.<br/>One Name you can trust.</h1>
+<div class="content darkgray-rev content-other-projects">
+  <div id="otherProjectsTitle">
+    <h1>Other Projects</h1>
   </div>
   <div class="container">
     <div id="projectCarouselData" class="d-none">
-  <!-- <div class="card col-sm-6 col-md-4"> -->
-<!--   <img class="project-img" src="./img/projects/project-1/0.jpg"/> -->
-<!--   <div class="card-body"> -->
-<!--     <h5 class="card-title">Boerum Street</h5> -->
-<!--     <a href="/project-1.html" class="btn btn-primary">View project</a> -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="card col-sm-6 col-md-4">
+  <div class="card">
   <a class="project-link" href="/project-1.html">
     <img class="project-img" src="./img/projects/project-1/0.jpg"/>
     <div class="project-text">
@@ -325,14 +316,7 @@ $(document).ready(function () {
   </a>
 </div>
 
-  <!-- <div class="card col-sm-6 col-md-4"> -->
-<!--   <img class="project-img" src="./img/projects/project-2/0.png"/> -->
-<!--   <div class="card-body"> -->
-<!--     <h5 class="card-title">Manhattan avenue</h5> -->
-<!--     <a href="/project-2.html" class="btn btn-primary">View project</a> -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="card col-sm-6 col-md-4">
+  <div class="card">
   <a class="project-link" href="/project-2.html">
     <img class="project-img" src="./img/projects/project-2/0.png"/>
     <div class="project-text">
@@ -344,14 +328,7 @@ $(document).ready(function () {
 </div>
 
   
-  <!-- <div class="card col-sm-6 col-md-4"> -->
-<!--   <img class="project-img" src="./img/projects/project-4/0.jpg"/> -->
-<!--   <div class="card-body"> -->
-<!--     <h5 class="card-title">Narrows Road</h5> -->
-<!--     <a href="/project-4.html" class="btn btn-primary">View project</a> -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="card col-sm-6 col-md-4">
+  <div class="card">
   <a class="project-link" href="/project-4.html">
     <img class="project-img" src="./img/projects/project-4/0.jpg"/>
     <div class="project-text">
@@ -362,14 +339,7 @@ $(document).ready(function () {
   </a>
 </div>
 
-  <!-- <div class="card col-sm-6 col-md-4"> -->
-<!--   <img class="project-img" src="./img/projects/project-5/0.jpg"/> -->
-<!--   <div class="card-body"> -->
-<!--     <h5 class="card-title">Saint Edwards St</h5> -->
-<!--     <a href="/project-5.html" class="btn btn-primary">View project</a> -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="card col-sm-6 col-md-4">
+  <div class="card">
   <a class="project-link" href="/project-5.html">
     <img class="project-img" src="./img/projects/project-5/0.jpg"/>
     <div class="project-text">
@@ -380,14 +350,7 @@ $(document).ready(function () {
   </a>
 </div>
 
-  <!-- <div class="card col-sm-6 col-md-4"> -->
-<!--   <img class="project-img" src="./img/projects/project-6/0.jpg"/> -->
-<!--   <div class="card-body"> -->
-<!--     <h5 class="card-title">Bay 25th Street</h5> -->
-<!--     <a href="/project-6.html" class="btn btn-primary">View project</a> -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="card col-sm-6 col-md-4">
+  <div class="card">
   <a class="project-link" href="/project-6.html">
     <img class="project-img" src="./img/projects/project-6/0.jpg"/>
     <div class="project-text">
@@ -398,14 +361,7 @@ $(document).ready(function () {
   </a>
 </div>
 
-  <!-- <div class="card col-sm-6 col-md-4"> -->
-<!--   <img class="project-img" src="./img/projects/project-7/0.jpg"/> -->
-<!--   <div class="card-body"> -->
-<!--     <h5 class="card-title">99th St Brooklyn</h5> -->
-<!--     <a href="/project-7.html" class="btn btn-primary">View project</a> -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="card col-sm-6 col-md-4">
+  <div class="card">
   <a class="project-link" href="/project-7.html">
     <img class="project-img" src="./img/projects/project-7/0.jpg"/>
     <div class="project-text">
@@ -420,12 +376,12 @@ $(document).ready(function () {
 <section>
   <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
     <!-- Carousel Buttons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <button class="carousel-control carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+      <span class="carousel-control-icon carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <button class="carousel-control carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+      <span class="carousel-control-icon carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
     <!-- Carousel -->
@@ -433,6 +389,19 @@ $(document).ready(function () {
   </div>
 </section>
 <script src="./js/projects-carousel.js"></script>
+<script>
+$(document).ready(function() {
+  $('#projectCarousel .card').each(function() {
+    var $titleWord = $(this).find('.project-title-word');
+    var words = $titleWord.text().split(' ');
+    var $title = $titleWord.parent();
+    $titleWord.remove();
+    $.each(words, function(i, word) {
+      $('<div class="project-title-word"></div>').text(word).appendTo($title);
+    });
+  });
+});
+</script>
 
   </div>
 </div>

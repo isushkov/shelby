@@ -2,6 +2,7 @@ $light: #f0f1f2;
 $light-gray: #dbdcdd;
 $gray-light: #98989a;
 $gray-dark: #555558;
+$dark-gray: #29292f;
 $dark: #1c1c20;
 $primary: #c14845;
 $secondary: #fde047;
@@ -44,6 +45,10 @@ a {
   }
   &.dark-nored {
     background: $dark;
+  }
+  &.darkgray-rev {
+    background: $dark-gray;
+    background-image: linear-gradient(-10deg, $primary, transparent 50%);
   }
   &.light {
     background: $light-gray;
