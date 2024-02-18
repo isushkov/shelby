@@ -45,7 +45,7 @@
   <div id="header" class="container">
     <div id="headerLeft">
       <a class="navbar-brand" href="/">
-        <img id="logo" src="img/logo-dark_ico-txt_transp.png">
+        <img id="logo" src="img/header/logo-dark_ico-txt_transp.png">
       </a>
       <button id="togglerLeft" class="navbar-toggler" type="button"
           data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
@@ -266,46 +266,36 @@ $(document).ready(function () {
 
     </header>
     <main>
-      <div class="first-filler content light">
+      <div class="first-filler content dark">
   <div class="container">
-    <div id="pageHeaderTitle">
-      <h1>1024 Manhattan Avenue</h1>
-    </div>
-    <div class="card">
-      <div class="row g-0">
-        <div class="col-md-6 border-end">
-          <div class="d-flex flex-column justify-content-center">
-            <div class="main_image">
-              <img src="https://i.imgur.com/TAzli1U.jpg" id="main_product_image" width="350">
-            </div>
-            <div class="thumbnail_images">
-              <ul id="thumbnail">
-                <li><img onclick="changeImage(this)" src="https://i.imgur.com/TAzli1U.jpg" width="70"></li>
-                <li><img onclick="changeImage(this)" src="https://i.imgur.com/w6kEctd.jpg" width="70"></li>
-                <li><img onclick="changeImage(this)" src="https://i.imgur.com/L7hFD8X.jpg" width="70"></li>
-                <li><img onclick="changeImage(this)" src="https://i.imgur.com/6ZufmNS.jpg" width="70"></li>
-              </ul>
-            </div>
+    <div id="pageHeaderTitle"><h1>1024 Manhattan Avenue</h1></div>
+    <div class="postcard light">
+      <div class="postcard-top">
+        <div class="postcard-left">
+          <div class="main-image">
+            <img id="mainProductImage" src="./img/projects/project-2/@@img-main">
+          </div>
+          <div class="thumbnailImages">
+            <div id="dataImgOthers" class="d-none">@@img-others</div>
+            <ul id="thumbnail">
+              <li><img onclick="changeImage(this)" src="./img/projects/project-2/@@img-main"></li>
+            </ul>
           </div>
         </div>
-        <!-- description -->
-        <div class="col-md-6">
-          <div class="p-3 right-side">
-            <div class="d-flex justify-content-between align-items-center">
-              <h3>Description:</h3>
-            </div>
-            <div class="mt-2 pr-3 description">
-              <p>Located in Greenpoint, Brooklyn, between Freeman Street and Green Street, the 75-foot-tall development yields 28,436 square feet, with 24,666 square feet designated for residential space and 3,770 square feet for commercial space. The building has 30 residences with nine affordable housing units. Units are rentals based on the average unit scope of 822 square feet. The concrete-based structure has a cellar and a 22-foot-long rear yard.</p>
-            </div>
-            <h3>Scope Of Work:</h3>
-            <div class="scope-of-work d-flex flex-column">
-              <li class="scope-of-work-item">400A Temporary Service; 4000A Permanent Service; General Wiring; Fire Alarm; Underground Piping; In Slab Conduit installation; 2D/3D Electrical and MEP Coordination Shop Drawings; Low Voltage, CCTV, & Intercom Systems; Electrical Plan Review and Short Circuit Study;</li>
-            </div>
+        <div class="postcard-right">
+          <div class="postcard-title"><h3>Scope Of Work:</h3></div>
+          <div class="postcard-bar"></div>
+          <div class="postcard-description scope-of-work list-unstyled">
+            <li class="scope-of-work-item">400A Temporary Service; 4000A Permanent Service; General Wiring; Fire Alarm; Underground Piping; In Slab Conduit installation; 2D/3D Electrical and MEP Coordination Shop Drawings; Low Voltage, CCTV, & Intercom Systems; Electrical Plan Review and Short Circuit Study;</li>
           </div>
         </div>
       </div>
+      <div class="postcard-description">
+        <div class="postcard-title"><h3>Description:</h3></div>
+        <div class="postcard-bar"></div>
+        <div class="postcard-description"><p>Located in Greenpoint, Brooklyn, between Freeman Street and Green Street, the 75-foot-tall development yields 28,436 square feet, with 24,666 square feet designated for residential space and 3,770 square feet for commercial space. The building has 30 residences with nine affordable housing units. Units are rentals based on the average unit scope of 822 square feet. The concrete-based structure has a cellar and a 22-foot-long rear yard.</p></div>
+      </div>
     </div>
-    <!-- projects carousel -->
     <div id="projectCarouselData" class="d-none">
   <div class="card m-2">
   <img class="project-img" src="./img/projects/1.png"/>
@@ -372,7 +362,7 @@ $(document).ready(function () {
     <div class="carousel-inner"></div>
   </div>
 </section>
-<script src="./js/projects-carousel-cards.js"></script>
+<script src="./js/projects-carousel.js"></script>
 
   </div>
 </div>
@@ -400,7 +390,7 @@ $(document).ready(function () {
     </ul>
   </div>
   <div id="footerTopRight">
-    <a href="/"><img id="footerLogo" class="img-fluid" src="img/logo-dark_ico-txt_transp.png"></a>
+    <a href="/"><img id="footerLogo" class="img-fluid" src="img/footer/logo-dark_ico-txt_transp.png"></a>
     <ul id="footerSocial" class="list-unstyled">
       <li><a class="img-fluid" href="https://www.instagram.com/shelbyelectrical" target="_blank"><i class="fab fa-instagram"></i></a></li>
       <li><a class="img-fluid" href="https://www.facebook.com/shelbyelectricalnyc" target="_blank"><i class="fab fa-facebook-f"></i></a></li>

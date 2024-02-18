@@ -4,21 +4,6 @@ main {
   .content {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    &.dark {
-      color: $light;
-      background: $dark;
-      background-image: linear-gradient(170deg, $primary, transparent 50%);
-    }
-    &.dark-rev {
-      color: $light;
-      background: $dark;
-      background-image: linear-gradient(-10deg, $primary, transparent 50%);
-    }
-    &.light {
-      color: $dark;
-      background: $light-gray;
-      background-image: linear-gradient(-10deg, $white, transparent 50%);
-    }
   }
   #pageHeaderTitle {
     max-width: 960px;

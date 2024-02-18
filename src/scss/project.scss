@@ -3,12 +3,65 @@
 main {
   background: $light;
   color: $dark;
-  .card {
-    border: none;
-    overflow: hidden;
+
+  // title
+  #pageHeaderTitle {
+    text-align: center;
+    color: $dark;
+    padding: 3rem 0;
+    h1 {
+      font-family: Barlow-SemiBold;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+    }
   }
-  // gallery
-  .thumbnail_images ul {
+  // project
+  .postcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    color: $dark;
+    background-color: $light;
+  }
+  .postcard-title {
+    text-transform: uppercase;
+    font-family: Barlow-Bold;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+    transition: color 0.2s ease;
+  }
+  .postcard-bar {
+    width: 150px;
+    height: 7px;
+    transition: width 0.2s ease;
+    background-color: $primary;
+    margin-bottom: 0.5rem;
+  }
+  .postcard-subtitle {
+    text-transform: uppercase;
+    font-family: Barlow-Regular;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .postcard-description {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    p { margin: 0; }
+  }
+  .fa-circle {
+    font-size: 0.5rem;
+    align-content: center;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+  }
+
+  // project-left
+  .thumbnail-images ul {
     list-style: none;
     justify-content: center;
     display: flex;
@@ -23,7 +76,7 @@ main {
       &:hover { border: 2px solid #000; }
     }
   }
-  .main_image {
+  .main-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +85,7 @@ main {
     width: 100%;
     overflow: hidden;
   }
-  // scope-of-work
+  // project-right
   .right-side {
     position: relative;
   }
@@ -40,38 +93,13 @@ main {
     font-size: 14px;
     margin-left: 12px;
   }
-  // description
   .description p {
     font-size: 12px;
   }
-
   // project-cards slider
-
-.carousel-item .d-flex > .card {
-  flex: 0 0 auto;
-  width: 16rem; /* Можно отрегулировать в зависимости от нужд */
-}
-
-@media (max-width: 768px) {
-  /* Для мобильных устройств показываем меньше карточек */
-  .carousel-item .d-flex > .card {
-    width: calc(50% - 20px); /* 2 карточки на малых экранах */
-  }
-}
-
-@media (max-width: 992px) {
-  /* Для планшетов */
-  .carousel-item .d-flex > .card {
-    width: calc(33.333% - 20px); /* 3 карточки на средних экранах */
-  }
-}
-
-@media (min-width: 992px) {
-  /* Для настольных ПК */
-  .carousel-item .d-flex > .card {
-    width: calc(16.666% - 20px); /* 6 карточек на больших экранах */
-  }
-}
+  
+ 
+  // media
   // @media (max-width: 992px) {}
   // @media (max-width: 768px) {}
 }

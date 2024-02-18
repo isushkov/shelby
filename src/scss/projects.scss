@@ -30,13 +30,13 @@ main {
     border: 1px solid $dark;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
-  .proj1 { grid-area: x1; }
-  .proj2 { grid-area: x2; }
-  .proj3 { grid-area: x3; }
-  .proj4 { grid-area: x4; }
-  .proj5 { grid-area: x5; }
-  .proj6 { grid-area: x6; }
-  .proj7 { grid-area: x7; }
+  .project-1 { grid-area: x1; }
+  .project-2 { grid-area: x2; }
+  .project-3 { grid-area: x3; }
+  .project-4 { grid-area: x4; }
+  .project-5 { grid-area: x5; }
+  .project-6 { grid-area: x6; }
+  .project-7 { grid-area: x7; }
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
@@ -49,8 +49,8 @@ main {
   $grid-height: 280px;
   .gallery { grid-gap: $grid-gap; }
   .gallery-item { height: $grid-height; }
-  .proj1 { height: $grid-height * 2 + $grid-gap; }
-  .proj2 { height: $grid-height * 2 + $grid-gap; }
+  .project-1 { height: $grid-height * 2 + $grid-gap; }
+  .project-2 { height: $grid-height * 2 + $grid-gap; }
 
   // project
   .project-link {
@@ -138,8 +138,8 @@ main {
     $grid-height: 250px;
     .gallery { grid-gap: $grid-gap; }
     .gallery-item { height: $grid-height; }
-    .proj1 { height: $grid-height * 2 + $grid-gap; }
-    .proj2 { height: $grid-height * 2 + $grid-gap; }
+    .project-1 { height: $grid-height * 2 + $grid-gap; }
+    .project-2 { height: $grid-height * 2 + $grid-gap; }
   }
   @media (max-width: 992px) {
     .container {
@@ -159,8 +159,8 @@ main {
     $grid-height: 220px;
     .gallery { grid-gap: $grid-gap; }
     .gallery-item { height: $grid-height; }
-    .proj1 { height: $grid-height * 2 + $grid-gap; }
-    .proj2 { height: $grid-height * 2 + $grid-gap; }
+    .project-1 { height: $grid-height * 2 + $grid-gap; }
+    .project-2 { height: $grid-height * 2 + $grid-gap; }
   }
   @media (max-width: 768px) {
     .gallery {
@@ -172,8 +172,8 @@ main {
     $grid-height: 220px;
     .gallery { grid-gap: $grid-gap; }
     .gallery-item { height: $grid-height; }
-    .proj1 { height: $grid-height * 2 + $grid-gap; }
-    .proj2 { height: $grid-height * 2 + $grid-gap; }
+    .project-1 { height: $grid-height * 2 + $grid-gap; }
+    .project-2 { height: $grid-height * 2 + $grid-gap; }
 
     .project-title { width: 90%; }
     .project-title-word { font-size: 1.8rem; }
