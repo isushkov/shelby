@@ -81,6 +81,7 @@ main {
   .thumbnail-image {
     height: 70px;
     width: 70px;
+    background: $dark-gray;
     transition: transform 0.3s ease;
   }
   // description and scope
