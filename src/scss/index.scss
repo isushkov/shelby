@@ -2,43 +2,30 @@
 
 main {
   color: $dark;
-  .index-filler {
-    background-color: $light-gray;
-  }
+  .index-filler { background-color: $light-gray; }
   // carousel
   .carousel-container {
     position: relative;
     display: inline-block;
     width: 100%;
   }
-  .container.carousel-title {
-    padding: 2rem;
-  }
+  .container.carousel-title { padding: 2rem; }
   #carouselFade img {
     width: 100%;
-    min-height: 350px;
-    max-height: 500px;
+    height: 400px;
     object-fit: cover;
+    filter: blur(3px);
   }
   @keyframes scaleUp {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.1);
-    }
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
   }
   .carousel-item img {
     transform-origin: center center;
     animation: scaleUp 5s forwards;
   }
   .carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
     background: linear-gradient(180deg, $light-gray, rgba(255,255,255,0) 50%);
     display: flex;
   }
@@ -62,18 +49,14 @@ main {
     color: $light;
     background-color: $dark;
   }
-  .carousel-title-second {
-    padding-right: 2rem;
-  }
+  .carousel-title-second { padding-right: 2rem; }
   .carousel-title-second .carousel-title-item {
     color: $dark;
     background-color: $light;
   }
 
   // content
-  .content {
-    padding: 3rem 0;
-  }
+  .content { padding: 3rem 0; }
   .postcard {
     display: flex;
     justify-content: space-between;
@@ -100,50 +83,32 @@ main {
         }
       }
     }
-    &:first-child {
-      margin: 0 0 2rem 0;
-    }
-    &:last-child {
-      margin: 2rem 0 0 0;
-    }
+    &:first-child { margin: 0 0 2rem 0; }
+    &:last-child { margin: 2rem 0 0 0; }
     &:active, &:hover {
-      .postcard__img {
-        transform: scale(1.1);
-      }
-      .postcard__bar {
-        width: 100px;
-      }
+      .postcard__img { transform: scale(1.1); }
+      .postcard__bar { width: 100px; }
     }
     &.light {
       color: $dark;
       background-color: $light;
-      &:active .postcard__title, &:hover .postcard__title {
-        color: $primary;
-      }
+      &:active .postcard__title, &:hover .postcard__title { color: $primary; }
       .postcard__text::before {
         background: repeating-linear-gradient(-45deg, $light-gray, $light-gray 10px, $light 10px, $light 20px);
       }
-      .postcard__bar {
-        background-color: $primary;
-      }
+      .postcard__bar { background-color: $primary; }
     }
     &.dark {
       color: $light-gray;
       background-color: $dark;
-      &:active .postcard__title, &:hover .postcard__title {
-        color: $primary;
-      }
+      &:active .postcard__title, &:hover .postcard__title { color: $primary; }
       .postcard__text {
         border: 1px solid $gray-dark;
         &::before {
           background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $gray-dark 10px, $gray-dark 20px);
         }
       }
-      .postcard__text::before {
-      }
-      .postcard__bar {
-        background-color: $primary;
-      }
+      .postcard__bar { background-color: $primary; }
     }
   }
   .postcard__img_link {
@@ -194,9 +159,7 @@ main {
     margin: 10px 0;
     transition: width 0.2s ease;
   }
-  .postcard__description {
-    font-size: 1.5rem;
-  }
+  .postcard__description { font-size: 1.5rem; }
 
   // media
   @media screen and (max-width: 991px) {
@@ -238,13 +201,7 @@ main {
     }
     .postcard__text {
       width: 100%;
-      &::before {
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3rem;
-        width: 100%;
-      }
+      &::before { top: 0; left: 0; right: 0; height: 3rem; width: 100%; }
     }
   }
 }

@@ -266,39 +266,98 @@ $(document).ready(function () {
 
     </header>
     <main>
-      <div class="first-filler content dark px-3">
-  <div id="yourVision" class="container">
-    <div class="txt">
-      <h2 class="txt-title mt-0">Lighting Your Vision.</h2>
-      <div class="txt-bar"></div>
-      <p class="lead">
-        We take pride in contributing to meaningful projects across the five boroughs.
-        With a focus on practical craftsmanship,
-        we apply industry-leading technologies to handle electrical construction
-        for new facilities and spaces undergoing renovations.
-      </p>
+      <!-- slider -->
+<div class="content dark-nored p-0">
+  <div class="first-filler index-filler"></div>
+<div class="carousel-container">
+  <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/about-us/carousel/1.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/about-us/carousel/2.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/about-us/carousel/3.jpg" class="d-block w-100">
+      </div>
+    </div>
+  </div>
+  <div class="carousel-overlay">
+    <div class="container carousel-title">
+      <div class="carousel-title-first row flex-row flex-wrap">
+        <div class="carousel-title-item">Lighting</div>
+        <div class="carousel-title-item">Your</div>
+        <div class="carousel-title-item">Vision</div>
+      </div>
+      <div class="carousel-title-second row flex-row flex-wrap">
+        <div class="carousel-title-item">Expert</div>
+        <div class="carousel-title-item">Craftsmanship</div>
+        <div class="carousel-title-item">in</div>
+        <div class="carousel-title-item">Electrical</div>
+        <div class="carousel-title-item">Construction</div>
+        <div class="carousel-title-item">and</div>
+        <div class="carousel-title-item">Renovation</div>
+      </div>
     </div>
   </div>
 </div>
-<div class="content light">
-  <div id="yourSuccess" class="container">
-    <img class="img-fluid p-2" src="./img/about-us/2.jpg">
-    <div class="txt p-3">
-      <h2 class="txt-title mt-0">Your Success, Our Purpose.</h2>
-      <div class="txt-bar"></div>
-      <p class="txt-lead">
-        At Shelby Electrical Corp, we offer comprehensive solutions through
-        the collaborative efforts of our dedicated office staff
-        and skilled electricians across all five boroughs.
-        Our expertise extends to major healthcare facilities,
-        intricate data centers, solar fields, and projects of various sizes.
-        Our commitment lies in building lasting relationships.
-        We prioritize transparent communication and mutual success.
-        Over 85% of our projects come from repeat customers,
-        a testament to the trust our clients place in us to consistently deliver
-        cost-effective, people-centric, and innovative solutions.
-      </p>
-    </div>
+<script>
+// анимировать активный слайдер
+$(document).ready(function() {
+  $('#carouselFade').on('slid.bs.carousel', function () {
+    // Плавно возвращаем увеличение к исходному масштабу перед началом анимации
+    $('.carousel-item img').css('transform', 'scale(1)');
+    // Плавное увеличение активного изображения
+    $('.carousel-item.active img').css('transform', 'scale(1.05)');
+  });
+});
+</script>
+
+</div>
+<!-- pic+text -->
+<div class="content dark-rev">
+  <div class="container">
+    <article class="postcard dark red">
+      <div class="postcard__img_link">
+        <img class="postcard__img" src="./img/about-us/1.jpg"/>
+      </div>
+      <div class="postcard__text">
+        <h1 class="postcard__title">Your Success, Our Purpose.</h1>
+        <div class="postcard__bar"></div>
+        <div class="postcard__description">
+          At Shelby Electrical Corp, we offer comprehensive solutions through
+          the collaborative efforts of our dedicated office staff
+          and skilled electricians across all five boroughs.
+          Our expertise extends to major healthcare facilities,
+          intricate data centers, solar fields, and projects of various sizes.
+          Our commitment lies in building lasting relationships.
+          We prioritize transparent communication and mutual success.
+          Over 85% of our projects come from repeat customers,
+          a testament to the trust our clients place in us to consistently deliver
+          cost-effective, people-centric, and innovative solutions.
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+<!-- core-values (like slider) -->
+Core Values:
+  Reliability and Safety: Guaranteeing safety and reliability in every project.
+  Innovation and Technology: Applying advanced solutions for efficiency and sustainability.
+  Professionalism and Expertise: High standard of work and continuous education of our specialists.
+  Eco-Friendliness and Responsibility: Promoting sustainable development and caring for the planet's future.
+  Transparency and Honesty: Open and honest communication with clients and partners.
+  Teamwork and Support: Collaborative effort and mutual assistance to achieve the best results.
+<!-- text-centered (white like proj-desc) -->
+<div class="container">
+  <div class="txt">
+    <p class="lead">
+      We take pride in contributing to meaningful projects across the five boroughs.
+      With a focus on practical craftsmanship,
+      we apply industry-leading technologies to handle electrical construction
+      for new facilities and spaces undergoing renovations.
+    </p>
   </div>
 </div>
 <div class="divider-dark-graylight"></div>
