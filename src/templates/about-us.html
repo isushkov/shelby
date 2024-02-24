@@ -2,6 +2,21 @@
 <div class="content dark-nored p-0">
   @@include("./about-us/carousel.html")
 </div>
+<!-- text-centered -->
+<div class="content light content-textcenter">
+  <div class="container">
+    <div class="divider-lightgray-light"></div>
+    <div class="textcenter">
+      <div class="textcenter-bar"></div>
+      <p class="textcenter-description">
+        We take pride in contributing to meaningful projects across the five boroughs.<br>
+        With a focus on practical craftsmanship,<br>
+        we apply industry-leading technologies to handle electrical construction<br>
+        for new facilities and spaces undergoing renovations.
+      </p>
+    </div>
+  </div>
+</div>
 <!-- pic+text -->
 <div class="content dark-rev">
   <div class="container">
@@ -29,22 +44,59 @@
   </div>
 </div>
 <!-- core-values (like slider) -->
-Core Values:
-  Reliability and Safety: Guaranteeing safety and reliability in every project.
-  Innovation and Technology: Applying advanced solutions for efficiency and sustainability.
-  Professionalism and Expertise: High standard of work and continuous education of our specialists.
-  Eco-Friendliness and Responsibility: Promoting sustainable development and caring for the planet's future.
-  Transparency and Honesty: Open and honest communication with clients and partners.
-  Teamwork and Support: Collaborative effort and mutual assistance to achieve the best results.
-<!-- text-centered (white like proj-desc) -->
-<div class="container">
-  <div class="txt">
-    <p class="lead">
-      We take pride in contributing to meaningful projects across the five boroughs.
-      With a focus on practical craftsmanship,
-      we apply industry-leading technologies to handle electrical construction
-      for new facilities and spaces undergoing renovations.
-    </p>
+<div class="content darkgray-rev content-core-values">
+  <div id="coreValuesTitle">
+    <h1>Core Values</h1>
+  </div>
+  <div class="container">
+    <div id="coreValuesData" class="d-none">
+      @@include("./about-us/carousel-card.html",{
+        "title": "Reliability and Safety",
+        "description": "Guaranteeing safety and reliability in every project.",
+        "img": "0.jpg"
+      })
+      @@include("./about-us/carousel-card.html",{
+        "title": "Innovation and Technology",
+        "description": "Applying advanced solutions for efficiency and sustainability.",
+        "img": "0.jpg"
+      })
+      @@include("./about-us/carousel-card.html",{
+        "title": "Professionalism and Expertise",
+        "description": "High standard of work and continuous education of our specialists.",
+        "img": "0.jpg"
+      })
+      @@include("./about-us/carousel-card.html",{
+        "title": "Eco-Friendliness and Responsibility",
+        "description": "Promoting sustainable development and caring for the planet's future.",
+        "img": "0.jpg"
+      })
+      @@include("./about-us/carousel-card.html",{
+        "title": "Transparency and Honesty",
+        "description": "Open and honest communication with clients and partners.",
+        "img": "0.jpg"
+      })
+      @@include("./about-us/carousel-card.html",{
+        "title": "Teamwork and Support",
+        "description": "Collaborative effort and mutual assistance to achieve the best results.",
+        "img": "0.jpg"
+      })
+    </div>
+    <section>
+      <div id="coreValuesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
+        <!-- Carousel Buttons -->
+        <button class="carousel-control carousel-control-prev" type="button" data-bs-target="#coreValuesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-icon carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control carousel-control-next" type="button" data-bs-target="#coreValuesCarousel" data-bs-slide="next">
+          <span class="carousel-control-icon carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- Carousel -->
+        <div class="carousel-inner"></div>
+      </div>
+    </section>
+    <script src="./js/corevalues-carousel.js"></script>
   </div>
 </div>
-<div class="divider-dark-graylight"></div>
+<div class="divider-dark-primary"></div>
