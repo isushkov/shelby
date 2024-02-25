@@ -1,237 +1,270 @@
 @import "_common.scss";
 
 main {
-  // carousel
-  .index-filler { background-color: $light-gray; }
-  .carousel-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
+  @media screen and (max-width: 991px) {
+    .container {
+      max-width: 100%;
+      padding: 0 2rem;
+    }
   }
-  .carousel-title {
-    padding: 2rem;
-  }
-  .carousel-title-first {
+  #aboutUsSlider {
+    background: $light-gray;
+    .index-filler { background-color: $light-gray; }
+    .carousel-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .carousel-title {
+      padding: 2rem;
+    }
     .carousel-title-item {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
-  }
-  #carouselFade img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    filter: blur(3px);
-  }
-  @keyframes scaleUp {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-  }
-  .carousel-item img {
-    transform-origin: center center;
-    animation: scaleUp 5s forwards;
-  }
-  .carousel-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
-    background: linear-gradient(180deg, $light-gray, rgba(255,255,255,0) 50%);
-    display: flex;
-  }
-  .carousel-title {
-    font-family: Barlow-SemiBold;
-    text-transform: uppercase;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2rem;
-  }
-  .carousel-title-item {
-    width: auto;
-    margin: 0;
-    font-size: 2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .carousel-title-first .carousel-title-item {
-    color: $light;
-    background-color: $dark;
-  }
-  .carousel-title-second { padding-right: 2rem; }
-  .carousel-title-second .carousel-title-item {
-    color: $dark;
-    background-color: $light;
-  }
-  // pic+text
-  .postcard {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0 2rem 0;
-    overflow: hidden;
-    position: relative;
-    &:nth-child(2n+0) {
-      flex-direction: row-reverse;
-      .postcard__text {
-        padding: 4rem 6rem 4rem 4rem;
-        &::before {
-          right: -15px;
-          transform: rotate(-4deg);
-        }
-      }
+    #carouselFade img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      filter: blur(3px);
     }
-    &:nth-child(2n+1) {
-      flex-direction: row;
-      .postcard__text {
-        padding: 4rem 4rem 4rem 6rem;
-        &::before {
-          left: -15px;
-          transform: rotate(4deg);
-        }
-      }
+    @keyframes scaleUp {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
     }
-    &:first-child { margin: 0 0 2rem 0; }
-    &:last-child { margin: 2rem 0 0 0; }
-    &:active, &:hover {
-      .postcard__img { transform: scale(1.1); }
-      .postcard__bar { width: 100px; }
+    .carousel-item img {
+      transform-origin: center center;
+      animation: scaleUp 5s forwards;
     }
-    &.light {
-      color: $dark;
-      background-color: $light;
-      &:active .postcard__title, &:hover .postcard__title { color: $primary; }
-      .postcard__text::before {
-        background: repeating-linear-gradient(-45deg, $light-gray, $light-gray 10px, $light 10px, $light 20px);
-      }
-      .postcard__bar { background-color: $primary; }
+    .carousel-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 1;
+      background: linear-gradient(180deg, $light-gray, rgba(255,255,255,0) 50%);
+      display: flex;
     }
-    &.dark {
-      color: $light-gray;
-      background-color: $dark;
-      &:active .postcard__title, &:hover .postcard__title { color: $primary; }
-      .postcard__text {
-        border: 1px solid $gray-dark;
-        &::before {
-          background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $gray-dark 10px, $gray-dark 20px);
-        }
-      }
-      .postcard__bar { background-color: $primary; }
-    }
-  }
-  .postcard__img_link {
-    display: flex;
-    width: 40%;
-  }
-  .postcard__img {
-    object-fit: cover;
-    position: relative;
-    width: 100%;
-    max-height: 100%;
-    transition: transform 0.3s ease;
-  }
-  .postcard__text {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: -20%;
-      height: 130%;
-      width: 60px;
-    }
-  }
-  .postcard__title {
-    text-transform: uppercase;
-    font-family: Barlow-Bold;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 0;
-    transition: color 0.2s ease;
-  }
-  .postcard__subtitle {
-    text-transform: uppercase;
-    font-family: Barlow-Regular;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-  }
-  .postcard__bar {
-    width: 50px;
-    height: 10px;
-    margin: 10px 0;
-    transition: width 0.2s ease;
-  }
-  .postcard__description { font-size: 1.5rem; }
-
-  // core-values
-  .content-core-values { padding-bottom: 4rem; }
-  #coreValuesTitle {
-    text-align: center;
-    padding: 3rem 0 2rem 0;
-    h1 {
+    .carousel-title {
       font-family: Barlow-SemiBold;
       text-transform: uppercase;
-      color: $light-gray;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+    }
+    .carousel-title-item {
+      width: auto;
+      margin: 0;
+      font-size: 2rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .carousel-title-first .carousel-title-item {
+      color: $light;
+      background-color: $dark;
+    }
+    .carousel-title-second { padding-right: 2rem; }
+    .carousel-title-second .carousel-title-item {
+      color: $dark;
+      background-color: $light;
+    }
+    @media screen and (max-width: 991px) {
+      #carouselFade img { height: 400px; }
+    }
+    @media screen and (max-width: 550px) {
+      #carouselFade img { height: 300px; }
+      .carousel-title-item { font-size: 1.6rem; }
     }
   }
-  .carousel-control-icon {
-    height: 60px;
-    width: 60px;
-    z-index: 2;
-  }
-  .corevalues-item-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-  .card {
-    margin: 0 0.2rem;
-    border: 1px solid $dark;
-    border-radius: 0;
-    width: 25%;
-  }
-  .corevalues-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  .corevalues-text {
-    width: 100%;
-  }
-  .corevalues-title {
-  }
-  .corevalues-description {
+
+  #aboutUsTextCenter {
+    padding: 2rem 0 3rem 0;
+    .text-center {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $dark;
+      background-color: $light;
+    }
+    .text-center-bar {
+      width: 150px;
+      height: 7px;
+      transition: width 0.2s ease;
+      background-color: $primary;
+      margin: 0.5rem 0 1rem 0;
+    }
+    .text-center-description {
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0;
+    }
   }
 
-  // textcenter
-  .content-textcenter {
-    padding: 3rem 0;
+  #aboutUsPostcard {
+    padding: 2rem 0;
+    .postcard {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0 2rem 0;
+      overflow: hidden;
+      position: relative;
+      flex-direction: row;
+      &:active, &:hover {
+        .postcard-img { transform: scale(1.1); }
+        .postcard-bar { width: 100px; }
+      }
+      &.dark {
+        color: $light-gray;
+        background-color: $dark;
+        border: 1px solid $gray-dark;
+        &:active .postcard-title, &:hover .postcard-title { color: $primary; }
+        .postcard-text::before {
+          background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $gray-dark 10px, $gray-dark 20px);
+        }
+        .postcard-bar { background-color: $primary; }
+      }
+    }
+    .postcard-img-wrap {
+      display: flex;
+      width: 40%;
+    }
+    .postcard-img {
+      object-fit: cover;
+      position: relative;
+      width: 100%;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+      object-position: right;
+    }
+    .postcard-text {
+    }
+    .postcard-text {
+      padding: 4rem 4rem 4rem 8rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: -20%;
+        height: 130%;
+        width: 80px;
+        left: -25px;
+        transform: rotate(4deg);
+      }
+    }
+    .postcard-title {
+      text-transform: uppercase;
+      font-family: Barlow-SemiBold;
+      font-size: 2rem;
+      margin-bottom: 0;
+      transition: color 0.2s ease;
+    }
+    .postcard-bar {
+      width: 50px;
+      height: 10px;
+      margin: 10px 0;
+      transition: width 0.2s ease;
+    }
+    .postcard-description { font-size: 1.5rem; }
+    @media screen and (max-width: 1199px) {
+      .postcard { flex-direction: column; }
+      .postcard-img-wrap {
+        width: 100%;
+      }
+      .postcard-img {
+        width: 100%;
+        max-height: 300px;
+        object-position: 0 -110px;
+      }
+      .postcard-text {
+        padding: 5rem 2rem 2rem 2rem;
+        width: 100%;
+        &::before {
+          top: 0; left: 0;
+          transform: rotate(0deg);
+          height: 3rem;
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .postcard-img {
+        object-position: top;
+      }
+    }
   }
-  .textcenter {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $dark;
-    background-color: $light;
-  }
-  .textcenter-bar {
-    width: 150px;
-    height: 7px;
-    transition: width 0.2s ease;
-    background-color: $primary;
-    margin-bottom: 0.5rem;
-  }
-  .textcenter-description {
-    padding: 1rem;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  // media
-  @media (max-width: 1000px) {
-  }
-  @media (max-width: 767px) {
+  // core-values⠁
+  #aboutUsCoreValues {
+    padding-bottom: 4rem;
+    #coreValuesTitle {
+      text-align: center;
+      padding: 0 0 2rem 0;
+      h1 {
+        font-family: Barlow-SemiBold;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $light-gray;
+      }
+    }
+    #coreValuesCarousel {
+      display: flex;
+      flex-direction: row;
+    }
+    .carousel-control { position: relative; }
+    .carousel-control-icon {
+      display: flex;
+      height: 60px;
+      width: 60px;
+      z-index: 2;
+    }
+    .carousel-inner {
+      width: 100%;
+    }
+    .core-values-item-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card {
+      width: 30%;
+      height: 300px;
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .core-values-img {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      min-height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    .core-values-img-main {
+      min-height: 100%;
+      width: 100%;
+      filter: blur(2px);
+    }
+    .darken-overlay {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .fas {
+      font-size: 5rem;
+      color: $light;
+    }
+    .core-values-title-word {
+      font-size: 1.5rem;
+      text-align: center;
+      color: $light;
+      background: $dark;
+      text-transform: uppercase;
+    }
+    .core-values-description {
+      margin: 0;
+      color: #f0f1f2;
+      text-align: center;
+    }
   }
 }

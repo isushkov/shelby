@@ -3,10 +3,10 @@ $(document).ready(function() {
   const $carouselInner = $('#coreValuesCarousel .carousel-inner').empty();
   let currentSlide;
   function createNewSlide() {
-    const $slide = $('<div class="carousel-item corevalues-item"><div class="carousel-item-wrapper corevalues-item-wrapper"></div></div>');
+    const $slide = $('<div class="carousel-item core-values-item"><div class="carousel-item-wrapper core-values-item-wrapper"></div></div>');
     if ($carouselInner.children().length === 0) $slide.addClass('active'); // Делаем первый слайд активным
     $carouselInner.append($slide);
-    return $slide.find('.corevalues-item-wrapper');
+    return $slide.find('.core-values-item-wrapper');
   }
   function addCardsToSlides() {
     let cardsPerSlide;

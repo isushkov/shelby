@@ -1,42 +1,26 @@
-about-us
-  slider:
-    Lighting Your Vision
-    Expert Craftsmanship in Electrical Construction and Renovation
-  pic+text:
-    Your Success, Our Purpose.
-    At Shelby Electrical Corp, we offer comprehensive solutions through the collaborative efforts of our dedicated office staff and skilled electricians across all five boroughs. Our expertise extends to major healthcare facilities, intricate data centers, solar fields, and projects of various sizes. Our commitment lies in building lasting relationships. We prioritize transparent communication and mutual success. Over 85% of our projects come from repeat customers, a testament to the trust our clients place in us to consistently deliver cost-effective, people-centric, and innovative solutions.
-  Core Values:
-    Reliability and Safety: Guaranteeing safety and reliability in every project.
-    Innovation and Technology: Applying advanced solutions for efficiency and sustainability.
-    Professionalism and Expertise: High standard of work and continuous education of our specialists.
-    Eco-Friendliness and Responsibility: Promoting sustainable development and caring for the planet's future.
-    Transparency and Honesty: Open and honest communication with clients and partners.
-    Teamwork and Support: Collaborative effort and mutual assistance to achieve the best results.
-  text centered:
-    We take pride in contributing to meaningful projects across the five boroughs. With a focus on practical craftsmanship, we apply industry-leading technologies to handle electrical construction for new facilities and spaces undergoing renovations.
 careers:
   slider:
     A Career to Be Proud Of.
     Unlock a Better Professional Experience.
     <button>
-  centered text:
+  text-center:
     Shelby is on the lookout for new team members to join our endeavor in developing, energizing, and illuminating the country!
     Explore our job openings and shift your focus from just finding a job to building a meaningful career!
-  core values:
-    Career Growth: Elevating careers from within, fostering personal and professional development.
-    Competitive Compensation: Offering competitive salaries and exceptional benefit packages.
-    Knowledge Advancement: Promoting continuous learning and industry expertise in our state-of-the-art training facilities.
-    Family Culture: Beyond a company – we're a tight-knit, supportive family.
-    Inclusive Diversity: Actively embracing and promoting diversity every single day.
-    Prioritizing People: Committing to our people first, from new hires to top executives.
-  <button>
+    values:
+      Career Growth: Elevating careers from within, fostering personal and professional development.
+      Competitive Compensation: Offering competitive salaries and exceptional benefit packages.
+      Knowledge Advancement: Promoting continuous learning and industry expertise in our state-of-the-art training facilities.
+      Family Culture: Beyond a company – we're a tight-knit, supportive family.
+      Inclusive Diversity: Actively embracing and promoting diversity every single day.
+      Prioritizing People: Committing to our people first, from new hires to top executives.
+    <button>
 
 добавить анимации по всему сайту:
   - для повления контента при скроле
-  - цикличные для динамики
   - replase hover-behavior for mouse to scroll trigger
-project-N:
-  при клике открывать картинку на весь экран
+  - цикличные для динамики
+project-N: при клике открывать картинку на весь экран
+about-us: add values
 
 request info:
   get link to indeed

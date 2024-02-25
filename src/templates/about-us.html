@@ -1,102 +1,112 @@
 <!-- slider -->
-<div class="content dark-nored p-0">
-  @@include("./about-us/carousel.html")
+<div id="aboutUsSlider" class="content dark-nored p-0">
+  @@include("./about-us/slider.html")
 </div>
 <!-- text-centered -->
-<div class="content light content-textcenter">
+<div id="aboutUsTextCenter" class="content light">
   <div class="container">
     <div class="divider-lightgray-light"></div>
-    <div class="textcenter">
-      <div class="textcenter-bar"></div>
-      <p class="textcenter-description">
+    <div class="text-center">
+      <p class="text-center-description">
         We take pride in contributing to meaningful projects across the five boroughs.<br>
         With a focus on practical craftsmanship,<br>
         we apply industry-leading technologies to handle electrical construction<br>
         for new facilities and spaces undergoing renovations.
       </p>
+      <div class="text-center-bar"></div>
     </div>
   </div>
 </div>
-<!-- pic+text -->
-<div class="content dark-rev">
+<!-- postcard -->
+<div id="aboutUsPostcard" class="content dark-rev">
   <div class="container">
-    <article class="postcard dark red">
-      <div class="postcard__img_link">
-        <img class="postcard__img" src="./img/about-us/1.jpg"/>
+    <article class="postcard dark">
+      <div class="postcard-img-wrap">
+        <img class="postcard-img" src="./img/about-us/postcard/0.jpg"/>
       </div>
-      <div class="postcard__text">
-        <h1 class="postcard__title">Your Success, Our Purpose.</h1>
-        <div class="postcard__bar"></div>
-        <div class="postcard__description">
-          At Shelby Electrical Corp, we offer comprehensive solutions through
-          the collaborative efforts of our dedicated office staff
-          and skilled electricians across all five boroughs.
-          Our expertise extends to major healthcare facilities,
-          intricate data centers, solar fields, and projects of various sizes.
-          Our commitment lies in building lasting relationships.
-          We prioritize transparent communication and mutual success.
-          Over 85% of our projects come from repeat customers,
-          a testament to the trust our clients place in us to consistently deliver
-          cost-effective, people-centric, and innovative solutions.
+      <div class="postcard-text">
+        <h1 class="postcard-title">Your Success, Our Purpose.</h1>
+        <div class="postcard-bar"></div>
+        <div class="postcard-description">
+          <p>At Shelby Electrical Corp, we deliver comprehensive solutions with our dedicated staff and skilled electricians in all five boroughs.</p>
+          <p>Specializing in healthcare, data centers, and solar fields, we focus on lasting relationships, clear communication, and mutual success.</p>
+          <p>Our dedication is proven by over 85% repeat customer projects, showcasing our commitment to cost-effective, innovative, and people-centric services.</p>
         </div>
       </div>
     </article>
   </div>
 </div>
-<!-- core-values (like slider) -->
-<div class="content darkgray-rev content-core-values">
-  <div id="coreValuesTitle">
-    <h1>Core Values</h1>
-  </div>
-  <div class="container">
-    <div id="coreValuesData" class="d-none">
-      @@include("./about-us/carousel-card.html",{
-        "title": "Reliability and Safety",
-        "description": "Guaranteeing safety and reliability in every project.",
-        "img": "0.jpg"
-      })
-      @@include("./about-us/carousel-card.html",{
-        "title": "Innovation and Technology",
-        "description": "Applying advanced solutions for efficiency and sustainability.",
-        "img": "0.jpg"
-      })
-      @@include("./about-us/carousel-card.html",{
-        "title": "Professionalism and Expertise",
-        "description": "High standard of work and continuous education of our specialists.",
-        "img": "0.jpg"
-      })
-      @@include("./about-us/carousel-card.html",{
-        "title": "Eco-Friendliness and Responsibility",
-        "description": "Promoting sustainable development and caring for the planet's future.",
-        "img": "0.jpg"
-      })
-      @@include("./about-us/carousel-card.html",{
-        "title": "Transparency and Honesty",
-        "description": "Open and honest communication with clients and partners.",
-        "img": "0.jpg"
-      })
-      @@include("./about-us/carousel-card.html",{
-        "title": "Teamwork and Support",
-        "description": "Collaborative effort and mutual assistance to achieve the best results.",
-        "img": "0.jpg"
-      })
-    </div>
-    <section>
-      <div id="coreValuesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
-        <!-- Carousel Buttons -->
-        <button class="carousel-control carousel-control-prev" type="button" data-bs-target="#coreValuesCarousel" data-bs-slide="prev">
-          <span class="carousel-control-icon carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control carousel-control-next" type="button" data-bs-target="#coreValuesCarousel" data-bs-slide="next">
-          <span class="carousel-control-icon carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-        <!-- Carousel -->
-        <div class="carousel-inner"></div>
-      </div>
-    </section>
-    <script src="./js/corevalues-carousel.js"></script>
-  </div>
-</div>
+<!-- &#60;&#33;&#45;&#45; core-values &#45;&#45;&#62; -->
+<!-- <div id="aboutUsCoreValues" class="content dark-rev"> -->
+<!--   <div id="coreValuesTitle"> -->
+<!--     <h1>Core Values</h1> -->
+<!--   </div> -->
+<!--   <div class="container"> -->
+<!--     <div id="coreValuesData" class="d-none"> -->
+<!--       @@include("./about-us/core-values-card.html",{ -->
+<!--         "title": "Reliability and Safety", -->
+<!--         "description": "Guaranteeing safety and reliability in every project.", -->
+<!--         "img": "0.jpg", -->
+<!--         "ico": "shield" -->
+<!--       }) -->
+<!--       @@include("./about-us/core-values-card.html",{ -->
+<!--         "title": "Innovation and Technology", -->
+<!--         "description": "Applying advanced solutions for efficiency and sustainability.", -->
+<!--         "img": "1.jpg", -->
+<!--         "ico": "lightbulb" -->
+<!--       }) -->
+<!--       @@include("./about-us/core-values-card.html",{ -->
+<!--         "title": "Professionalism and Expertise", -->
+<!--         "description": "High standard of work and continuous education of our specialists.", -->
+<!--         "img": "2.jpg", -->
+<!--         "ico": "user-tie" -->
+<!--       }) -->
+<!--       @@include("./about-us/core-values-card.html",{ -->
+<!--         "title": "Eco-Friendliness and Responsibility", -->
+<!--         "description": "Promoting sustainable development and caring for the planet's future.", -->
+<!--         "img": "3.jpg", -->
+<!--         "ico": "leaf" -->
+<!--       }) -->
+<!--       @@include("./about-us/core-values-card.html",{ -->
+<!--         "title": "Transparency and Honesty", -->
+<!--         "description": "Open and honest communication with clients and partners.", -->
+<!--         "img": "4.jpg", -->
+<!--         "ico": "eye" -->
+<!--       }) -->
+<!--       @@include("./about-us/core-values-card.html",{ -->
+<!--         "title": "Teamwork and Support", -->
+<!--         "description": "Collaborative effort and mutual assistance to achieve the best results.", -->
+<!--         "img": "5.jpg", -->
+<!--         "ico": "handshake" -->
+<!--       }) -->
+<!--     </div> -->
+<!--     <section> -->
+<!--       <div id="coreValuesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true"> -->
+<!--         <button class="carousel-control carousel-control-prev" type="button" data-bs-target="#coreValuesCarousel" data-bs-slide="prev"> -->
+<!--           <span class="carousel-control-icon carousel-control-prev-icon" aria-hidden="true"></span> -->
+<!--           <span class="visually-hidden">Previous</span> -->
+<!--         </button> -->
+<!--         <div class="carousel-inner"></div> -->
+<!--         <button class="carousel-control carousel-control-next" type="button" data-bs-target="#coreValuesCarousel" data-bs-slide="next"> -->
+<!--           <span class="carousel-control-icon carousel-control-next-icon" aria-hidden="true"></span> -->
+<!--           <span class="visually-hidden">Next</span> -->
+<!--         </button> -->
+<!--       </div> -->
+<!--     </section> -->
+<!--     <script src="./js/core-values-carousel.js"></script> -->
+<!--   </div> -->
+<!-- </div> -->
+<!-- <script> -->
+<!-- $(document).ready(function() { -->
+<!--   $('#aboutUsCoreValues .card').each(function() { -->
+<!--     var $titleWord = $(this).find('.core-values-title-word'); -->
+<!--     var words = $titleWord.text().split(' '); -->
+<!--     var $title = $titleWord.parent(); -->
+<!--     $titleWord.remove(); -->
+<!--     $.each(words, function(i, word) { -->
+<!--       $('<div class="core-values-title-word"></div>').text(word).appendTo($title); -->
+<!--     }); -->
+<!--   }); -->
+<!-- }); -->
+<!-- </script> -->
 <div class="divider-dark-primary"></div>

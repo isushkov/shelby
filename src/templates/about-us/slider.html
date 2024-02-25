@@ -32,14 +32,3 @@
     </div>
   </div>
 </div>
-<script>
-// анимировать активный слайдер
-$(document).ready(function() {
-  $('#carouselFade').on('slid.bs.carousel', function () {
-    // Плавно возвращаем увеличение к исходному масштабу перед началом анимации
-    $('.carousel-item img').css('transform', 'scale(1)');
-    // Плавное увеличение активного изображения
-    $('.carousel-item.active img').css('transform', 'scale(1.05)');
-  });
-});
-</script>
