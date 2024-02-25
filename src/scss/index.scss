@@ -55,7 +55,7 @@ main {
     background-color: $light;
   }
 
-  // content
+  // services
   .content { padding: 3rem 0; }
   .postcard {
     display: flex;
@@ -160,6 +160,12 @@ main {
     transition: width 0.2s ease;
   }
   .postcard__description { font-size: 1.5rem; }
+  .service-3 {
+    .postcard__img { object-position: right; }
+    @media screen and (max-width: 767px) {
+      .postcard__img { object-position: top; }
+    }
+  }
 
   // media
   @media screen and (max-width: 991px) {
