@@ -12,7 +12,7 @@ main {
   // slider
   #aboutUsSlider {
     background: $light-gray;
-    .index-filler { background-color: $light-gray; }
+    .first-filler { background-color: $light-gray; }
     .carousel-container {
       position: relative;
       display: inline-block;
@@ -200,12 +200,12 @@ main {
     }
   }
 
-  // core-values
-  #aboutUsCoreValues {
+  // values
+  #aboutUsValues {
     #values {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row; 
+      flex-direction: row;
       justify-content: space-between;
       padding-bottom: 3rem;
     }

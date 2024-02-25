@@ -1,19 +1,70 @@
-<div class="first-filler content light">
+<!-- slider -->
+<div id="careersSlider" class="content dark-nored p-0">
+  @@include("./careers/slider.html")
+</div>
+<!-- values -->
+<div id="careersValues" class="content light">
+  <div class="values-title-wrap">
+    <h1 class="values-title">Find Your Better Career with Shelby</h1>
+  </div>
   <div class="container">
-    <div class="career">
-      <img class="career-img" src="./img/about-us/2.jpg"/>
-      <div class="career-text">
-        <h2 class="career-title">A Career to Be Proud Of.</h2>
-        <div class="career-bar"></div>
-        <p class="career-description">
-          Shelby is on the lookout for new team members to join our endeavor
-          in developing, energizing, and illuminating the country!
-          Explore our job openings and shift your focus from just finding
-          a job to building a meaningful career!
-        </p>
-        <h2 class="txt-title mt-0"><a href="#">LINK_TO_INDEED</a></h2>
-      </div>
+    <div id="values">
+      @@include("./careers/values-card.html",{
+        "title": "Career Growth",
+        "description": "Elevating careers from within, fostering personal and professional development.",
+        "img": "0.jpg",
+        "ico": "chart-line"
+      })
+      @@include("./careers/values-card.html",{
+        "title": "Competitive Compensation",
+        "description": "Offering competitive salaries and exceptional benefit packages.",
+        "img": "1.jpg",
+        "ico": "hand-holding-usd"
+      })
+      @@include("./careers/values-card.html",{
+        "title": "Knowledge Advancement",
+        "description": "Promoting continuous learning and industry expertise in our state-of-the-art training facilities.",
+        "img": "2.jpg",
+        "ico": "book-open"
+      })
+      @@include("./careers/values-card.html",{
+        "title": "Family Culture",
+        "description": "Beyond a company – we're a tight-knit, supportive family.",
+        "img": "3.jpg",
+        "ico": "home"
+      })
+      @@include("./careers/values-card.html",{
+        "title": "Inclusive Diversity",
+        "description": "Actively embracing and promoting diversity every single day.",
+        "img": "4.jpg",
+        "ico": "globe"
+      })
+      @@include("./careers/values-card.html",{
+        "title": "Prioritizing People",
+        "description": "Committing to our people first, from new hires to top executives.",
+        "img": "5.jpg",
+        "ico": "user-check"
+      })
     </div>
   </div>
 </div>
-<div class="divider-dark-graylight"></div>
+<!-- postcard -->
+<div id="careersPostcard" class="content dark-rev">
+  <div class="container">
+    <article class="postcard dark">
+      <div class="postcard-img-wrap">
+        <img class="postcard-img" src="./img/careers/postcard/0.jpg"/>
+      </div>
+      <div class="postcard-text">
+        <h1 class="postcard-title">Grow with Us!</h1>
+        <div class="postcard-bar"></div>
+        <div class="postcard-description">
+          <p>Shelby is on the lookout for new team members to join our endeavor in developing, energizing, and illuminating the country!</p>
+          <p>Explore our job openings and shift your focus from just finding a job to building a meaningful career!</p>
+          <a href="#" target="_blank" class="btn btn-primary btn-lg btn-block w-100">View Career Opportunities</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+<div class="divider-dark-primary"></div>

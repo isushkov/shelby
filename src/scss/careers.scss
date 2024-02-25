@@ -1,40 +1,255 @@
 @import "_common.scss";
 
 main {
-  .content {
-    max-width: 100%;
-    padding: 2rem 0 2rem 0;
-    &:active, &:hover {
-      .career-bar {
-        width: 120px;
+  // common
+  @media screen and (max-width: 991px) {
+    .container {
+      max-width: 100%;
+      padding: 0 2rem;
+    }
+  }
+
+  // slider
+  #careersSlider {
+    background: $light-gray;
+    .first-filler { background-color: $light-gray; }
+    .carousel-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .carousel-title { padding: 2rem; }
+    .carousel-title-item { font-size: 2rem; }
+    #carouselFade img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      filter: blur(3px);
+    }
+    @keyframes scaleUp {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    .carousel-item img {
+      transform-origin: center center;
+      animation: scaleUp 5s forwards;
+    }
+    .carousel-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, $light-gray, rgba(255,255,255,0) 50%);
+      display: flex;
+      z-index: 1;
+    }
+    .carousel-title {
+      font-family: Barlow-SemiBold;
+      text-transform: uppercase;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .carousel-title-first { padding-left: 0.6rem; }
+    .carousel-title-second { padding-left: 0.6rem; }
+    .carousel-title-item {
+      width: auto;
+      margin: 0;
+      font-size: 2rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .carousel-title-first .carousel-title-item {
+      color: $light;
+      background-color: $dark;
+    }
+    .carousel-title-second .carousel-title-item {
+      color: $dark;
+      background-color: $light;
+    }
+    .slider-btn {
+      width: fit-content;
+      margin: 1rem 0 2rem 0;
+      box-shadow: 0 0 20px #fff;
+    }
+    @media screen and (max-width: 991px) {
+      #carouselFade img { height: 400px; }
+      .slider-btn { margin: 1rem 0 0 0; }
+    }
+    @media screen and (max-width: 550px) {
+      #carouselFade img { height: 300px; }
+      .carousel-title-item { font-size: 1.6rem; }
+    }
+  }
+  // values
+  #careersValues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .values-title-wrap {
+      padding: 3rem 0 2rem 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .values-title {
+        padding: 0 1rem;
+        font-family: Barlow-SemiBold;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2.5rem;
+        color: $dark;
       }
     }
-    &.dark {
-      .career-bar { background: $light; }
+    #values {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 3rem;
     }
-    &.light {
-      .career-bar { background: $dark; }
+    .values-item {
+      width: 30%;
+      margin: 1rem 0;
+    }
+    .values-item-top {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $dark;
+    }
+    .values-item-top-text {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .fas {
+      position: relative;
+      padding: 0.5rem 1rem;
+      font-size: 4rem;
+      color: $light-gray;
+    }
+    .values-item-title {
+      position: inherit;
+      height: 45%;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      font-family: barlow-semibold;
+      text-align: center;
+      text-transform: uppercase;
+      color: $light;
+    }
+    .darken-overlay {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .values-item-img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: blur(2px);
+    }
+    .values-item-description {
+      margin: 0;
+      font-family: barlow-regular;
+      color: $dark;
+    }
+    @media screen and (max-width: 991px) {
+      .values-item { width: 48%; }
+    }
+    @media screen and (max-width: 550px) {
+      .values-item { width: 100%; }
     }
   }
-  .career {
-    display: flex;
-    flex-direction: row;
+
+  // postcard
+  #careersPostcard {
+    padding: 2rem 0;
+    .postcard {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0 2rem 0;
+      overflow: hidden;
+      position: relative;
+      flex-direction: row;
+      &.dark {
+        color: $light-gray;
+        background-color: $dark;
+        border: 1px solid $gray-dark;
+        .postcard-text::before {
+          background: repeating-linear-gradient(-45deg, $dark, $dark 10px, $gray-dark 10px, $gray-dark 20px);
+        }
+        .postcard-bar { background-color: $primary; }
+      }
+    }
+    .postcard-img-wrap {
+      display: flex;
+      width: 40%;
+    }
+    .postcard-img {
+      object-fit: cover;
+      position: relative;
+      width: 100%;
+      max-height: 100%;
+      object-position: -80px 0;
+    }
+    .postcard-text {
+      padding: 4rem 4rem 4rem 8rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: -20%;
+        height: 130%;
+        width: 80px;
+        left: -25px;
+        transform: rotate(4deg);
+      }
+    }
+    .postcard-title {
+      text-transform: uppercase;
+      font-family: Barlow-SemiBold;
+      font-size: 2rem;
+      margin-bottom: 0;
+      transition: color 0.2s ease;
+    }
+    .postcard-bar {
+      width: 50px;
+      height: 10px;
+      margin: 10px 0;
+      transition: width 0.2s ease;
+    }
+    .postcard-description { font-size: 1.5rem; }
+    @media screen and (max-width: 1199px) {
+      .postcard { flex-direction: column; }
+      .postcard-img-wrap { width: 100%; }
+      .postcard-img {
+        width: 100%;
+        max-height: 300px;
+        object-position: 0 -40px;
+      }
+      .postcard-text {
+        padding: 5rem 2rem 2rem 2rem;
+        width: 100%;
+        &::before {
+          top: 0; left: 0;
+          transform: rotate(0deg);
+          height: 3rem;
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .postcard-img { object-position: top; }
+    }
   }
-  .career-img {
-    width: 40%;
-    object-fit: cover;
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-  .career-text { width: 60%; }
-  .career-title {
-    font-family: "Barlow-SemiBold";
-  }
-  .career-bar {
-    width: 50px;
-    height: 7px;
-    margin: 10px 0;
-    transition: width 0.2s ease, background 0.2s ease;
-  }
-  .career-description {}
 }
