@@ -1,12 +1,15 @@
 @import "_common.scss";
 
 main {
+  // common
   @media screen and (max-width: 991px) {
     .container {
       max-width: 100%;
       padding: 0 2rem;
     }
   }
+
+  // slider
   #aboutUsSlider {
     background: $light-gray;
     .index-filler { background-color: $light-gray; }
@@ -75,6 +78,7 @@ main {
     }
   }
 
+  // text-center
   #aboutUsTextCenter {
     padding: 2rem 0 3rem 0;
     .text-center {
@@ -85,6 +89,12 @@ main {
       color: $dark;
       background-color: $light;
     }
+    .text-center-description {
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0;
+    }
     .text-center-bar {
       width: 150px;
       height: 7px;
@@ -92,14 +102,9 @@ main {
       background-color: $primary;
       margin: 0.5rem 0 1rem 0;
     }
-    .text-center-description {
-      padding: 1rem;
-      font-size: 1.5rem;
-      text-align: center;
-      margin: 0;
-    }
   }
 
+  // postcard
   #aboutUsPostcard {
     padding: 2rem 0;
     .postcard {
@@ -135,8 +140,6 @@ main {
       max-height: 100%;
       transition: transform 0.3s ease;
       object-position: right;
-    }
-    .postcard-text {
     }
     .postcard-text {
       padding: 4rem 4rem 4rem 8rem;
@@ -196,75 +199,75 @@ main {
       }
     }
   }
-  // core-values⠁
+
+  // core-values
   #aboutUsCoreValues {
-    padding-bottom: 4rem;
-    #coreValuesTitle {
-      text-align: center;
-      padding: 0 0 2rem 0;
-      h1 {
-        font-family: Barlow-SemiBold;
-        text-transform: uppercase;
-        font-size: 2rem;
-        color: $light-gray;
-      }
-    }
-    #coreValuesCarousel {
+    #values {
       display: flex;
-      flex-direction: row;
-    }
-    .carousel-control { position: relative; }
-    .carousel-control-icon {
-      display: flex;
-      height: 60px;
-      width: 60px;
-      z-index: 2;
-    }
-    .carousel-inner {
-      width: 100%;
-    }
-    .core-values-item-wrapper {
-      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; 
       justify-content: space-between;
+      padding-bottom: 3rem;
     }
-    .card {
+    .values-item {
       width: 30%;
-      height: 300px;
-      background: none;
-      border: none;
+      margin: 1rem 0;
+    }
+    .values-item-top {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $gray-dark;
     }
-    .core-values-img {
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      min-height: 100%;
-      width: 100%;
-      overflow: hidden;
+    .values-item-top-text {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .core-values-img-main {
-      min-height: 100%;
-      width: 100%;
-      filter: blur(2px);
+    .fas {
+      position: relative;
+      padding: 0.5rem 1rem;
+      font-size: 4rem;
+      color: $light-gray;
+    }
+    .values-item-title {
+      position: inherit;
+      height: 45%;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      font-family: barlow-semibold;
+      text-align: center;
+      text-transform: uppercase;
+      color: $light-gray;
     }
     .darken-overlay {
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
-    .fas {
-      font-size: 5rem;
-      color: $light;
+    .values-item-img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: blur(7px);
     }
-    .core-values-title-word {
-      font-size: 1.5rem;
-      text-align: center;
-      color: $light;
-      background: $dark;
-      text-transform: uppercase;
-    }
-    .core-values-description {
+    .values-item-description {
       margin: 0;
-      color: #f0f1f2;
-      text-align: center;
+      font-family: barlow-regular;
+      color: $light-gray;
+    }
+    @media screen and (max-width: 991px) {
+      .values-item { width: 48%; }
+    }
+    @media screen and (max-width: 550px) {
+      .values-item { width: 100%; }
     }
   }
 }
