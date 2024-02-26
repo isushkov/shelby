@@ -2,7 +2,7 @@
   <div class="container">
     <div id="pageHeaderTitle"><h1>@@title</h1></div>
     <div class="postcard">
-      <div class="postcard-gallery">
+      <div class="postcard-gallery reveal">
         <div class="main-image">
           <img class="blur-overlay" src="./img/projects/@@page/@@img-main">
           <div class="darken-overlay"></div>
@@ -16,12 +16,12 @@
           </ul>
         </div>
       </div>
-      <div class="postcard-description">
+      <div class="postcard-description reveal">
         <div class="postcard-title"><h3>Description:</h3></div>
         <div class="postcard-bar"></div>
         <div class="postcard-text"><p>@@description</p></div>
       </div>
-      <div class="postcard-scope">
+      <div class="postcard-scope reveal">
         <div class="postcard-title"><h3>Scope Of Work:</h3></div>
         <div class="postcard-bar"></div>
         <div id="scopeOfWork" class="postcard-text list-unstyled">
@@ -32,10 +32,10 @@
   </div>
 </div>
 <div class="content darkgray-rev content-other-projects">
-  <div id="otherProjectsTitle">
+  <div id="otherProjectsTitle" class="reveal">
     <h1>Other Projects</h1>
   </div>
-  <div class="container">
+  <div class="container reveal">
     @@include("./project/projects-carousel.html", {"page": "@@page"})
   </div>
 </div>

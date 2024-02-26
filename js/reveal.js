@@ -1,0 +1,1 @@
+$(document).ready(function(){function o(){$(".reveal").each(function(){var o=$(window).height();$(this).offset().top-$(window).scrollTop()<o-50?$(this).addClass("active"):$(this).removeClass("active")})}$(window).on("scroll",o),o()});

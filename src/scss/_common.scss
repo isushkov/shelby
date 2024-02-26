@@ -88,3 +88,14 @@ a {
   @extend .divider;
   background: repeating-linear-gradient(-45deg, $light-gray, $light-gray 10px, $light 10px, $light 20px);
 }
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}

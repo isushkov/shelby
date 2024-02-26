@@ -1,25 +1,13 @@
-careers:
-  slider:
-    A Career to Be Proud Of.
-    Unlock a Better Professional Experience.
-    <button>
-  values:
-    Career Growth: Elevating careers from within, fostering personal and professional development.
-    Competitive Compensation: Offering competitive salaries and exceptional benefit packages.
-    Knowledge Advancement: Promoting continuous learning and industry expertise in our state-of-the-art training facilities.
-    Family Culture: Beyond a company – we're a tight-knit, supportive family.
-    Inclusive Diversity: Actively embracing and promoting diversity every single day.
-    Prioritizing People: Committing to our people first, from new hires to top executives.
-  postcard:
-    Shelby is on the lookout for new team members to join our endeavor in developing, energizing, and illuminating the country!
-    Explore our job openings and shift your focus from just finding a job to building a meaningful career!
-    <button>
+анимации повления контента при скроле
 
-добавить анимации по всему сайту:
-  - для повления контента при скроле
-  - replase hover-behavior for mouse to scroll trigger
-  - цикличные для динамики
 project-N: при клике открывать картинку на весь экран
+project-N: other projects - не залазить за стрелочки
+добавить подпись
+
+hover-behavior for touch
+убрать внешние ресурсы
+собрать js/css
+дописать readme и зависимости
 
 request info:
   get link to indeed
